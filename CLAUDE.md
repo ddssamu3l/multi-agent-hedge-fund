@@ -154,6 +154,18 @@ Every analysis must end with: (1) directional call with timeframe, (2) confidenc
 
 Full design: `docs/design/analytical-foundation.md`
 
+### Organizational Structures (Designed 2026-03-21)
+
+Three topologies running simultaneously. Same agents, same data, same knowledge. Only variable is topology. Design doc: `docs/design/organizational-structures.md`
+
+**Structure A "The Council"** (11 agents) — Peer network. All analysts are equals. Full transparency + private DMs. Decisions by believability-weighted consensus + extremized mean. Risk agent has veto power. Inspired by Tiger Cubs, GJP superforecasters, NAIC clubs.
+
+**Structure B "The Firm"** (15 agents) — 4-layer pyramid. L1: 10 domain analysts → L2: 3 sector heads (Tech & Supply Chain, Macro & Rates, Geopolitics & Resources) → L3: CIO → L4: Risk Committee (sees everything). Progressive information filtering. Info barriers between sectors at L1. CIO sees only sector synthesis, not raw data. Inspired by Point72, Citadel, Bridgewater.
+
+**Structure C "The Model"** (10 agents) — No interaction. Agents produce independent structured signals. Deterministic optimizer (code, not LLM) combines signals via believability weighting + correlation management + risk constraints. No meetings, no DMs. The experimental control group. Inspired by Renaissance.
+
+Estimated combined cost: $160-245/month.
+
 ### Data Pipeline (Designed 2026-03-21)
 
 How agents get information. Design doc: `docs/design/data-pipeline.md`
@@ -172,13 +184,13 @@ How agents get information. Design doc: `docs/design/data-pipeline.md`
 Living document: `docs/design/DESIGN_PLAN.md`
 
 ```
+[x] Area 1  — Org Structures (3 variants: Council, Firm, Model)
 [x] Area 8  — Knowledge Base (14 axioms, 3 reference docs)
 [x] Area 9  — Anti-Bias & Analytical Discipline (system prompt, conviction pool)
-[~] Area 1  — Org Structures (research done, decisions pending)
+[~] Area 5  — Tool Schemas (data pipeline done, tool defs pending)
 [ ] Area 2  — Agent Role Roster
 [ ] Area 3  — Meeting Cadence & Communication
 [ ] Area 4  — Runtime Loop & Context Engineering
-[ ] Area 5  — Tool Schemas
 [ ] Area 6  — Trade Execution & Portfolio Tracking
 [ ] Area 7  — Monitoring Dashboard & Human Interface
 ```
@@ -211,7 +223,8 @@ multi-agent-hedge-fund/
     ├── design/
     │   ├── DESIGN_PLAN.md                 ← Living design tracker with confirmed decisions
     │   ├── analytical-foundation.md       ← System prompt architecture (Layer 1/2/3 design)
-    │   └── data-pipeline.md              ← How agents get info (YouTube, RSS, EDGAR, FRED)
+    │   ├── data-pipeline.md              ← How agents get info (YouTube, RSS, EDGAR, FRED)
+    │   └── organizational-structures.md  ← 3 topologies: Council, Firm, Model
     ├── knowledge/
     │   ├── world-mechanics.md             ← 14 axioms with full explanations + sources
     │   ├── reasoning-examples.md          ← Worked examples (AI supply chain, Mao, Iran, EV, defense)

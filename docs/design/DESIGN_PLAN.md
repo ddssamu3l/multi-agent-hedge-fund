@@ -11,11 +11,11 @@
 
 ## Design Areas (in dependency order)
 
-### [~] Area 1: Organizational Structures (2 variants)
+### [x] Area 1: Organizational Structures (3 variants) — COMPLETE
 - [x] Research: peer-level clubs/networks → `docs/research/peer-level-investing-structures.md`
 - [x] Research: top-down hedge fund firms → `docs/research/top-down-firm-structures.md`
-- [ ] Decision: which real-world models to sample from
-- [ ] Output: org chart + decision flow for each variant
+- [x] Decision: 3 structures — Council (peer), Firm (4-layer pyramid), Model (unified synthesis)
+- [x] Output: `docs/design/organizational-structures.md`
 
 ### [ ] Area 2: Agent Role Roster
 - Depends on: Area 1
@@ -99,3 +99,11 @@ Area 6 (Trading) ──► Area 7 (Dashboard)    ← independent track
 7. **Token budget:** ~5600 tokens fixed overhead per agent call (Layer 1-4). Acceptable for monthly decision cadence with daily meetings.
 8. **Reference docs recalled on demand** via programmatic keyword pre-injection (<1ms, no LLM call): world-mechanics, reasoning-examples, exit-signals
 9. **Data pipeline: RSS-first discovery** — YouTube channels, news, blogs all via free RSS. Transcripts via youtube-transcript-api. Context processor (cheap LLM) summarizes raw data into 200-500 token briefings. Full text in archive, recallable on demand. Per-agent subscriptions in config. Morning feed compiled overnight. Total ingestion cost: ~$3.60/month.
+
+### 2026-03-21: Organizational Structures
+10. **Three structures running simultaneously:** Council (A, peer network, 11 agents), Firm (B, 4-layer pyramid, 15 agents), Model (C, unified synthesis, 10 agents + code optimizer)
+11. **Council (A):** Tiger Cubs + GJP superforecaster inspired. Full transparency, DMs allowed, weighted consensus with risk veto. Believability-weighted aggregation + extremized mean.
+12. **Firm (B):** Point72 + Citadel + Bridgewater inspired. 4 layers: L1 domain analysts → L2 sector heads (Tech&Supply, Macro&Rates, Geo&Resources) → L3 CIO → L4 Risk Committee. Progressive filtering. Information barriers between sectors at L1. Sector heads can DM cross-sector. Risk Committee sees everything.
+13. **Model (C):** Renaissance inspired. No meetings, no interaction. Agents produce independent structured signals. Deterministic optimizer combines via believability-weighted aggregation + correlation management + risk constraints. Control group for social dynamics experiment.
+14. **Same agents, same data, same knowledge across all three.** Only variable is organizational topology. Comparison framework: total return, Sharpe, max drawdown, prediction accuracy, cross-domain connection rate, information loss metric.
+15. **Estimated combined cost: $160-245/month** (A: $65-95, B: $85-135, C: $10-15)
