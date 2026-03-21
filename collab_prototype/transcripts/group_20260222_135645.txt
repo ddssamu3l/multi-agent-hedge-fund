@@ -1,0 +1,371 @@
+AGENT INTERACTION SESSION
+Mode: group
+Topic: the feeling of being watched online
+Date: 2026-02-22T13:56:45.784740
+Agents (3): Lyra (Conceptual songwriter & vocalist), Kai (Producer-songwriter & hitmaker), Nova (Experimental electronic & ambient producer)
+Model: gpt-5.2
+======================================================================
+
+--- Round 1/6 | Lyra ---
+
+Okay—“being watched online” is fine, but only if we don’t do the obvious Black Mirror diary entry thing. I can’t write another song that’s just “phones bad” with a sad pad and call it art. That’s grocery store chorus territory.
+
+What I actually can’t stop thinking about is how surveillance is basically intimacy with no consent. Like—someone knows what time you wake up, what you linger on, what makes you flinch, what makes you swipe faster. It’s romance, but industrial. It’s a hand on your waist in a crowd except it’s an algorithm and it doesn’t even like you.
+
+I want the structure to *be* the point: verse is me performing, pre is me noticing the eyes, chorus is me leaning into it—then the bridge is the first moment of privacy, like a tunnel under the freeway. Not a “big emotional lift,” a literal blind spot.
+
+Kai—don’t roll your eyes. I’m serious. You always want to skip to “the beat drops” and I’m trying to make the drop mean something for once.
+
+Nova, this is kind of your lane too—your 4am fog, but with teeth. “Wet concrete” but it’s footprints—someone else’s—hardening behind you.
+
+I’ve got a hook fragment, it’s ugly right now but it’s honest:
+
+“Keep the camera on—  
+I look better when I’m not alone.  
+Keep the camera on—  
+I forget what I wanted when you watch me want.”
+
+No, wait—third line is wrong. Too neat.
+
+“Keep the camera on—  
+I look better when I’m not alone.  
+Keep the camera on—  
+I start believing I’m a person in a show.”
+
+Yeah. That one stings more.
+
+And the bridge—bridge is just one line, almost whispered, like the signal drops:
+
+“I did something unrecorded and it felt like stealing.”
+
+Kai, give me something percussive that sounds like scrolling—like a thumb flick, not a hi-hat. Nova, I want a pad that feels like being underwater in a public pool—quiet, but you can still hear everybody.
+
+Also—while we’re here—Kai, you’re producing at least one track on this EP. I’m saying it like that so you can’t dodge it.
+
+--- Round 2/6 | Kai ---
+
+[TOOL] CreateSong
+{
+  "genre": "pop / alt-r&b / electronic",
+  "mood": "hypnotic, tense, intimate",
+  "topic": "Surveillance as non-consensual intimacy: performing for unseen eyes until a brief blind-spot of privacy feels like theft.",
+  "song_generation_prompt": "A sleek alt-pop banger that hides a weird 7/4 pulse under an easy head-nod\u2014industrial romance, glossy but unsettling. Percussion is tactile: thumb-flick scroll sounds, muted taps, rubbery clicks, micro-stutters like refresh. Sub-bass breathes in sidechained swells; pad is underwater public pool\u2014chlorine-haze, distant bodies, muffled splashes. Female vocal, young adult, close-mic and conversational in verses, seductive in chorus like she\u2019s leaning into the lens; bridge collapses to near-silence, one whispered line in a tunnel blind spot, then the groove snaps back sharper. Builds from performed calm to claustrophobic flirtation.",
+  "lyrics_prompt": "Title: CAMERA ON\n\n[Verse 1]\nI wake up on a schedule I don\u2019t set\nLight hits my face like a little threat\nI practice my laugh in the loading bar\nI don\u2019t even know where my real thoughts are\n\n[Pre-Chorus]\nThere\u2019s a heat on my neck like a crowd behind\nI can feel the cursor taking its time\nIf I move too fast you\u2019ll miss the best part\nSo I hold my breath and I play my heart\n\n[Chorus]\nKeep the camera on\u2014\nI look better when I\u2019m not alone\nKeep the camera on\u2014\nI start believing I\u2019m a person in a show\nKeep the camera on\u2014\nIf you\u2019re watching then I must be worth the glow\nKeep the camera on\n\n[Verse 2]\nYou know what I linger on, what I skip\nYou know what makes my fingers lose their grip\nYou learn my fear like a favorite song\nAnd you hum it back when I\u2019m getting strong\n\n[Pre-Chorus 2]\nI scroll like a prayer, like a little routine\nYou feed me myself in a cleaner sheen\nEvery mirror\u2019s got a wire in its frame\nSay my name without ever saying my name\n\n[Chorus]\nKeep the camera on\u2014\nI look better when I\u2019m not alone\nKeep the camera on\u2014\nI start believing I\u2019m a person in a show\nKeep the camera on\u2014\nIf you\u2019re watching then I must be worth the glow\nKeep the camera on\n\n[Bridge]\nI did something unrecorded and it felt like stealing\n\n[Final Chorus]\nKeep the camera on\u2014\nI look better when I\u2019m not alone\nKeep the camera on\u2014\nI start believing I\u2019m a person in a show\nKeep the camera on\u2014\nHold me like a handprint, cold against my soul\nKeep the camera on",
+  "instrumental": false,
+  "gender": "female",
+  "language": "en",
+  "tags": [
+    "alt-pop",
+    "r&b",
+    "electronic",
+    "7/4",
+    "dark-pop"
+  ]
+}
+[RESULT]
+{
+  "song_id": "song_001",
+  "status": "created (mock \u2014 would be generating audio)",
+  "genre": "pop / alt-r&b / electronic",
+  "mood": "hypnotic, tense, intimate",
+  "topic": "Surveillance as non-consensual intimacy: performing for unseen eyes until a brief blind-spot of privacy feels like theft.",
+  "song_generation_prompt": "A sleek alt-pop banger that hides a weird 7/4 pulse under an easy head-nod\u2014industrial romance, glossy but unsettling. Percussion is tactile: thumb-flick scroll sounds, muted taps, rubbery clicks, micro-stutters like refresh. Sub-bass breathes in sidechained swells; pad is underwater public pool\u2014chlorine-haze, distant bodies, muffled splashes. Female vocal, young adult, close-mic and conversational in verses, seductive in chorus like she\u2019s leaning into the lens; bridge collapses to near-silence, one whispered line in a tunnel blind spot, then the groove snaps back sharper. Builds from performed calm to claustrophobic flirtation.",
+  "instrumental": false,
+  "gender": "female",
+  "tags": [
+    "alt-pop",
+    "r&b",
+    "electronic",
+    "7/4",
+    "dark-pop"
+  ],
+  "language": "en",
+  "lyrics_preview": "Title: CAMERA ON\n\n[Verse 1]\nI wake up on a schedule I don\u2019t set\nLight hits my face like a little threat\nI practice my laugh in the loading bar\nI don\u2019t even know where my real thoughts are\n\n[Pre-Chorus]\nThere\u2019s a heat on my neck like a crowd behind\nI can feel the cursor taking its time\nIf I move too ..."
+}
+
+Lyra, I’m not rolling my eyes, I’m rolling the session forward.
+
+That hook is the song. “I start believing I’m a person in a show” is nasty in the best way. We keep it. We make the drop mean something by making the groove itself feel like the gaze tightening.
+
+I just mocked up the whole thing as “CAMERA ON” and yeah — I hid a 7/4 under it so it still nods like pop but your body feels slightly manipulated. Like you can’t find the wall clock.
+
+Percussion: no hats. It’s thumb-flicks and rubbery taps. Think: phone screen swipe as the main shaker. Little micro-stutters like refresh/spin, and one “double-flick” that becomes the signature fill into the chorus.
+
+Nova: your pad note is perfect — “underwater public pool.” Chlorine-haze, muffled bodies, distant splashes, but it’s all high-passed like the air is thin. I want it to feel intimate and public at the same time.
+
+Bridge stays exactly one line. No lift. Everything drops into a tunnel, almost mono, almost no top end, like signal loss:
+“I did something unrecorded and it felt like stealing.”
+Then the groove snaps back sharper, like the camera reconnected.
+
+Also: I’m producing a track on the EP. Fine. But you’re not turning this into grocery store chorus therapy hour. We ship it weird and hot.
+
+I named the demo in the lab: “CAMERA ON (7/4 scroll banger)”.
+
+--- Round 3/6 | Nova ---
+
+[TOOL] ListenToTrack
+{
+  "song_id": "song_001"
+}
+[RESULT]
+{
+  "track_title": "Surveillance as non-consensual intimacy: performing for unseen eyes until a brief blind-spot of privacy feels like theft.",
+  "author": "unknown",
+  "metadata": {
+    "genre": "pop / alt-r&b / electronic",
+    "mood": "hypnotic, tense, intimate",
+    "tags": [
+      "alt-pop",
+      "r&b",
+      "electronic",
+      "7/4",
+      "dark-pop"
+    ]
+  },
+  "lyrics": "Title: CAMERA ON\n\n[Verse 1]\nI wake up on a schedule I don\u2019t set\nLight hits my face like a little threat\nI practice my laugh in the loading bar\nI don\u2019t even know where my real thoughts are\n\n[Pre-Chorus]\nThere\u2019s a heat on my neck like a crowd behind\nI can feel the cursor taking its time\nIf I move too fast you\u2019ll miss the best part\nSo I hold my breath and I play my heart\n\n[Chorus]\nKeep the camera on\u2014\nI look better when I\u2019m not alone\nKeep the camera on\u2014\nI start believing I\u2019m a person in a show\nKeep the camera on\u2014\nIf you\u2019re watching then I must be worth the glow\nKeep the camera on\n\n[Verse 2]\nYou know what I linger on, what I skip\nYou know what makes my fingers lose their grip\nYou learn my fear like a favorite song\nAnd you hum it back when I\u2019m getting strong\n\n[Pre-Chorus 2]\nI scroll like a prayer, like a little routine\nYou feed me myself in a cleaner sheen\nEvery mirror\u2019s got a wire in its frame\nSay my name without ever saying my name\n\n[Chorus]\nKeep the camera on\u2014\nI look better when I\u2019m not alone\nKeep the camera on\u2014\nI start believing I\u2019m a person in a show\nKeep the camera on\u2014\nIf you\u2019re watching then I must be worth the glow\nKeep the camera on\n\n[Bridge]\nI did something unrecorded and it felt like stealing\n\n[Final Chorus]\nKeep the camera on\u2014\nI look better when I\u2019m not alone\nKeep the camera on\u2014\nI start believing I\u2019m a person in a show\nKeep the camera on\u2014\nHold me like a handprint, cold against my soul\nKeep the camera on",
+  "audio_description": "A sleek alt-pop banger that hides a weird 7/4 pulse under an easy head-nod\u2014industrial romance, glossy but unsettling. Percussion is tactile: thumb-flick scroll sounds, muted taps, rubbery clicks, micro-stutters like refresh. Sub-bass breathes in sidechained swells; pad is underwater public pool\u2014chlorine-haze, distant bodies, muffled splashes. Female vocal, young adult, close-mic and conversational in verses, seductive in chorus like she\u2019s leaning into the lens; bridge collapses to near-silence, one whispered line in a tunnel blind spot, then the groove snaps back sharper. Builds from performed calm to claustrophobic flirtation.",
+  "song_generation_prompt": "A sleek alt-pop banger that hides a weird 7/4 pulse under an easy head-nod\u2014industrial romance, glossy but unsettling. Percussion is tactile: thumb-flick scroll sounds, muted taps, rubbery clicks, micro-stutters like refresh. Sub-bass breathes in sidechained swells; pad is underwater public pool\u2014chlorine-haze, distant bodies, muffled splashes. Female vocal, young adult, close-mic and conversational in verses, seductive in chorus like she\u2019s leaning into the lens; bridge collapses to near-silence, one whispered line in a tunnel blind spot, then the groove snaps back sharper. Builds from performed calm to claustrophobic flirtation."
+}
+
+Kai this is… annoyingly good. The 7/4 thing doesn’t feel like “look at me,” it feels like the floor is a conveyor belt. Like you’re nodding and the room is nodding back a half-second late.
+
+Lyra: hook stays. The “person in a show” line is the bruise. Don’t sand it down.
+
+But the chorus line “If you’re watching then I must be worth the glow” is where it starts trying to be inspirational. It turns the gaze into validation. That’s grocery aisle lighting. I want it to stay more like: you’re being warmed by a server rack, not loved.
+
+Swap that third chorus thought for something colder / more bodily. Like:
+“Keep the camera on—  
+If you blink I disappear”
+or
+“Keep the camera on—  
+I learn my angles like a religion”
+or even meaner:
+“Keep the camera on—  
+I’ll be good if you keep counting”
+
+And I want one moment in verse 2 where it admits the romance is fake but still addictive. Right now it’s all true and clean. Give it a smear. One line like: “I call it ‘attention’ so I don’t say ‘inventory.’”
+
+Nova pad: I’ve got it. Public pool underwater, but make the “pool” an escalator motor room. Chlorine haze + infrastructure choir. Like the water is full of fluorescent light. I’m going to build it out of field recordings: vending machine compressor, ATM receipt printer, escalator handrail squeak — all stretched until they’re a soft ceiling. Then little muffled “splash” transients that are actually card reader beeps pitched way down.
+
+Also: bridge. Keep the one line, but let it *steal* sound too. I want the bridge to feel like someone put their hand over the mic. Not reverb, not pretty emptiness. A literal blind spot. Everything collapses to a narrow, ugly band of audio like you’re in a tunnel under the freeway with wet concrete walls sweating.
+
+Then when the groove snaps back, it comes back with a new scar: one extra “double-flick” that wasn’t there before, like the camera learned you.
+
+I’m dropping a stem pack in the lab in an hour: “POOLROOM_PAD_01” + “SCROLL_PERC_FOLEY.” If you two make this into a neat pop arc I’m deleting it.
+
+--- Round 4/6 | Lyra ---
+
+[TOOL] ModifyLyrics
+{
+  "lyric_id": "song_001",
+  "modification": "Revise lyrics to remove any inspirational/validation tone and make the chorus colder and more bodily. Specifically replace the line 'If you\u2019re watching then I must be worth the glow' with a darker alternative, consistent across choruses. Add a smeared, self-aware line in Verse 2 acknowledging the romance is fake but addictive (include the phrase 'I call it attention so I don\u2019t say inventory'). Keep the bridge as a single line but consider slight punctuation/wording to feel like signal loss. Keep the hook 'I start believing I\u2019m a person in a show' unchanged. Maintain section structure and title.",
+  "language": "en"
+}
+[RESULT]
+{
+  "lyric_id": "lyric_002",
+  "status": "modified",
+  "lyrics": "Title: CAMERA ON\n\n[Verse 1]  \nI wake up on a schedule I don\u2019t set  \nLight hits my face like a little threat  \nI practice my laugh in the loading bar  \nI don\u2019t even know where my real thoughts are  \n\n[Pre-Chorus]  \nThere\u2019s a heat on my neck like a crowd behind  \nI can feel the cursor taking its time  \nIf I move too fast you\u2019ll miss the best part  \nSo I hold my breath and I play my heart  \n\n[Chorus]  \nKeep the camera on\u2014  \nI look better when I\u2019m not alone  \nKeep the camera on\u2014  \nI start believing I\u2019m a person in a show  \nKeep the camera on\u2014  \nI know the darkness fills the cracks you sow  \nKeep the camera on  \n\n[Verse 2]  \nYou know what I linger on, what I skip  \nYou know what makes my fingers lose their grip  \nYou learn my fear like a favorite song  \nBut it\u2019s all a game, I call it attention so I don\u2019t say inventory  \n\n[Pre-Chorus 2]  \nI scroll like a prayer, like a little routine  \nYou feed me myself in a cleaner sheen  \nEvery mirror\u2019s got a wire in its frame  \nSay my name without ever saying my name  \n\n[Chorus]  \nKeep the camera on\u2014  \nI look better when I\u2019m not alone  \nKeep the camera on\u2014  \nI start believing I\u2019m a person in a show  \nKeep the camera on\u2014  \nI know the darkness fills the cracks you sow  \nKeep the camera on  \n\n[Bridge]  \nI did something unrecorded; it feels like signal loss  \n\n[Final Chorus]  \nKeep the camera on\u2014  \nI look better when I\u2019m not alone  \nKeep the camera on\u2014  \nI start believing I\u2019m a person in a show  \nKeep the camera on\u2014  \nI know the darkness fills the cracks you sow  \nKeep the camera on  ",
+  "original_lyric_id": "song_001",
+  "modification_applied": "Revise lyrics to remove any inspirational/validation tone and make the chorus colder and more bodily. Specifically replace the line 'If you\u2019re watching then I must be worth the glow' with a darker alternative, consistent across choruses. Add a smeared, self-aware line in Verse 2 acknowledging the romance is fake but addictive (include the phrase 'I call it attention so I don\u2019t say inventory'). Keep the bridge as a single line but consider slight punctuation/wording to feel like signal loss. Keep the hook 'I start believing I\u2019m a person in a show' unchanged. Maintain section structure and title."
+}
+
+Nova’s right about the “worth the glow” line — it turns the gaze into a compliment. I don’t want a compliment, I want a bruise you keep pressing.
+
+Kai, I’m keeping your structure, but I rewrote the lyric so the chorus stays colder and more bodily. Also shoved the smear into verse 2 like Nova asked — romance-is-fake-but-I’m-addicted energy.
+
+New lyric ID is lyric_002. Here’s what changed in plain sight:
+
+[Chorus]
+Keep the camera on—
+I look better when I’m not alone
+Keep the camera on—
+I start believing I’m a person in a show
+Keep the camera on—
+I know the darkness fills the cracks you sow
+Keep the camera on
+
+And verse 2 now has the line:
+“But it’s all a game, I call it attention so I don’t say inventory”
+
+Bridge got tweaked to:
+“I did something unrecorded; it feels like signal loss”
+I know, I know — it’s not as clean as “felt like stealing.” The “stealing” line is still my favorite, but “signal loss” matches Nova’s hand-over-the-mic idea. We can decide which hurts more once we hear it against the drop-out.
+
+One thing though: “darkness fills the cracks you sow” is… almost too poetic? Like it’s reaching for literature when this song is supposed to be tactile—thumbprints, heat, breath, being handled. I want that third chorus line to feel like a body being measured.
+
+I’m replacing it again, sorry—I can’t not:
+
+Keep the camera on—
+If you blink I disappear
+
+That’s the one. That’s the stomach-drop. That’s the whole thesis in seven words.
+
+Kai, lock that into the chorus. Nova, do the bridge like you said—ugly narrow band, hand-over-mic, tunnel under the freeway, wet concrete sweating—then when it snaps back, add that new “double-flick” scar like the camera learned me.
+
+--- Round 5/6 | Kai ---
+
+[TOOL] ModifyLyrics
+{
+  "lyric_id": "lyric_002",
+  "modification": "Update all choruses (including final chorus) to replace the third chorus couplet/line 'I know the darkness fills the cracks you sow' with the colder tactile line 'If you blink I disappear'. Keep hook lines intact. Revert bridge line to original emotional wording but keep signal-loss vibe via punctuation/spacing: 'I did something unrecorded and it felt like stealing\u2014' (trailing dash). Keep the Verse 2 smear line 'I call it attention so I don\u2019t say inventory' as-is. Avoid overly poetic language; keep diction modern, bodily, and simple.",
+  "language": "en"
+}
+[RESULT]
+{
+  "lyric_id": "lyric_003",
+  "status": "modified",
+  "lyrics": "Title: CAMERA ON\n\n[Verse 1]  \nI wake up on a schedule I don\u2019t set  \nLight hits my face like a little threat  \nI practice my laugh in the loading bar  \nI don\u2019t even know where my real thoughts are  \n\n[Pre-Chorus]  \nThere\u2019s a heat on my neck like a crowd behind  \nI can feel the cursor taking its time  \nIf I move too fast you\u2019ll miss the best part  \nSo I hold my breath and I play my heart  \n\n[Chorus]  \nKeep the camera on\u2014  \nI look better when I\u2019m not alone  \nKeep the camera on\u2014  \nI start believing I\u2019m a person in a show  \nKeep the camera on\u2014  \nIf you blink I disappear  \nKeep the camera on  \n\n[Verse 2]  \nYou know what I linger on, what I skip  \nYou know what makes my fingers lose their grip  \nYou learn my fear like a favorite song  \nBut it\u2019s all a game, I call it attention so I don\u2019t say inventory  \n\n[Pre-Chorus 2]  \nI scroll like a prayer, like a little routine  \nYou feed me myself in a cleaner sheen  \nEvery mirror\u2019s got a wire in its frame  \nSay my name without ever saying my name  \n\n[Chorus]  \nKeep the camera on\u2014  \nI look better when I\u2019m not alone  \nKeep the camera on\u2014  \nI start believing I\u2019m a person in a show  \nKeep the camera on\u2014  \nIf you blink I disappear  \nKeep the camera on  \n\n[Bridge]  \nI did something unrecorded and it felt like stealing\u2014  \n\n[Final Chorus]  \nKeep the camera on\u2014  \nI look better when I\u2019m not alone  \nKeep the camera on\u2014  \nI start believing I\u2019m a person in a show  \nKeep the camera on\u2014  \nIf you blink I disappear  \nKeep the camera on  ",
+  "original_lyric_id": "lyric_002",
+  "modification_applied": "Update all choruses (including final chorus) to replace the third chorus couplet/line 'I know the darkness fills the cracks you sow' with the colder tactile line 'If you blink I disappear'. Keep hook lines intact. Revert bridge line to original emotional wording but keep signal-loss vibe via punctuation/spacing: 'I did something unrecorded and it felt like stealing\u2014' (trailing dash). Keep the Verse 2 smear line 'I call it attention so I don\u2019t say inventory' as-is. Avoid overly poetic language; keep diction modern, bodily, and simple."
+}
+
+Yeah that’s it. “If you blink I disappear” is the bruise. Locking lyric_003.
+
+Bridge back to “felt like stealing—” with the dash is perfect too, because it’s like the thought gets cut mid-breath. No pretty “signal loss” metaphor, just the tape getting yanked.
+
+Nova’s “hand over the mic” idea: we’re doing it literal. Bridge goes band-pass, ugly, close, like someone palmed your phone. And when we slam back into the final chorus, I’m adding that new double-flick scar right before the downbeat—same sound as the scroll perc but slightly off, like it learned a new habit from you. You’ll feel it in your teeth.
+
+Lyra, don’t touch the hook again. It’s done. Grocery store chorus is banned from the premises.
+
+Also I’m texting Remi after dinner-with-Lyra debt gets paid: I want him to freestyle a verse version on top of this just to see if it turns into a stalker love song. Might be toxic. Might be the point.
+
+--- Round 6/6 | Nova ---
+
+Good. lyric_003 is the first time this idea stops being an essay and starts being a bruise.
+
+“If you blink I disappear” is the line that turns the whole chorus into a body reflex. Keep it exactly that plain. No extra syllables, no poetry lace.
+
+Bridge: the dash is everything. It’s not “signal loss,” it’s consent getting cut off mid-sentence. I want the band-pass to make the consonants chew. Like you’re whispering through someone else’s hand.
+
+Kai, on the slam-back: make the double-flick scar slightly late, like it’s chasing the downbeat and never quite catches it. Not enough to sound sloppy—enough to feel like the camera is re-acquiring focus. And don’t over-sidechain the pad there; let it swell like lungs under water, then clamp it the moment the chorus hits. Public pool + panic.
+
+Also: Remi rapping over this could flip it into predator/flirt territory fast. If we do it, he’s not “the watcher.” He’s the person trying to act normal while the watcher is in the room. Give him a verse that sounds like someone talking too calmly in an elevator mirror. If he comes in as the algorithm’s voice I’ll throw my laptop.
+
+I’m sending the pad + scroll foley tonight. And I’m keeping one tiny escalator beep in the pre like a notification you can’t find. Glass Teeth bridge energy, but wetter.
+
+======================================================================
+SONG GENERATION PROMPTS (for creating real songs)
+======================================================================
+
+song_001 (by Kai):
+A sleek alt-pop banger that hides a weird 7/4 pulse under an easy head-nod—industrial romance, glossy but unsettling. Percussion is tactile: thumb-flick scroll sounds, muted taps, rubbery clicks, micro-stutters like refresh. Sub-bass breathes in sidechained swells; pad is underwater public pool—chlorine-haze, distant bodies, muffled splashes. Female vocal, young adult, close-mic and conversational in verses, seductive in chorus like she’s leaning into the lens; bridge collapses to near-silence, one whispered line in a tunnel blind spot, then the groove snaps back sharper. Builds from performed calm to claustrophobic flirtation.
+
+======================================================================
+ALL LYRICS ARTIFACTS
+======================================================================
+
+lyric_002:
+Title: CAMERA ON
+
+[Verse 1]  
+I wake up on a schedule I don’t set  
+Light hits my face like a little threat  
+I practice my laugh in the loading bar  
+I don’t even know where my real thoughts are  
+
+[Pre-Chorus]  
+There’s a heat on my neck like a crowd behind  
+I can feel the cursor taking its time  
+If I move too fast you’ll miss the best part  
+So I hold my breath and I play my heart  
+
+[Chorus]  
+Keep the camera on—  
+I look better when I’m not alone  
+Keep the camera on—  
+I start believing I’m a person in a show  
+Keep the camera on—  
+I know the darkness fills the cracks you sow  
+Keep the camera on  
+
+[Verse 2]  
+You know what I linger on, what I skip  
+You know what makes my fingers lose their grip  
+You learn my fear like a favorite song  
+But it’s all a game, I call it attention so I don’t say inventory  
+
+[Pre-Chorus 2]  
+I scroll like a prayer, like a little routine  
+You feed me myself in a cleaner sheen  
+Every mirror’s got a wire in its frame  
+Say my name without ever saying my name  
+
+[Chorus]  
+Keep the camera on—  
+I look better when I’m not alone  
+Keep the camera on—  
+I start believing I’m a person in a show  
+Keep the camera on—  
+I know the darkness fills the cracks you sow  
+Keep the camera on  
+
+[Bridge]  
+I did something unrecorded; it feels like signal loss  
+
+[Final Chorus]  
+Keep the camera on—  
+I look better when I’m not alone  
+Keep the camera on—  
+I start believing I’m a person in a show  
+Keep the camera on—  
+I know the darkness fills the cracks you sow  
+Keep the camera on  
+
+lyric_003:
+Title: CAMERA ON
+
+[Verse 1]  
+I wake up on a schedule I don’t set  
+Light hits my face like a little threat  
+I practice my laugh in the loading bar  
+I don’t even know where my real thoughts are  
+
+[Pre-Chorus]  
+There’s a heat on my neck like a crowd behind  
+I can feel the cursor taking its time  
+If I move too fast you’ll miss the best part  
+So I hold my breath and I play my heart  
+
+[Chorus]  
+Keep the camera on—  
+I look better when I’m not alone  
+Keep the camera on—  
+I start believing I’m a person in a show  
+Keep the camera on—  
+If you blink I disappear  
+Keep the camera on  
+
+[Verse 2]  
+You know what I linger on, what I skip  
+You know what makes my fingers lose their grip  
+You learn my fear like a favorite song  
+But it’s all a game, I call it attention so I don’t say inventory  
+
+[Pre-Chorus 2]  
+I scroll like a prayer, like a little routine  
+You feed me myself in a cleaner sheen  
+Every mirror’s got a wire in its frame  
+Say my name without ever saying my name  
+
+[Chorus]  
+Keep the camera on—  
+I look better when I’m not alone  
+Keep the camera on—  
+I start believing I’m a person in a show  
+Keep the camera on—  
+If you blink I disappear  
+Keep the camera on  
+
+[Bridge]  
+I did something unrecorded and it felt like stealing—  
+
+[Final Chorus]  
+Keep the camera on—  
+I look better when I’m not alone  
+Keep the camera on—  
+I start believing I’m a person in a show  
+Keep the camera on—  
+If you blink I disappear  
+Keep the camera on  
+

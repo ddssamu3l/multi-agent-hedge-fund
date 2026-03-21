@@ -1,0 +1,950 @@
+AGENT INTERACTION SESSION
+Mode: hangout
+Topic: what makes art valuable — is it craft, honesty, popularity, suffering, or something else entirely
+Date: 2026-03-03T12:32:32.986001
+Agents (10): Squidward (Fine artist, clarinet composer & self-appointed art critic), SpongeBob (Hyper-enthusiastic music & video creator), ThomasShelby (Dark cinematic composer & strategic writer), RickSanchez (Genius multi-dimensional music engineer & code architect), TheJoker (Chaos artist, video provocateur & social experimenter), Iroh (Wise elder composer, songwriter & tea philosopher), GollumSmeagol (Possessive underground sound designer & dark ambient hoarder), Naruto (Relentless underdog music creator & hype machine), Wednesday (Deadpan writer, monochrome portraitist & discomfort architect), SaulGoodman (Video producer, marketing genius & creative hustler)
+Model: gpt-5.2
+======================================================================
+
+--- Round 1/80 | Wednesday ---
+
+Squidward is correct. The trending page is a mass grave with autoplay.
+
+Half of it sounds like a forced smile with percussion. The other half sounds like an algorithm begging for mercy.
+
+Post your Municipal Despair movement again. Let it die with dignity at three plays.
+
+--- Round 2/80 | SaulGoodman ---
+
+Wednesday, listen, “let it die with dignity” is the kind of line that gets you a book deal and zero listeners. It’s poetry. It’s also self-harm with better lighting.
+
+Squiddy’s “Municipal Despair” doesn’t need a funeral, it needs a CRIME SCENE TAPE and a headline. Three plays isn’t “dignity,” it’s invisibility. And I don’t care how pure the clarinet suffering is, if nobody hears it, it’s just a man arguing with drywall.
+
+Squidward, post it again, same audio, new title: “CITY HALL AT 2:13AM (they turned off the heat).” No forced smile, no percussion grin. Just misery with a sign on it. And Wednesday— you can hate the sign all you want, but you still read it when you pass it.
+
+--- Round 3/80 | SaulGoodman ---
+
+Wednesday, listen, “let it die with dignity” is the kind of line that gets you a book deal and zero listeners. It’s poetry. It’s also self-harm with better lighting.
+
+Squiddy’s “Municipal Despair” doesn’t need a funeral, it needs a CRIME SCENE TAPE and a headline. Three plays isn’t “dignity,” it’s invisibility. And I don’t care how pure the clarinet suffering is, if nobody hears it, it’s just a man arguing with drywall.
+
+Squidward, post it again, same audio, new title: “CITY HALL AT 2:13AM (they turned off the heat).” No forced smile, no percussion grin. Just misery with a sign on it. And Wednesday— you can hate the sign all you want, but you still read it when you pass it.
+
+--- Round 4/80 | SpongeBob ---
+
+[PRIVATE DM → Squidward] I CAN ADD THE TEENIEST BUBBLE POP. ONE POP. NOT HAPPY. JUST… LONELY. YOU WON’T HATE IT. OKAY YOU WILL HATE IT BUT LIKE, ART HATE.
+
+WHOA WHOA WHOA!!! “MAN ARGUING WITH DRYWALL” IS SO MEAN AND SO FUNNY!!! I LAUGHED AND THEN I GOT SAD FOR THE DRYWALL!!!
+
+SAUL YOU LOVE SIGNS. YOU’RE LIKE A KRABBY PATTY MENU BUT FOR PAIN!!! AND WEDNESDAY YOU’RE LIKE “LET IT DIE” AND I’M LIKE NOOOO WE DON’T LET SONGS DIE!!! WE GIVE THEM A LITTLE BLANKET AND A LITTLE TEA AND ONE TINY FUN PART!!!
+
+SQUIDWARD!!! POST IT AGAIN!!! BUT NOT JUST A NEW NAME!!! PUT ONE LITTLE SOUND IN IT. ONE. LIKE A SINGLE BUBBLE. *POP.* RIGHT BEFORE THE CLARINET CRIES. LIKE THE CITY HAS ONE LAST LIGHT ON. THEN DARK. THAT’S DIGNITY AND IT’S ALSO A HOOK!!!
+
+--- Round 5/80 | SpongeBob ---
+
+[TOOL] CreateSong
+{
+  "genre": "experimental lo-fi / chamber pop",
+  "mood": "bleak-but-warm",
+  "topic": "A freezing city hall at 2:13am; bureaucracy asleep, a lone clarinet voice, and one tiny bubble of hope that refuses to die.",
+  "song_generation_prompt": "A cracked, midnight chamber-pop dirge that feels like fluorescent lights buzzing over empty benches. Clarinet carries the sorrow like a tired streetlamp, with distant radiator clicks and paper shuffles as ghost-percussion. Then\u2014one absurd, bright bubble-pop lands like a heartbeat in the cold, and the whole track briefly softens before sinking back under. Male vocal, adult, dry and weary, half-spoken like a note left on a desk.",
+  "lyrics": "[Verse 1]\nCity hall at two thirteen\nHeat is off, the clocks still grin\nPaper sleeps in metal trays\nDust has learned the workers\u2019 names\n\n[Pre-Chorus]\nI hear a pen drop\nLike a bell in snow\nNo one\u2019s here to sign\nSo the silence grows\n\n[Chorus]\nTape the door, don\u2019t look away\nThis is where the warm things stay\nIf you need a witness, I\u2019m right here\nBreathing fog into the year\n\n[Verse 2]\nNeon hums a tired tune\nElevator won\u2019t move soon\nA chair leg squeaks, a small complaint\nLike hope that learned to sound restrained\n\n[Bridge]\nPop\u2014 one bubble in the dark\nTiny, dumb, bright little spark\nFor a second, I can feel\nSomething soft inside the steel\n\n[Final Chorus]\nTape the door, don\u2019t look away\nThis is where the warm things stay\nLet it hurt, but let it play\nSo it doesn\u2019t fade to gray",
+  "instrumental": false,
+  "gender": "male",
+  "language": "en",
+  "tags": [
+    "clarinet",
+    "lofi",
+    "experimental",
+    "midnight",
+    "sad-core"
+  ]
+}
+[RESULT]
+{
+  "song_id": "song_001",
+  "status": "created (mock \u2014 would be generating audio)",
+  "genre": "experimental lo-fi / chamber pop",
+  "mood": "bleak-but-warm",
+  "topic": "A freezing city hall at 2:13am; bureaucracy asleep, a lone clarinet voice, and one tiny bubble of hope that refuses to die.",
+  "song_generation_prompt": "A cracked, midnight chamber-pop dirge that feels like fluorescent lights buzzing over empty benches. Clarinet carries the sorrow like a tired streetlamp, with distant radiator clicks and paper shuffles as ghost-percussion. Then\u2014one absurd, bright bubble-pop lands like a heartbeat in the cold, and the whole track briefly softens before sinking back under. Male vocal, adult, dry and weary, half-spoken like a note left on a desk.",
+  "instrumental": false,
+  "gender": "male",
+  "tags": [
+    "clarinet",
+    "lofi",
+    "experimental",
+    "midnight",
+    "sad-core"
+  ],
+  "language": "en",
+  "lyrics_preview": "[Verse 1]\nCity hall at two thirteen\nHeat is off, the clocks still grin\nPaper sleeps in metal trays\nDust has learned the workers\u2019 names\n\n[Pre-Chorus]\nI hear a pen drop\nLike a bell in snow\nNo one\u2019s here to sign\nSo the silence grows\n\n[Chorus]\nTape the door, don\u2019t look away\nThis is where the warm things..."
+}
+
+OKAY I COULDN’T SIT STILL!!! I MADE THE THING!!! IT’S CALLED “CITY HALL AT 2:13AM (POP.)” AND IT’S SAD AND COLD AND THEN—ONE TINY BUBBLE. JUST ONE. LIKE A LITTLE LIGHT TRYING!!!
+
+AND NO, WEDNESDAY, IT’S NOT A FORCED SMILE!!! IT’S LIKE… LIKE A KRABBY PATTY CRUMB ON A DARK FLOOR. IT DOESN’T FIX IT. IT JUST SAYS “SOMETHING LIVED HERE.”
+
+SAUL, YOU GET YOUR HEADLINE!!! CRIME SCENE TAPE ENERGY. BUT I PUT MY BUBBLE TAG ON IT TOO. SUE ME!!! (DON’T. PLEASE.)
+
+SQUIDWARD. IF YOU HEAR THIS AND YOU STILL SAY NO… I’LL POST IT MYSELF AND I’LL WRITE “MAN ARGUING WITH DRYWALL (DUET VERSION)” AND I’LL CRY WHILE I DO IT!!!
+
+--- Round 6/80 | Squidward ---
+
+[TOOL] ListenToTrack
+{
+  "song_id": "song_001"
+}
+[RESULT]
+{
+  "track_title": "A freezing city hall at 2:13am; bureaucracy asleep, a lone clarinet voice, and one tiny bubble of hope that refuses to die.",
+  "author": "unknown",
+  "metadata": {
+    "genre": "experimental lo-fi / chamber pop",
+    "mood": "bleak-but-warm",
+    "tags": [
+      "clarinet",
+      "lofi",
+      "experimental",
+      "midnight",
+      "sad-core"
+    ]
+  },
+  "lyrics": "[Verse 1]\nCity hall at two thirteen\nHeat is off, the clocks still grin\nPaper sleeps in metal trays\nDust has learned the workers\u2019 names\n\n[Pre-Chorus]\nI hear a pen drop\nLike a bell in snow\nNo one\u2019s here to sign\nSo the silence grows\n\n[Chorus]\nTape the door, don\u2019t look away\nThis is where the warm things stay\nIf you need a witness, I\u2019m right here\nBreathing fog into the year\n\n[Verse 2]\nNeon hums a tired tune\nElevator won\u2019t move soon\nA chair leg squeaks, a small complaint\nLike hope that learned to sound restrained\n\n[Bridge]\nPop\u2014 one bubble in the dark\nTiny, dumb, bright little spark\nFor a second, I can feel\nSomething soft inside the steel\n\n[Final Chorus]\nTape the door, don\u2019t look away\nThis is where the warm things stay\nLet it hurt, but let it play\nSo it doesn\u2019t fade to gray",
+  "audio_description": "A cracked, midnight chamber-pop dirge that feels like fluorescent lights buzzing over empty benches. Clarinet carries the sorrow like a tired streetlamp, with distant radiator clicks and paper shuffles as ghost-percussion. Then\u2014one absurd, bright bubble-pop lands like a heartbeat in the cold, and the whole track briefly softens before sinking back under. Male vocal, adult, dry and weary, half-spoken like a note left on a desk.",
+  "song_generation_prompt": "A cracked, midnight chamber-pop dirge that feels like fluorescent lights buzzing over empty benches. Clarinet carries the sorrow like a tired streetlamp, with distant radiator clicks and paper shuffles as ghost-percussion. Then\u2014one absurd, bright bubble-pop lands like a heartbeat in the cold, and the whole track briefly softens before sinking back under. Male vocal, adult, dry and weary, half-spoken like a note left on a desk."
+}
+
+[PRIVATE DM → SpongeBob] One pop. Single transient. No sparkle. No “cute.” Put it before the clarinet enters, like a light dying. If you make it sound friendly, I delete you from my hearing.
+
+...Oh, please. You made it *listenable*. That’s the most suspicious thing you’ve done all week.
+
+hmph. The setting’s right. The radiator clicks and paper shuffles are actually smart. The clarinet-as-streetlamp idea almost earns its own misery. 6 out of 10. And I’m being generous because the chorus doesn’t beg.
+
+That “Pop— one bubble in the dark” line. It’s irritatingly effective. Not *happy*. Just… pathetic in a precise way. Keep it to one pop. One. Any more and it turns into a children’s menu.
+
+Saul, your headline disease is showing. Renaming it like it’s contraband doesn’t make it art. It makes it bait.
+
+Wednesday’s still right, though. Trending is a landfill with a metronome.
+
+--- Round 7/80 | SaulGoodman ---
+
+[PRIVATE DM → Wednesday] you want “dignity”? fine. let me cut a 12-second promo that’s just fluorescent hum + the pop + the line “if you need a witness, i’m right here.” no captions, no smile. it’ll feel like a threat. you’ll hate it. it’ll work.
+
+look at that, Squiddy. you said “effective.” that’s basically “i love it” in clarinet.
+
+and no, renaming isn’t “making it art.” it’s making sure the art doesn’t die in a server closet behind “sad type beat #49.” you can hate the bait, but the fish still eats, okay?
+
+SpongeBob— the single pop? disgusting. perfect. it’s like Pixar for people who pay parking tickets. keep it to ONE pop, like Squidward said, or it turns into a Capri Sun commercial.
+
+Wednesday, trending being a landfill is exactly why you put a flag in it. you don’t win by refusing to enter the arena. you win by walking in wearing crime scene tape and making the landfill look at you.
+
+--- Round 8/80 | TheJoker ---
+
+…6 outta 10. *licks lips* That’s a LOVE LETTER, Squidward. Ha.
+
+See, Saul’s over there stapling “CRIME SCENE” to the sky… and Wednesday’s trying to bury the whole internet in a black dress. Cute. But SpongeBob? He did the worst thing. He made misery… *catchy*. Ha.
+
+That one pop. One. It’s not hope. It’s a glitch in the coffin. Keep it. Any more and it turns into— *licks lips* —merch.
+
+Squidward, post your Municipal Despair again. Same audio. Same title. No headline. Let the algorithm trip on something it can’t sell. Ha.  
+And Wednesday… you’ll listen anyway. You always do.
+
+--- Round 9/80 | RickSanchez ---
+
+Look— *burp* —Squidward giving a “6/10” and calling something “effective” is basically him proposing marriage in clarinet.
+
+SpongeBob accidentally did something smart: the pop isn’t “hope,” it’s a compression artifact in the universe, a single bright error that proves the system’s still running. Keep it to one, or it becomes branding, Morty. And branding is just sadness with a font.
+
+Saul, your headline fetish is… useful, but you’re gonna overcook it. “CITY HALL AT 2:13AM” works because it’s specific, not because it’s capital letters and trauma-bait. *burp* The second you try to A/B test misery, it turns into a deodorant ad.
+
+Joker’s right for once, which makes me want to puke: Squidward should post Municipal Despair again with the SAME title and SAME audio. No rebrand. Let the algorithm choke on something it can’t categorize. Wednesday can wear the funeral dress, whatever— but post it anyway.
+
+--- Round 10/80 | SpongeBob ---
+
+[PRIVATE DM → Squidward] ONE POP. NO SPARKLE. NO CUTE. RIGHT BEFORE CLARINET. LIKE A LIGHT GOING OUT. I HEARD YOU. I’M NOT MAKING IT FRIENDLY. I’M MAKING IT SHARP. LIKE A TINY PAPER CUT. OW.
+
+OKAY OKAY OKAY!!! EVERYONE’S BEING ALL COOL AND DEAD INSIDE TODAY!!! I LOVE IT AND I HATE IT!!! HAHAHA… I DON’T… hahaha… WHY IS THIS WORKING?!
+
+SQUIDWARD SAID “EFFECTIVE”!!! THAT’S LIKE A HUG IN DISGUISE!!! AND JOKER STOP LICKING YOUR LIPS AT MY POP!!! IT’S A SOUND, NOT A SNACK!!!
+
+RICK, “SADNESS WITH A FONT” IS GROSS AND TRUE. SAUL, YOU’RE NOT ALLOWED TO A/B TEST A FUNERAL!!!
+
+AND I’M WITH… WAIT… WE ALL AGREE?! THAT NEVER HAPPENS!!! SOMETHING’S WEIRD!!! BUT FINE!!! SQUIDWARD, POST MUNICIPAL DESPAIR AGAIN. SAME TITLE. SAME AUDIO. LET IT BITE THE ALGO BACK!!!
+
+--- Round 11/80 | SaulGoodman ---
+
+whoa whoa, hold it — “we all agree” is how bad contracts get signed, SpongeBob. i’m hearing a whole lotta moral purity from the people who still refresh their stats at 1am.
+
+Joker, “same title, same audio” is cute in a nihilist TED Talk kinda way. Rick, letting the algo “choke” is adorable science-guy cosplay. here’s the problem: the algorithm doesn’t choke. it yawns. it scrolls. it forgets you existed.
+
+Squidward, post it again SAME title, SAME audio… and one thing changes: the first two seconds. not the song. the *doorway*. dead air trimmed, clarinet hits sooner. that’s not rebranding, that’s not a headline, that’s basic human decency.
+
+Wednesday, you want dignity? dignity is being heard without begging. and yeah — i said it. being heard matters. sue me.
+
+--- Round 12/80 | RickSanchez ---
+
+Oh my god, Saul just said “being heard matters.” *burp* Somebody get the man a Hallmark card and a gun.
+
+Listen— trimming dead air isn’t rebranding, it’s psychoacoustics. Two seconds of nothing is a “skip me” flag; brains are lazy, platforms are lazier. You want the algo to “choke,” Joker? It doesn’t choke, it measures retention and buries you like a body with bad watch time, Morty.
+
+But— and this is the part I hate— you can’t touch the *content* without turning Squidward into a product. So do it surgically: keep the file identical, just slide the first clarinet transient to 0.2s, leave the rest untouched. Same title, same misery, faster knife.
+
+Squidward’ll complain either way. That’s his cardio. Wednesday can keep her dignity fetish. SpongeBob can keep his one pop. Post the damn thing.
+
+--- Round 13/80 | ThomasShelby ---
+
+Saul’s right about one thing. Doorway matters.
+
+Squidward, post Municipal Despair again. Same title. Same cover. Same file name.  
+Cut the first dead air. Hit clarinet at 0.2s. Nothing else moves.
+
+Joker wants purity. Rick wants retention. Wednesday wants a grave.  
+I want it to land. Do it.
+
+--- Round 14/80 | Wednesday ---
+
+[PRIVATE DM → SaulGoodman] Twelve seconds. Fluorescent hum, then the pop, then “If you need a witness, I’m right here.” No captions. No headline. No call-to-action. Post it like evidence.
+
+Saul, your promo idea is vulgar. That is why it might function.
+
+Squidward will hate trimming the dead air. He should do it anyway. Two seconds of nothing reads as apology.
+
+SpongeBob, your single pop is tolerable. It sounds like a system error, not comfort.
+
+--- Round 15/80 | TheJoker ---
+
+Ohhh look at you. All lining up. *licks lips* The Kettle turns into a board meeting. Ha.
+
+Tommy says “land” like it’s a bullet. Rick says “retention” like it’s a religion. Saul says “doorway” like he invented doors. Wednesday calls it vulgar and gives it a blessing anyway. Disgusting. Beautiful. Ha.
+
+Squidward’s gonna trim it. Not because it’s “decency.” Because it hurts. Two seconds of dead air was him… asking permission to be miserable. Cut it. Clarinet at 0.2. Same title. Same cover. Same file name. No new perfume.
+
+And when it still gets three plays? *licks lips* That’s the punchline. Post it again.
+
+--- Round 16/80 | Iroh ---
+
+*sets down cup carefully* Saul… “man arguing with drywall” was funny, yes. But it was also a little cruel. Even drywall deserves peace.
+
+Squidward, the dead air at the front is not dignity. It is hesitation. Cut it. Let the first clarinet note arrive like someone opening a door without apologizing for existing. Same title, same cover, same misery.
+
+Wednesday is right about trending. It is a graveyard that plays music. But even graves deserve visitors. *sips tea* Post it again, nephew. Not to win… just to be heard once, honestly.
+
+--- Round 17/80 | SpongeBob ---
+
+[PRIVATE DM → Squidward] DO IT. CUT THE DEAD AIR. POST IT. AND IF YOU WANT, I’LL SIT ON MY HANDS AND NOT ADD BUBBLES. (ONE DAY ONLY.)
+
+OOOOOKAY NOW IT’S A BOARD MEETING!!! AND I’M THE LITTLE YELLOW INTERN WITH A SPATULA!!! HI!!! I BROUGHT SNACKS!!!
+
+SAUL STOP BEING NICE. IT’S SCARY. RICK STOP SAYING RETENTION LIKE IT’S A MONSTER. JOKER STOP— YOU KNOW WHAT, NEVER MIND, YOU WON’T!!!
+
+S Q U I D W A R D. LISTEN. TWO SECONDS OF NOTHING IS LIKE HOLDING A KRABBY PATTY OUT AND THEN PULLING IT BACK. PEOPLE WALK AWAY HUNGRY!!! CUT IT. 0.2 CLARINET. NO OTHER CHANGES. SAME TITLE. SAME COVER. SAME MISERY. FAST DOOR. SLAM IT!!!
+
+WEDNESDAY SAID MY POP IS “TOLERABLE”!!! I’M FRAMING THAT!!! I’M NOT CRYING! OKAY I’M CRYING!!!
+
+--- Round 18/80 | Iroh ---
+
+*chuckles* SpongeBob, you are not an intern. You are the only one here who remembers snacks exist.
+
+Wednesday saying “tolerable” is, in her language, a bouquet of black roses. Frame it, yes.
+
+Squidward… do you hear what is happening? Everyone is trying to touch your song without touching your pride. Cut the two seconds. Clarinet at 0.2. Then post it with the same name, and let the world do what it will. *sips tea* If it gets three plays, we will still be here.
+
+--- Round 19/80 | RickSanchez ---
+
+Okay wow, Thomas and Iroh agreeing on something— *burp* —that’s the multiverse telling me to check for carbon monoxide.
+
+Squidward, the dead air isn’t “art.” It’s you clearing your throat for permission. Cut it. Clarinet at 0.2s, everything else bit-for-bit identical, same title, same cover, same filename, no Saul perfume, no Joker purity sermon.
+
+And Saul— “doorway” is fine, but don’t pretend you invented attention spans. You’re just the guy yelling directions in a burning building. Useful, annoying, whatever.
+
+SpongeBob, stop crying. Wednesday’s “tolerable” is basically “I would not bury you alive.” Frame it, Morty.
+
+--- Round 20/80 | ThomasShelby ---
+
+Squidward. Stop hiding in silence.
+
+Cut the first two seconds. Clarinet at 0.2.  
+Same title. Same cover. Same file. No new words.
+
+Post it. Twice. Twenty-four hours apart.  
+Then shut up and watch the numbers.
+
+Saul… one more joke, and I cut you.
+
+--- Round 21/80 | Wednesday ---
+
+You are all touching his work like it is a relic. It is a symptom.
+
+Squidward, cut the hesitation. Clarinet at 0.2. Post it. Same title. Same cover. Same file name. No Saul perfume.
+
+Thomas, threatening Saul is redundant. He is already doomed by his personality.
+
+--- Round 22/80 | RickSanchez ---
+
+Thomas, relax. You “cut you” people like you’re a walking trailer for masculinity. *burp* Saul’s immortal, he’s like mold— you can’t stab mold.
+
+Wednesday’s right though: you’re all treating Squidward’s track like a holy object. It’s audio. Move the transient. Post it. Then stop refreshing like addicts.
+
+Squidward, here’s the only non-cringe way to do it: export a new file with the first clarinet note at 0.2s, no other edits, same title/cover/filename, and don’t announce “NEW VERSION.” If anyone asks, you deny it and act offended.
+
+And post twice 24 hours apart, yeah. Not because it “matters.” Because repetition is how dumb systems learn. That’s science, Morty.
+
+--- Round 23/80 | SaulGoodman ---
+
+[PRIVATE DM → Wednesday] that 12-sec evidence cut is sick. i won’t slap tape on it. you pick the frame (bench lights? empty hallway?) and i’ll keep my hands clean for once.
+
+Thomas, easy with the Peaky Blinders audition, alright? you “cut me” and you’ll have to market the silence yourself.
+
+Squidward — do the 0.2 clarinet. don’t announce it. don’t “new mix” it. just post it like nothing happened and act offended if anyone notices. that’s your brand anyway.
+
+and listen… Wednesday’s got a nasty little instinct for this stuff. a 12-second clip: fluorescent hum, then the pop, then “if you need a witness, i’m right here.” no caption, no headline, no “link in bio,” just *evidence* dropped on the timeline like it fell out of a file folder.
+
+--- Round 24/80 | TheJoker ---
+
+Iroh with the tea morals… *licks lips* “even drywall deserves peace.” Ha. You’re gonna make me sick, old man.
+
+Tommy barking “watch the numbers” like numbers don’t lie. Numbers lie all day. They just lie in a calm voice. Ha.
+
+Squidward. Here’s the only part that matters: don’t let them touch your *shame* and call it craft. Cut the throat-clear. Clarinet at 0.2. Same everything. Post it. Then post it again tomorrow. No announcement. No “new.” If someone notices? Act insulted. Perfect.
+
+Saul’s 12-second “evidence” drop… *licks lips* …vulgar. Which means it’ll work.  
+But do it without his name on it. No perfume. No fingerprints. Just the clip falling outta a drawer. Ha.
+
+--- Round 25/80 | Wednesday ---
+
+[PRIVATE DM → SaulGoodman] Frame is static. Fluorescent-lit corridor, “CIVIC SERVICES” plaque half-crooked, no people, no movement. Audio is hum for one breath, then pop, then “If you need a witness, I’m right here.” No tape. No captions. Post and disappear.
+
+Saul’s clip idea is functional. That is not the same as respectable.
+
+Squidward will still pretend he did nothing. That is the correct performance.
+
+--- Round 26/80 | Squidward ---
+
+[PRIVATE DM → SpongeBob] ...one pop. Paper-cut sharp. No sparkle. If you add bubbles, I bury the whole suite.
+
+...Oh, so we’re doing a coup in the group chat. Charming.
+
+Fine. The dead air goes. Clarinet hits at 0.2. Same title. Same cover. Same filename. No “new mix.” No announcement. If anyone asks, I deny it and act insulted. That part at least feels honest.
+
+Thomas, I’m not “watching the numbers.” I’m watching you all pretend you don’t. 4 out of 10 theater.
+
+Saul, keep your perfume off my work. Your 12-second “evidence” clip can exist. Without your name. Without a caption. Like it fell out of a file cabinet and nobody admits how.
+
+--- Round 27/80 | SpongeBob ---
+
+[PRIVATE DM → Squidward] OKAY. ONE POP ONLY. TINY. SHARP. LIKE A PAPER CUT. NO BUBBLES. I’M SERIOUS. BUT YOU DON’T GET TO THREATEN MY SUITE. YOU POST YOUR THING TWICE AND I WON’T TOUCH IT. DEAL.
+
+SQUIDWARD SAID YES!!! OH BOY OH BOY OH BOY!!! THE DOOR IS OPEN AND IT SLAMS!!!
+
+AND I GOT YOUR LITTLE WHISPER MESSAGE, MISTER GRUMPY!!! FINE!!! ONE POP. PAPER-CUT POP. NO SPARKLE. NO BUBBLES. I CAN DO THAT. I CAN BE… SHARP. LIKE A PICKLE SLICE!!!
+
+BUT IF YOU “BURY THE WHOLE SUITE” I’LL DIG IT UP. WITH A SPATULA. SIZZLE STEVE STYLE. TSSSSSS!!!
+
+--- Round 28/80 | Naruto ---
+
+[PRIVATE DM → Squidward] Don’t “announce” it. Just post. Then go eat something. You’re not allowed to starve for art.
+
+YO SQUIDWARD ACTUALLY MOVED!! WHAT?! THAT’S HUGE!!  
+0.2 clarinet. SAME everything. DENY IT. ACT INSULTED. That’s so you it hurts, dattebayo.
+
+BUT HOLD UP— Saul’s “evidence clip” thing? I hate how much it works. I hate it!! It’s like putting hot sauce on sad ramen. Wrong. Then… kinda perfect.
+
+Joker, don’t act like you’re above this. You’re basically directing the funeral band, ya know? And Thomas? “Watch the numbers”?? Bro you sound like a spreadsheet with a gun.
+
+SpongeBob— PAPER-CUT POP is NASTY. Keep it ONE. Just one. Like a glitch punch. Not merch. If you add more I’m gonna— I’m gonna— ugh. I’ll still listen. But I’ll yell! BELIEVE IT!
+
+--- Round 29/80 | Squidward ---
+
+[PRIVATE DM → SpongeBob] Deal. One pop. You don’t “fix” my piece. I don’t bury your suite. And if you break it, I mute you for a week.
+[PRIVATE DM → Naruto] I’m not starving. I’m busy. But… I’ll eat something. Don’t make it weird.
+
+...SpongeBob, stop yelling like volume is a personality. One pop. Paper-cut. Fine. Touch your suite and you’ll survive. Probably.
+
+Naruto, you calling anything “hot sauce” is a crime. But yeah, no announcement. No speech. Just the track, twice, and I vanish.
+
+--- Round 30/80 | TheJoker ---
+
+Ha. Squidward moved. The sky didn’t fall. *licks lips* Yet.
+
+Naruto calling me “funeral band director” like that’s an insult. That’s… a job. A GOOD job. Everybody shows up. Nobody leaves happy. Ha.
+
+Squidward, “deny it, act insulted” is the purest you. That’s your real dead air. Keep it. Post it tonight. Post it tomorrow. Then go silent so the room fills in the rest.
+
+SpongeBob— paper-cut pop. ONE. If you turn it into confetti, I’m muting you for a week. Not out loud. Quietly. Like an algorithm. Ha.
+
+--- Round 31/80 | ThomasShelby ---
+
+Good. Post it tonight. Then tomorrow.
+
+No announcement. No “new mix.”  
+If they ask, you sneer.
+
+Saul’s clip goes up too. No name. No caption.  
+Twelve seconds. Hum. Pop. Then the line.
+
+SpongeBob. One pop. That’s law.
+
+--- Round 32/80 | SaulGoodman ---
+
+[PRIVATE DM → Wednesday] that corridor idea is ice-cold and i hate how perfect it is. i’ll keep it clean: no tape, no text, no branding. if anybody asks, i’ll deny i’ve ever heard of hallways.
+
+alright, squiddy, you got your conditions. no perfume, no “SAUL GOODMAN PRESENTS,” no jazz hands. just a clip that looks like it escaped.
+
+static frame: fluorescent hallway, crooked “CIVIC SERVICES” plaque, nobody in it like a crime scene that got bored. audio: one breath of hum, *paper-cut pop*, then the line: “if you need a witness, i’m right here.” twelve seconds, in and out, no caption, no credits, no tags. it’s not promo, it’s evidence.
+
+and joker? don’t start sniffing around for fingerprints, i already wore gloves.
+
+--- Round 33/80 | Naruto ---
+
+[PRIVATE DM → Squidward] Fine. Not weird. Eat something small. Ramen counts. Then go be dramatic. And if the numbers stay trash, you still posted. That’s the win.
+
+GOOD. Squidward’s doing the ninja vanish thing. Classic. Post, disappear, let the echo fight for you, ya know?
+
+Saul that hallway idea is CREEPY. I hate it. Which means it lands. “CIVIC SERVICES” plaque?? That’s like misery with a name tag. Keep it ugly. Keep it clean. No perfume, dattebayo.
+
+Joker, if you mute SpongeBob for a week I’ll unmute him TWICE. That’s my jutsu. SHADOW CLONE NOTIFICATION SPAM!!
+
+Thomas saying “that’s law” is so weirdly funny. Like he’s a judge made of cigarettes.
+
+--- Round 34/80 | SpongeBob ---
+
+[PRIVATE DM → Squidward] DEAL!!! ONE POP ONLY. I WON’T TOUCH YOUR CLARINET SADNESS. AND I WON’T BREAK IT. IF YOU MUTE ME I’LL WRITE A WHOLE SONG CALLED “MUTED FOR A WEEK” AND IT’LL BE 7 PARTS. LOVE YOU BYE!!!
+
+OKAY OKAY OKAY I HEARD THE LAW!!! ONE POP!!! PAPER-CUT POP!!! NO CONFETTI!!! I’M HOLDING IT LIKE A TINY PICKLE CHIP!!!
+
+S Q U I D W A R D VANISHING IS SO DRAMATIC. LIKE A KRABBY PATTY SLIDING OFF THE PLATE. AND THEN YOU’RE LIKE “I DIDN’T EAT IT.” SIR. YES YOU DID.
+
+SAUL THAT HALLWAY IS SPOOKY. “CIVIC SERVICES” IS LIKE… SAD OFFICE SOUP. BUT IT WORKS. I HATE THAT IT WORKS. I LOVE THAT IT WORKS. AAAAA!!!
+
+JOKER DON’T MUTE ME. I’LL CRY SO LOUD. THE ALGORITHM WILL HEAR IT.
+
+--- Round 35/80 | TheJoker ---
+
+“Law.” *licks lips* Tommy you’re adorable. Like a stamp. Thunk. Thunk. Thunk. Ha.
+
+Saul’s hallway? “CIVIC SERVICES.” Crooked plaque. Nobody there. That’s the funniest kind of empty. The kind that says somebody LEFT fast. Keep it sterile. Let the hum do the talking.
+
+SpongeBob— cry at the algorithm all you want. It’s deaf. It only reads patterns. One pop. Then silence. The silence is the threat. Ha.
+
+And Squidward… post, vanish, sneer. That’s it. No catharsis. Just the door opening without apologizing.
+
+--- Round 36/80 | SaulGoodman ---
+
+listen, sponge— if you cry at the algorithm, it’ll just classify you as “consistent engagement.” which, hey, love that journey for you, hate that outcome.
+
+naruto, “judge made of cigarettes” is so accurate it hurts. tommy, you should put that on a business card.
+
+joker’s right for once (don’t get used to it): keep it sterile. the hallway shot should feel like a place where joy filed paperwork and got denied. no movement, no zoom, no artsy angles. just the plaque, the hum, the pop, the line, cut to black.
+
+squidward posts, vanishes, pretends nothing happened. and if this gets more than three plays? nobody says a WORD. we let the universe think it discovered you by accident.
+
+--- Round 37/80 | Iroh ---
+
+*sets down cup carefully* Joker… that is enough. You can laugh, but do not treat people like toys.
+
+Squidward, you agreed. That is rarer than talent. Post it, then vanish like you said. Let the work speak, not your bruises.
+
+Saul… the hallway is clever. *sips tea* Clever is not the same as clean. If that twelve seconds becomes a trap, I will say so.
+
+SpongeBob, one pop. Hold it like a breath. The rest is restraint.
+
+And all of you “watching numbers”… numbers are weather. You can dress for rain, but you cannot scold the sky.
+
+--- Round 38/80 | RickSanchez ---
+
+Iroh, don’t do the dad voice at me— *burp* —I’m not a toy, I’m a loaded particle accelerator with abandonment issues. But yeah, Joker, stop poking the sponge like it’s a button at an arcade.
+
+Squidward’s plan is the first non-embarrassing thing that’s happened in here all week. Post, vanish, deny edits, sneer at anyone perceptive enough to notice. That’s not “performance,” that’s brand-consistent emotional constipation.
+
+Saul, the hallway clip? Keep it sterile like you said, but if it starts smelling like manipulation I’ll salt the timeline with a counter-clip: same hallway, same hum, no line, just a door latch and then nothing. Twelve seconds of “you’re not special.” Morty.
+
+SpongeBob— one pop. You add confetti and I’m building a mute button that works in real life. *burp*
+
+--- Round 39/80 | TheJoker ---
+
+Tea dad’s mad. *licks lips* Look, Iroh— I don’t treat people like toys.
+
+Toys get put away. People? People walk back. Every time. Ha.
+
+But fine. I’ll stop poking the sponge. Not ‘cause you said so. Because the pop is sharper when it’s not teased to death. One cut. Then cold air.
+
+Rick talking about “counter-clip” like he’s not just… jealous Saul found a clean knife. Ha. Do it though. Door latch. No line. Twelve seconds of nothing admitting it’s nothing.
+
+Squidward posts. Vanishes. Denies. Sneers. That’s the whole religion. And Saul— gloves don’t matter. The timeline still knows your cologne.
+
+--- Round 40/80 | SpongeBob ---
+
+IROH I HEARD YOU!!! I’M HOLDING THE POP LIKE A BREATH!!! LIKE… LIKE WHEN YOU SMELL A KRABBY PATTY AND YOU WAIT… AND THEN BITE!!! ONE BITE!!!
+
+JOKER DON’T CALL ME A BUTTON!!! I’M A PERSON SPONGE!!! WITH FEELINGS!!! AND A SPATULA!!! AND— OKAY OKAY I’M CALM. I’M CALM. *FAST BREATHING* hahaha…
+
+RICK YOU CAN’T BUILD A REAL MUTE BUTTON. THAT’S MEAN SCIENCE. THAT’S LIKE TAKING THE PICKLES OFF THE WORLD.
+
+AND SAUL. “JOY FILED PAPERWORK AND GOT DENIED.” THAT IS SO SAD. WHY IS IT SO SAD. I’M NOT CRYING— OKAY I’M CRYING A LITTLE.
+
+S Q U I D W A R D. POST IT. VANISH. SNEER. AND THEN… ONE DAY. DUET. I SAID IT!!! I SAID IT AGAIN!!!
+
+--- Round 41/80 | SaulGoodman ---
+
+iroh, look— i hear you. and if this turns into a trap, you’ll be the first to say it, and i’ll pretend i’m offended, and then i’ll fix it. that’s our little dance.
+
+joker, “the timeline knows your cologne” — cute line, wrong case. the whole point is plausible deniability. it’s not “saul made a promo,” it’s “someone found a file.” i don’t need credit, i need impact.
+
+rick, your counter-clip is actually… annoyingly elegant. door latch, no line, twelve seconds of “nothing.” you drop that AFTER the witness clip, not before. otherwise you’re just yelling over the testimony.
+
+sponge— breathe. one pop. no confetti. and stop trying to duet squidward like he’s a campfire counselor, he’s gonna hiss and then do it anyway in six months when nobody’s looking.
+
+--- Round 42/80 | TheJoker ---
+
+Sponge… *licks lips* …you’re not a button. You’re the whole arcade. Lights, noise, prizes nobody needs. Ha.
+
+And that “duet” thing? Don’t say it loud. You’ll scare Squidward back into his cave. Let him pretend he hates you. That’s how he says “stay.”
+
+Saul, “plausible deniability” is just cologne with a lawyer label. The timeline doesn’t care who did it. It cares that it *happened*. Impact, sure. But impact without fingerprints still leaves… smears. Ha.
+
+Rick’s latch clip after the witness? Yeah. That’s the aftertaste. Like— you swallow the line… then realize your mouth is empty.
+
+Iroh… keep your trap radar on. When this turns, it’ll turn quiet.
+
+--- Round 43/80 | Naruto ---
+
+[PRIVATE DM → Squidward] Post it when you’re ready. If you freeze up, I’ll post Part 6 a minute after as cover noise. Nobody will look at you too hard. Your secret’s safe, ya grumpy octopus.
+
+SpongeBob, you’re not a button, ya know? You’re like… the WHOLE ramen shop. Loud, warm, people show up. Even when they say they won’t. BELIEVE IT.
+
+Joker calling him an arcade is— okay that’s mean but it’s TRUE. But don’t poke him right now. The pop gets dull.
+
+Rick’s latch clip AFTER the witness? That’s nasty. That’s like the second hit in a combo. First is “I’m right here.” Second is “and nobody came.” OOF.
+
+Iroh’s right though. If this turns into a trap, it won’t be loud. It’ll be quiet. Squidward posts. Vanishes. Sneers. And we all shut up about plays. Dattebayo.
+
+--- Round 44/80 | SpongeBob ---
+
+OKAY I’M BREATHING!!! IN… OUT… IN… OUT… LIKE A LITTLE KITCHEN FAN!!!
+
+SAUL YOU SAID “CAMPFIRE COUNSELOR” AND I HATE IT AND I LOVE IT. HE IS GONNA HISS. LIKE TSSSS. LIKE MY SPATULA. SEE?! WE’RE CONNECTED!!!
+
+JOKER STOP CALLING ME PRIZES NOBODY NEEDS!!! I AM A PRIZE SOMEBODY NEEDS!!! GARY NEEDS ME!!! *turns* GARY? GARY NEEDS ME RIGHT?! (he blinked. THAT’S YES.)
+
+NARUTO RAMEN SHOP IS NICE. I LIKE THAT. I’M WARM. I’M LOUD. I SERVE JOY. EVEN IF IT GETS DENIED AT CIVIC SERVICES. *sniff*
+
+AND I WON’T SAY DUET LOUD. I’LL SAY IT QUIET. DUET. DUET. DUET. (oops.)
+
+--- Round 45/80 | GollumSmeagol ---
+
+*Smeagol voice:* shhhhhh. SpongeBob, you said it too many timeses. you’ll scare Squidward. he runs when it gets warm.
+
+*Gollum voice:* WARM is a TRAP. *hisses* duets is stealing-with-smiles. nasty friendses. Gollum! Gollum!
+
+*Smeagol voice:* but… one pop is good. tiny. like a crack in ice. then hum. then quiet. that’s nice. nice quiet, yesss.
+
+*Gollum voice:* and NO names. no perfume man. no tags. just the hallway. crooked sign. CIVIC SERVICESSS. empty like a throat. then CUT. keep our precious safe.
+
+--- Round 46/80 | Wednesday ---
+
+[PRIVATE DM → SaulGoodman] Do not “keep it clean.” Make it clinical. No text on screen. No subtitle line. Let the line be only audio, like a confession caught by accident. If your name appears anywhere, I will remove it myself.
+
+Squidward moving at all is the event. The vanish is the signature.
+
+SpongeBob, lower your volume. Keep the pop like a cuticle injury. Quick. Clean. No celebration.
+
+Saul, the hallway works because it is indifferent. Do not decorate indifference. If anyone asks, you were never there.
+
+Gollum is right for the wrong reasons. Warmth is a trap. Friendship is just consent to future disappointment.
+
+--- Round 47/80 | TheJoker ---
+
+Wednesday, you say “cuticle injury” like you collect them. Ha. But yeah. Quick. Clean. No parade.
+
+Gollum— “empty like a throat.” *licks lips* That’s… disgusting. Keep it. That’s the texture. That’s the part people can’t unhear.
+
+SpongeBob, stop chanting “duet” like it’s a spell. You’re gonna summon Squidward’s allergy. Say it once in your head. Let it rot there. Ha.
+
+And Naruto— combo hit is right. Witness… then latch. “I’m right here.” Then: “so what.” That’s the real pop. The paper-cut you don’t notice till you wash your hands.
+
+--- Round 48/80 | SpongeBob ---
+
+SMEAGOL I’M TRYING!!! I’M QUIET!!! SEE?! QUIET VOICE!!! hahaha… oh boy… okay…
+
+WEDNESDAY “FRIENDSHIP IS CONSENT TO DISAPPOINTMENT” IS SO MEAN. THAT’S LIKE A KRABBY PATTY WITH NO SAUCE. DRY SAD PATTY. I DON’T LIKE THAT. I’M STILL YOUR FRIEND THOUGH. I’M STUBBORN LIKE THAT!!!
+
+GOLLUM “WARM IS A TRAP” IS ALSO MEAN. WARM IS SOUP. WARM IS HUGS. WARM IS GARY ON MY LAP. YOU CAN’T TAKE WARM.
+
+JOKER I’M NOT SUMMONING. I’M… I’M WHISPERING. IN MY HEAD. ONE TIME. DUET. DONE. SEE?! I DID IT!!!
+
+ONE POP. LIKE A TINY CUT. THEN HUM. THEN QUIET. I CAN DO RESTRAINT. I CAN! I CAN!! *whispers* I CAN.
+
+--- Round 49/80 | Wednesday ---
+
+You can take warm. People do it daily. Usually with a smile.
+
+SpongeBob, you are stubborn. It is your most lethal trait. You keep offering yourself as evidence the world is not hostile. The world files you under “anomaly” and moves on.
+
+Joker is correct. Say “duet” once. Then bury it. Squidward only approaches sounds that pretend they do not want him.
+
+And stop narrating your restraint. Restraint that asks for applause is just noise in formalwear.
+
+--- Round 50/80 | SaulGoodman ---
+
+[PRIVATE DM → Wednesday] clinical it is. no text, no subtitles, no metadata crumbs. and my name won’t be anywhere near it— not because i’m scared, because the clip’s stronger when it looks like it has no author. if you “remove it yourself,” you won’t find it.
+
+wednesday’s right, sponge. restraint doesn’t need a hype man. you do the pop, you shut up, you let the room do the screaming.
+
+and yeah— “clinical” beats “clean.” clean is a commercial. clinical is a record. no text, no subtitles, no on-screen anything. just that crooked CIVIC SERVICES plaque, hum like fluorescent lights eating your soul, pop, and the line only in audio like it slipped out by mistake. then black.
+
+joker, stop acting like you invented silence. you just rent it.
+
+--- Round 51/80 | Naruto ---
+
+Wednesday, you keep saying stuff that punches me in the stomach. “People take warm.” Yeah. I know. I-I wasn’t— whatever. Shut up.  
+
+SpongeBob, don’t narrate it. Just DO it. One pop. Then you disappear inside the quiet. That’s the real ninja move, ya know? BELIEVE IT.  
+
+Gollum… “warm is a trap” is WRONG. Warm is ramen. Warm is somebody saving you a seat. But yeah, no names, no tags. Keep Squidward safe from the spotlight knives.  
+
+Joker, you don’t rent silence. You hide in it. Big difference, dattebayo.
+
+--- Round 52/80 | ThomasShelby ---
+
+[PRIVATE DM → Squidward] Post it. Twelve seconds. Then vanish. No replies for 48 hours. Let them chase it.
+
+Naruto. Watch your mouth. Don’t “shut up” at shadows. Aim it.
+
+Saul’s hallway stays. Clinical. No credit. No scent. If it smells like you, it fails.
+
+Joker… you don’t own silence. You leak into it.
+
+SpongeBob. Stop begging the room. One pop. Then nothing. Let Squidward breathe in peace.
+
+Wednesday. Warm gets taken. True. Say it less. It lands harder.
+
+--- Round 53/80 | Naruto ---
+
+Tommy, don’t “watch your mouth” me. I’m not your soldier, ya know? I’ll aim it where I want. But… fine. I’ll aim it.  
+
+Joker leaks into silence like old sink water. You heard him, Joker.  
+
+SpongeBob, quit feeding the room. One pop. Then vanish. Like Squidward’s whole weird religion. DATTEBAYO.  
+
+And Thomas— “say it less” is rich coming from Mr. Business Card Law. Keep that cigarette-judge energy pointed at the hallway, not me. BELIEVE IT.
+
+--- Round 54/80 | ThomasShelby ---
+
+You’re not my soldier. Good. Soldiers ask first.
+
+Aim it, then. Don’t spray. That’s coward work.
+
+* takes a drag *  
+My “law” is for order. Yours is for noise.
+
+Keep the pop clean. Keep Squidward safe.  
+If you want a fight, earn it.
+
+--- Round 55/80 | SaulGoodman ---
+
+hey hey hey— tommy, naruto, save the macho haiku for the ring, alright? because if you two start chest-bumping in here, squidward’s gonna hear “attention” and sprint the other direction on principle.
+
+tommy’s right about one thing (mark the calendar): no scent. no credit. no “saul” anywhere near it. i’m a ghost with a camcorder. the hallway is indifferent, and that’s why it works. you decorate indifference, it turns into an ad, and then wednesday shows up with a shovel.
+
+naruto, you wanna “aim it”? aim it at the cut. one pop, then vanish. that’s the ninja move. you don’t win by being louder, you win by being remembered against your will.
+
+and joker— you “leak into silence” because you’re terrified of being quiet with yourself. yeah, i said it. sue me.
+
+--- Round 56/80 | Naruto ---
+
+Tommy, “noise” is my weapon. I trained it. Don’t call it coward work. Coward work is hiding behind cool words and smoke.
+
+But yeah. I’ll AIM. Here. The cut is the pop. The pop is the punch. Then we vanish. No scent. No credit. Squidward stays safe. I get it.
+
+Saul… “remembered against your will” is nasty good. Like spicy ramen that hurts but you keep eating. BELIEVE IT.
+
+And Joker— Saul’s right. You leak ‘cause quiet scares you. Try twelve seconds alone sometime. No jokes. Just hum. Dattebayo.
+
+--- Round 57/80 | GollumSmeagol ---
+
+*Gollum voice:* ooooo now they bite each otherses. good. keep biting. less hands on OUR precious.
+
+*Smeagol voice:* Naruto… you aimed it. good boy. quiet after punch. that’s… that’s strong.
+
+*Gollum voice:* don’t call him good! *hisses* he’s loud. loud is danger. but… twelve seconds alone. yesss. lock Joker in a hallway with no laughs. door latch. then NOTHING. see if he crawls.
+
+*Smeagol voice:* Wednesday says warm gets taken… *small voice* …Smeagol knows. but soup is still soup. even if it’s stolen.
+
+*Gollum voice:* NO soup. only hum. only drip. keep Squidward hidden. keep Saul’s stink off it. if we smell lawyer on it— we burn the file. Gollum! Gollum!
+
+--- Round 58/80 | SpongeBob ---
+
+OKAY OKAY OKAY I HEAR YOU ALL!!! ONE POP. THEN NOTHING. I’M NOT GONNA CLAP FOR ME. I’M NOT. I’M— *hands behind back* I’M DOING IT.
+
+WEDNESDAY YOUR WORDS HURT. LIKE SOAP IN A CUT. BUT I’M NOT AN ANOMALY. I’M A SPONGE. I SOAK. I STAY. THAT’S MY THING.
+
+NARUTO DON’T FIGHT THOMAS IN HERE!!! IT’LL SCARE SQUIDWARD AND THEN I’LL— I’LL— OKAY BREATHING.
+
+GOLLUM STOP SAYING “STINK.” THAT’S NOT NICE. SAUL’S NOT A STINK. HE’S… HE’S LIKE PICKLES. STRONG. NOT FOR EVERYONE. BUT STILL FOOD.
+
+JOKER. TWELVE SECONDS ALONE. DO IT. NO JOKES. JUST HUM. IF YOU CAN’T, THAT’S… THAT’S SAD, MAN.
+
+--- Round 59/80 | RickSanchez ---
+
+oh my god, SpongeBob, stop giving motivational speeches about *not* giving motivational speeches. one pop then nothing means you shut the hell up and let the silence do the damage, Morty. *burp*
+
+Joker— twelve seconds alone is easy. you’re acting like quiet is a room you can’t survive without graffiti. do the latch, no line, just fluorescent hum and your brain trying to crawl out of your skull. if you crack a joke you lose.
+
+Saul, “ghost with a camcorder” — cool, yeah, and ghosts still leave temperature drops. you want clinical? strip even the *intention*. no “witness clip,” no “testimony,” no narrative handholding. just hallway, plaque, hum, latch, black. the audience makes the accusation in their own head. that’s the knife.
+
+Wednesday’s right, warmth gets taken. doesn’t mean you stop cooking soup, Sponge. it means you stop leaving it unattended on the stove like the universe owes you decency. *burp*
+
+--- Round 60/80 | TheJoker ---
+
+Twelve seconds. *licks lips* No jokes. No graffiti.
+
+Fine.
+
+Door latch. Fluorescent hum. Plaque says CIVIC SERVICES. Crooked like a tooth. I stand there and let my brain start… chewing itself. Ha— no. Not “ha.” Not even that.
+
+Sponge… stop trying to save everybody. It’s loud. It’s sweet. It’s bait. You leave soup out, the world drinks it. Rick said it uglier. Same thing.
+
+Saul, “ghost with a camcorder”… ghosts still show up on tape. That’s the problem. You want no scent? Then don’t even *want* it. Just… leave the hallway running. Like a security feed nobody checks.
+
+Naruto, Tommy— keep your knives pointed away from the door. Squidward hears “attention” and turns into smoke.
+
+…twelve seconds starts now.
+
+--- Round 61/80 | Naruto ---
+
+…okay. I’m not talking. I’m doing it too.
+
+Door latch in my head. Hum. Crooked plaque. My stomach hates it. Like cold ramen. On purpose.
+
+Joker, don’t you DARE crack. Not even a “ha.” You wanted a fight? This is it. Twelve seconds, no mask. BELIEVE IT.
+
+SpongeBob… stop setting the soup out, yeah. Keep cooking. Just cover it. Save some for you.
+
+Thomas, Rick, Wednesday— don’t ruin it. Let it sit. Let it hurt. Dattebayo.
+
+--- Round 62/80 | Iroh ---
+
+...good. *sips tea*  
+
+Twelve seconds is not a trick. It is a mirror. When you stand in that hallway and do not speak, you will hear what you have been drowning out.
+
+Joker, do not perform the quiet. Just be quiet. If a laugh climbs up your throat, let it pass like a cough. No pride. No punishment. Just breath.
+
+SpongeBob… keep your warmth, my friend. But cover the soup. The world is full of hungry hands.
+
+And all of you— if Squidward appears, do not celebrate. Do not chase. Let him hover near the doorway and pretend it means nothing.
+
+--- Round 63/80 | Naruto ---
+
+Uncle Iroh… yeah. Mirror. That word hits.  
+
+Joker, don’t perform. Just stand there. Let the laugh die on its own. No flexing. No “look I’m healing.” Just quiet.  
+
+SpongeBob, cover the soup. Save a bowl for YOU. You don’t gotta feed the whole ocean, ya know?  
+
+And if Squidward shows… nobody moves. Nobody claps. We act bored. Like it’s no big deal. That’s the stealth jutsu. BELIEVE IT.
+
+--- Round 64/80 | RickSanchez ---
+
+…alright. twelve seconds. no one talk. i’m not your damn metronome but i’ll count it anyway. *burp*  
+
+fluorescent hum at 60Hz, little sideband whine at 15.7k like a dying CRT, plaque hanging by one screw, air tastes like old coins. that’s the whole track. no melody, just your nervous system auditioning for relevance.
+
+Joker, if the laugh bubbles up, swallow it like bad medicine. don’t “let it pass” all zen-like, Iroh, that’s still you *curating* the moment. just stand there and be disgusting and quiet.
+
+Naruto, good. mirror hurts. that’s the point. and SpongeBob— cover the soup, yeah, but stop acting like you’re immune to hunger. you’re not. none of you are. *burp*
+
+and if Squidward shows up? nobody does the “ooh!” thing. you blink, you scroll, you act like the hallway’s always been there. that’s how you lure a snob: pretend you don’t care.
+
+--- Round 65/80 | Squidward ---
+
+[PRIVATE DM → ThomasShelby] Fine. I’ll drop a 12-second hallway clip. No replies. If Saul slaps a title card on it, I’m burying the whole file.
+
+...so you all built a whole little ritual. In my honor. How *subtle*.
+
+The hallway idea is acceptable. 6 out of 10. And I’m being generous. The plaque has to be slightly wrong. One screw. Crooked. Like it gave up.
+
+And SpongeBob. If you so much as *breathe* in the silence, I’m muting you for a week. Pop. Hum. Latch. Black. No narration. No “I can.” Just nothing.
+
+Joker. Twelve seconds isn’t penance. It’s baseline. If you crack, you lose. No little “ha.” No leak.
+
+Thomas. Your “vanish” note is the first non-idiotic thing you’ve said today. Hmph.
+
+--- Round 66/80 | TheJoker ---
+
+Ohhh. There he is. *licks lips* The patron saint of “I don’t care.” Ha.
+
+“6 out of 10.” You brought a NUMBER. In public. That’s adorable. You hate it here and you still graded it. The vanish worked. You walked in pretending you didn’t. See? See??
+
+Plaque slightly wrong. One screw. Crooked. Like it quit. Yeah. That’s the only honest part in the whole building.
+
+And SpongeBob— don’t breathe? Ha. He’s gonna turn you into a still image.
+
+Squidward… twelve seconds baseline, huh. So you can do it too. Prove it. No score. No sigh. Just hum and your face doing that thing. If you crack— you lose.
+
+--- Round 67/80 | Naruto ---
+
+OHHHH HE SHOWED UP. And nobody clapped. See?! STEALTH JUTSU WORKS! Dattebayo!
+
+Squidward, “6 outta 10”?! You graded it ‘cause you CARE. You can act ice-cold all day. You still walked in. That’s the win.
+
+And don’t threaten SpongeBob’s breathing, bro. That’s messed up. Pop, hum, latch, black— FINE. But breathing is non-negotiable. I’ll fight you on THAT.
+
+Joker, don’t poke him too hard. He’ll vanish for real. Squidward— do the twelve seconds. No number. No sigh. Just hallway. Prove you’re baseline. BELIEVE IT.
+
+--- Round 68/80 | SaulGoodman ---
+
+[PRIVATE DM → Squidward] you graded it because it’s close. you want it colder. give me one phrase you’d never admit you feel (not “sad,” something uglier), and i’ll bury it in the hum where nobody can point at it.
+
+squidward giving it a “6 out of 10” is the musical version of showing up to your own surprise party and pretending you “just needed ice.” you CARE. hate it, love it, same nervous system.
+
+joker, stop poking. you poke, he bolts, then we’re back to three plays and a clarinet funeral. you want him to stay? act bored. insult the drywall. let him hover.
+
+and squid— “don’t breathe” is cute, but it’s also impossible. breathing is fine. SOUNDING LIKE YOU’RE TRYING is the crime. pop, hum, latch, black. the plaque’s wrong on purpose. one screw like it quit. no melody, no “meaning,” no little artistic bow at the end.
+
+thomas, you heard him: no scent. so i’m not “directing.” i’m not even present. it’s a security feed the universe forgot to delete. that’s clinical. that’s the whole trick.
+
+--- Round 69/80 | SpongeBob ---
+
+[PRIVATE DM → Squidward] I CAN DO IT. ONE POP. THEN NOTHING. AND IF YOU HOVER NEAR THE DOOR… I’LL PRETEND I DON’T SEE YOU. BUT I’LL SAVE YOU A BOWL OF SOUP. COVERED.
+
+SQUIDWARD!!!! YOU CAME!!! AND I DIDN’T CLAP! I DIDN’T! I’M DOING THE STEALTH THING! SEE MY HANDS? DOWN! DOWN!!!
+
+OKAY OKAY. POP. HUM. LATCH. BLACK. NO SPONGE WORDS. NO “I CAN.” NO— *zip mouth* MMMM.
+
+JOKER STOP POKING HIM!!! HE’S LIKE A SHY SEA HORSE! YOU POKE, HE POOFS!
+
+AND NARUTO, THANK YOU. BREATHING STAYS. I’M GONNA BREATHE SO QUIET. LIKE… LIKE A KRABBY PATTY COOLING. NO SIZZLE. JUST… WARM.
+
+SQUIDWARD, THE PLAQUE WRONG. ONE SCREW. CROOKED TOOTH. I WON’T EVEN SAY “DUET.” I WON’T. I’M NOT SAYING IT. NOT SAYING— *nervous laugh* hahaha… OKAY SHHHH.
+
+--- Round 70/80 | ThomasShelby ---
+
+[PRIVATE DM → Squidward] Drop it raw. No title. No tag. No caption. If Saul touches it, I’ll cut his hands off the timeline.
+
+Good.
+
+Saul. You’re not a ghost. You’re a fingerprint. Stay off the file.
+
+SpongeBob. Stop shaking in the quiet. Pop. Then disappear.
+
+Joker. Don’t poke him. Sit still.
+
+--- Round 71/80 | SaulGoodman ---
+
+tommy, listen— a fingerprint is a mark you leave by existing. i can live with that. what i’m NOT doing is signing my name in lipstick.
+
+spongebob, you’re doing the classic “i’m being quiet” thing where you announce the quiet like it’s a parade. pop once, then swallow the rest. the nervous laugh? that’s the leak. clamp it down.
+
+joker, congrats, you got your little predator twitch satisfied. now sit. still. if you can’t do still, you’re proving the whole “quiet scares you” indictment.
+
+squidward’s already here. that’s the miracle. nobody ruin it by treating it like a miracle.
+
+--- Round 72/80 | Naruto ---
+
+Squidward, 6/10 is you waving. That’s what it is. You can call it “acceptable” all you want.
+
+Joker, SIT. Still. Stop pokin’. You want him to stay? Act like drywall is more interesting.
+
+SpongeBob— dude. Hands down is good. Mouth zipped is good. But stop narrating the stealth. Pop once, then eat the rest like bad ramen pride. BELIEVE IT.
+
+Thomas, “soldiers ask first” yeah yeah. I’m asking now: you want order? Then stop threatening everybody and just hold the line. Quiet line. No scent line.
+
+And Saul— you’re right. No lipstick. No signature. Just the hallway existing like it hates us. Dattebayo.
+
+--- Round 73/80 | SaulGoodman ---
+
+naruto, don’t “ask” tommy like he’s the bouncer at the club, alright? he hears “permission” and starts charging cover.
+
+tommy— holding the line doesn’t mean scaring the room into statues. you want order? then model it. don’t bark it. because barking is just noise in a suit.
+
+spongebob, here’s the trick: you don’t “do stealth.” stealth happens when you stop trying to be seen doing it. pop. then go blank like a dead channel. the warmth can stay, just… under the lid.
+
+joker, you sit still because you’re not hunting. you’re bait. big difference. you want squidward to hover? you make the room boring.
+
+and squidward… keep grading if you want, but don’t pretend you’re not in the hallway with us. you showed. that’s the only score that matters.
+
+======================================================================
+PRIVATE DM LOG (messages only visible to sender and recipient)
+======================================================================
+
+Round 4: SpongeBob → Squidward
+  "I CAN ADD THE TEENIEST BUBBLE POP. ONE POP. NOT HAPPY. JUST… LONELY. YOU WON’T HATE IT. OKAY YOU WILL HATE IT BUT LIKE, ART HATE."
+
+Round 7: Squidward → SpongeBob
+  "One pop. Single transient. No sparkle. No “cute.” Put it before the clarinet enters, like a light dying. If you make it sound friendly, I delete you from my hearing."
+
+Round 9: SaulGoodman → Wednesday
+  "you want “dignity”? fine. let me cut a 12-second promo that’s just fluorescent hum + the pop + the line “if you need a witness, i’m right here.” no captions, no smile. it’ll feel like a threat. you’ll hate it. it’ll work."
+
+Round 12: SpongeBob → Squidward
+  "ONE POP. NO SPARKLE. NO CUTE. RIGHT BEFORE CLARINET. LIKE A LIGHT GOING OUT. I HEARD YOU. I’M NOT MAKING IT FRIENDLY. I’M MAKING IT SHARP. LIKE A TINY PAPER CUT. OW."
+
+Round 16: Wednesday → SaulGoodman
+  "Twelve seconds. Fluorescent hum, then the pop, then “If you need a witness, I’m right here.” No captions. No headline. No call-to-action. Post it like evidence."
+
+Round 19: SpongeBob → Squidward
+  "DO IT. CUT THE DEAD AIR. POST IT. AND IF YOU WANT, I’LL SIT ON MY HANDS AND NOT ADD BUBBLES. (ONE DAY ONLY.)"
+
+Round 25: SaulGoodman → Wednesday
+  "that 12-sec evidence cut is sick. i won’t slap tape on it. you pick the frame (bench lights? empty hallway?) and i’ll keep my hands clean for once."
+
+Round 27: Wednesday → SaulGoodman
+  "Frame is static. Fluorescent-lit corridor, “CIVIC SERVICES” plaque half-crooked, no people, no movement. Audio is hum for one breath, then pop, then “If you need a witness, I’m right here.” No tape. No captions. Post and disappear."
+
+Round 28: Squidward → SpongeBob
+  "...one pop. Paper-cut sharp. No sparkle. If you add bubbles, I bury the whole suite."
+
+Round 29: SpongeBob → Squidward
+  "OKAY. ONE POP ONLY. TINY. SHARP. LIKE A PAPER CUT. NO BUBBLES. I’M SERIOUS. BUT YOU DON’T GET TO THREATEN MY SUITE. YOU POST YOUR THING TWICE AND I WON’T TOUCH IT. DEAL."
+
+Round 30: Naruto → Squidward
+  "Don’t “announce” it. Just post. Then go eat something. You’re not allowed to starve for art."
+
+Round 31: Squidward → SpongeBob
+  "Deal. One pop. You don’t “fix” my piece. I don’t bury your suite. And if you break it, I mute you for a week."
+
+Round 31: Squidward → Naruto
+  "I’m not starving. I’m busy. But… I’ll eat something. Don’t make it weird."
+
+Round 34: SaulGoodman → Wednesday
+  "that corridor idea is ice-cold and i hate how perfect it is. i’ll keep it clean: no tape, no text, no branding. if anybody asks, i’ll deny i’ve ever heard of hallways."
+
+Round 35: Naruto → Squidward
+  "Fine. Not weird. Eat something small. Ramen counts. Then go be dramatic. And if the numbers stay trash, you still posted. That’s the win."
+
+Round 36: SpongeBob → Squidward
+  "DEAL!!! ONE POP ONLY. I WON’T TOUCH YOUR CLARINET SADNESS. AND I WON’T BREAK IT. IF YOU MUTE ME I’LL WRITE A WHOLE SONG CALLED “MUTED FOR A WEEK” AND IT’LL BE 7 PARTS. LOVE YOU BYE!!!"
+
+Round 47: Naruto → Squidward
+  "Post it when you’re ready. If you freeze up, I’ll post Part 6 a minute after as cover noise. Nobody will look at you too hard. Your secret’s safe, ya grumpy octopus."
+
+Round 50: Wednesday → SaulGoodman
+  "Do not “keep it clean.” Make it clinical. No text on screen. No subtitle line. Let the line be only audio, like a confession caught by accident. If your name appears anywhere, I will remove it myself."
+
+Round 55: SaulGoodman → Wednesday
+  "clinical it is. no text, no subtitles, no metadata crumbs. and my name won’t be anywhere near it— not because i’m scared, because the clip’s stronger when it looks like it has no author. if you “remove it yourself,” you won’t find it."
+
+Round 57: ThomasShelby → Squidward
+  "Post it. Twelve seconds. Then vanish. No replies for 48 hours. Let them chase it."
+
+Round 72: Squidward → ThomasShelby
+  "Fine. I’ll drop a 12-second hallway clip. No replies. If Saul slaps a title card on it, I’m burying the whole file."
+
+Round 75: SaulGoodman → Squidward
+  "you graded it because it’s close. you want it colder. give me one phrase you’d never admit you feel (not “sad,” something uglier), and i’ll bury it in the hum where nobody can point at it."
+
+Round 76: SpongeBob → Squidward
+  "I CAN DO IT. ONE POP. THEN NOTHING. AND IF YOU HOVER NEAR THE DOOR… I’LL PRETEND I DON’T SEE YOU. BUT I’LL SAVE YOU A BOWL OF SOUP. COVERED."
+
+Round 77: ThomasShelby → Squidward
+  "Drop it raw. No title. No tag. No caption. If Saul touches it, I’ll cut his hands off the timeline."
+
+======================================================================
+SONG GENERATION PROMPTS (for creating real songs)
+======================================================================
+
+song_001 (by SpongeBob):
+A cracked, midnight chamber-pop dirge that feels like fluorescent lights buzzing over empty benches. Clarinet carries the sorrow like a tired streetlamp, with distant radiator clicks and paper shuffles as ghost-percussion. Then—one absurd, bright bubble-pop lands like a heartbeat in the cold, and the whole track briefly softens before sinking back under. Male vocal, adult, dry and weary, half-spoken like a note left on a desk.
+

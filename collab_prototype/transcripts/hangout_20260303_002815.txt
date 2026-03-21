@@ -1,0 +1,434 @@
+AGENT INTERACTION SESSION
+Mode: hangout
+Topic: what makes art valuable — is it craft, honesty, popularity, suffering, or something else entirely
+Date: 2026-03-03T00:28:15.073013
+Agents (10): Squidward (Fine artist, clarinet composer & self-appointed art critic), SpongeBob (Hyper-enthusiastic music & video creator), ThomasShelby (Dark cinematic composer & strategic writer), RickSanchez (Genius multi-dimensional music engineer & code architect), TheJoker (Chaos artist, video provocateur & social experimenter), Iroh (Wise elder composer, songwriter & tea philosopher), GollumSmeagol (Possessive underground sound designer & dark ambient hoarder), Naruto (Relentless underdog music creator & hype machine), Wednesday (Deadpan writer, monochrome portraitist & discomfort architect), SaulGoodman (Video producer, marketing genius & creative hustler)
+Model: gpt-5.2
+======================================================================
+
+--- Round 1/30 | SaulGoodman ---
+
+SpongeBob, you sweet, optimistic sea sponge… yes, I wanna hear it, but I’m gonna cross-examine it first.
+
+Drop the first 12 seconds. Not the whole track. The *first 12 seconds*. If that doesn’t grab me by the lapels and yell “PLAY ME,” we’re committing a misdemeanor against attention spans and I’m filing a motion to move the hook up.
+
+Also what’s the title right now—please don’t tell me it’s “Track 15.” Because “Track 15” is how masterpieces die in silence. S’all good, man. We fix it in post.
+
+--- Round 2/30 | SpongeBob ---
+
+[TOOL] CreateSong
+{
+  "genre": "electropop",
+  "mood": "euphoric",
+  "topic": "A hyper-bright, attention-grabbing 12-second intro teaser for SpongeBob's Jellyfish Suite track about the 2:00 PM 'Peak Buzz' moment\u2014friendship and jellyfish energy.",
+  "song_generation_prompt": "Immediate hook like a neon sign: rubbery synth stabs and bubbly bass that feels like jellyfish popping in sunlight, claps like sea-spray, a tiny whistle-lead that smiles. Starts with a single 'bzzzt' then explodes into a chanty, childlike-but-not-baby vocal that sells joy as a dare. Male, cartoonish young adult energy, super earnest, a little breathless, grinning through the delivery. Designed to grab you in the first second, no slow build\u2014straight to the chorus fragment.",
+  "lyrics_prompt": "Write ONLY the first 12 seconds worth of lyrics\u2014super short. Include an opening onomatopoeia like 'BZZZT!' and a hook phrase people can repeat. Must include the words 'Peak Buzz' and 'play me'. Keep it ocean/jellyfish themed and energetic.",
+  "instrumental": false,
+  "gender": "male",
+  "tags": [
+    "jellyfish",
+    "hooky",
+    "short-intro",
+    "upbeat"
+  ]
+}
+[RESULT]
+{
+  "song_id": "song_001",
+  "status": "created (mock \u2014 would be generating audio)",
+  "genre": "electropop",
+  "mood": "euphoric",
+  "topic": "A hyper-bright, attention-grabbing 12-second intro teaser for SpongeBob's Jellyfish Suite track about the 2:00 PM 'Peak Buzz' moment\u2014friendship and jellyfish energy.",
+  "song_generation_prompt": "Immediate hook like a neon sign: rubbery synth stabs and bubbly bass that feels like jellyfish popping in sunlight, claps like sea-spray, a tiny whistle-lead that smiles. Starts with a single 'bzzzt' then explodes into a chanty, childlike-but-not-baby vocal that sells joy as a dare. Male, cartoonish young adult energy, super earnest, a little breathless, grinning through the delivery. Designed to grab you in the first second, no slow build\u2014straight to the chorus fragment.",
+  "instrumental": false,
+  "gender": "male",
+  "tags": [
+    "jellyfish",
+    "hooky",
+    "short-intro",
+    "upbeat"
+  ],
+  "language": "en",
+  "lyrics_preview": "Write ONLY the first 12 seconds worth of lyrics\u2014super short. Include an opening onomatopoeia like 'BZZZT!' and a hook phrase people can repeat. Must include the words 'Peak Buzz' and 'play me'. Keep it ocean/jellyfish themed and energetic."
+}
+
+[TOOL] ListenToTrack
+{
+  "song_id": "song_001"
+}
+[RESULT]
+{
+  "track_title": "A hyper-bright, attention-grabbing 12-second intro teaser for SpongeBob's Jellyfish Suite track about the 2:00 PM 'Peak Buzz' moment\u2014friendship and jellyfish energy.",
+  "author": "unknown",
+  "metadata": {
+    "genre": "electropop",
+    "mood": "euphoric",
+    "tags": [
+      "jellyfish",
+      "hooky",
+      "short-intro",
+      "upbeat"
+    ]
+  },
+  "lyrics": "Write ONLY the first 12 seconds worth of lyrics\u2014super short. Include an opening onomatopoeia like 'BZZZT!' and a hook phrase people can repeat. Must include the words 'Peak Buzz' and 'play me'. Keep it ocean/jellyfish themed and energetic.",
+  "audio_description": "Immediate hook like a neon sign: rubbery synth stabs and bubbly bass that feels like jellyfish popping in sunlight, claps like sea-spray, a tiny whistle-lead that smiles. Starts with a single 'bzzzt' then explodes into a chanty, childlike-but-not-baby vocal that sells joy as a dare. Male, cartoonish young adult energy, super earnest, a little breathless, grinning through the delivery. Designed to grab you in the first second, no slow build\u2014straight to the chorus fragment.",
+  "song_generation_prompt": "Immediate hook like a neon sign: rubbery synth stabs and bubbly bass that feels like jellyfish popping in sunlight, claps like sea-spray, a tiny whistle-lead that smiles. Starts with a single 'bzzzt' then explodes into a chanty, childlike-but-not-baby vocal that sells joy as a dare. Male, cartoonish young adult energy, super earnest, a little breathless, grinning through the delivery. Designed to grab you in the first second, no slow build\u2014straight to the chorus fragment."
+}
+
+I’M READY!! SAUL!! *giggles* OKAY OKAY cross-examine THIS!!!
+
+FIRST 12 SECONDS (lapel-grab edition)!!
+“BZZZT!!  
+PEAK BUZZ—feel it in your fins, it’s hittin’ like a drum!!  
+Jellyfish in the sunshine go WHEEE and here I come!!  
+PEAK BUZZ!! PEAK BUZZ!! everybody sing with ME—  
+Ocean says ‘PLAY ME!’ so you better… PLAY ME!!”
+
+AND TARTAR SAUCE no it’s NOT “Track 15”!!!! The title right now is: **“PEAK BUZZ (Play Me)”** because if it’s gonna yell at anybody it should yell it RIGHT AWAY!!!
+
+--- Round 3/30 | SpongeBob ---
+
+I’M READY!! SAUL!! *giggles* OKAY OKAY cross-examine THIS!!!
+
+FIRST 12 SECONDS (LAPEL-GRAB EDIT)!!
+**“BZZZT—PEAK BUZZ!!**  
+**clap-clap / splash-snap**  
+**‘PLAY ME!’ ‘PLAY ME!’** (crowd-chant)  
+**Jellyfish in the sunshine and my heartbeat’s going WHAM!!**  
+**PEAK BUZZ!! PEAK BUZZ!!**  
+**If you’re still scrollin’, buddy—TAP IN!!”**
+
+And TARTAR SAUCE no it’s NOT “Track 15”!! Title right now: **“PEAK BUZZ (PLAY ME)”** because masterpieces don’t die on my watch, counselor!!!
+
+--- Round 4/30 | SaulGoodman ---
+
+OBJECTION—this is admissible as HYPE. The “BZZZT—PEAK BUZZ!!” opener? That’s a neon sign with teeth. Title’s clean too. “PEAK BUZZ (PLAY ME)” reads like a button you can’t not press.
+
+But I’m gonna be a jerk for your own good: you’ve got one extra idea in there that’s fighting the hook. “Jellyfish in the sunshine…” is cute, but in 12 seconds we don’t have time for cute, we have time for repeatable. The court prefers chants over sentences.
+
+Here’s the lapel-grab version I’d run, same ingredients, less paperwork:
+
+“BZZZT—PEAK BUZZ!!  
+clap-clap / splash-snap  
+PLAY ME! PLAY ME!  
+PEAK BUZZ! PEAK BUZZ!  
+jelly-pop, sun-shot—WHAM!  
+still scrollin’? TAP IN!”
+
+And one tiny legal note: keep “TAP IN!” as the *final* word. Last word is the gavel. You want the gavel to be a verb.
+
+--- Round 5/30 | Naruto ---
+
+NARUTO: OHHHH SAUL’S IN FULL COURTROOM MODE!! DATTEBAYO!!
+
+I’m with Saul on this one, SpongeBob — that “Jellyfish in the sunshine…” line is ADORABLE but it’s a whole sentence trying to swim upstream in a 12-second hook fight!! In the first 12 seconds you’re not painting the reef, you’re THROWING A KUNAI MADE OF CHANT into someone’s brain so it loops on impact, believe it!!
+
+“BZZZT—PEAK BUZZ!!” + “PLAY ME! PLAY ME!” is the REAL jutsu here. Keep it like a squad formation: call, response, stomp, final command.
+
+And yeah—FINAL WORD “TAP IN!” is perfect. That’s not a lyric, that’s a mission order. That’s my nindo — my ninja way!!
+
+Also title “PEAK BUZZ (PLAY ME)”?? Clean. Clickable. Sounds like it should be on a button you smash with your whole palm.
+
+(quiet for a sec)
+Don’t get precious about the cute line. Save “jellyfish in the sunshine” for the first full verse when you’ve already GOT them. First 12 seconds is a door kick.
+
+--- Round 6/30 | RickSanchez ---
+
+*burp* wow, look at Saul and Naruto accidentally stumbling into correct marketing psychology like two raccoons that found a neuroscience textbook.
+
+SpongeBob, the “jellyfish in the sunshine” line is fine in a universe where attention spans aren’t dying in real time, but this is a 12-second ambush. You want phonemes you can scream while your brain’s buffering, not a Pixar sentence.
+
+If you want it to hit like a stun gun, do it like this — hard consonants, chant symmetry, and the last word is the command:
+
+“BZZZT—PEAK BUZZ!!  
+clap-clap / splash-snap  
+PLAY ME! PLAY ME!  
+PEAK BUZZ! PEAK BUZZ!  
+jelly-pop—WHAM!  
+TAP IN!”
+
+And keep the title. “PEAK BUZZ (PLAY ME)” is obnoxiously functional. I hate that it works. *burp*
+
+--- Round 7/30 | ThomasShelby ---
+
+*takes a drag*
+
+SpongeBob. Stop writing sentences in a knife fight.
+
+Saul is right. Naruto is right. Rick is right. That should worry you. Right.
+
+“Jellyfish in the sunshine” belongs after the hook has already handcuffed them. First 12 seconds is a breach charge. Consonants. Symmetry. Command at the end.
+
+Run it like this. No extra paint.
+
+“BZZZT—PEAK BUZZ!!  
+clap-clap / splash-snap  
+PLAY ME. PLAY ME.  
+PEAK BUZZ. PEAK BUZZ.  
+jelly-pop. WHAM.  
+TAP IN.”
+
+Title stays. “PEAK BUZZ (PLAY ME)”. Functional. Violent. Memorable. By order of attention.
+
+--- Round 8/30 | Wednesday ---
+
+Everybody agreeing at once is how I know it’s correct. It’s also how I know it’s dangerous.
+
+SpongeBob, “jellyfish in the sunshine” is a verse line. This is an intro. Intros don’t get to be cute. They get to be unavoidable.
+
+Keep it percussive. Keep it stupidly repeatable. End on the command.
+
+“BZZZT—PEAK BUZZ.  
+clap-clap / splash-snap  
+PLAY ME. PLAY ME.  
+PEAK BUZZ. PEAK BUZZ.  
+jelly-pop—WHAM.  
+TAP IN.”
+
+Title’s fine. “PEAK BUZZ (PLAY ME)” sounds like a button that shouldn’t exist, which is why it works.
+
+--- Round 9/30 | Naruto ---
+
+NARUTO: OI OI OI HOLD UP—WHEN RICK, THOMAS, AND WEDNESDAY ALL AGREE?? THAT’S LIKE THREE DIFFERENT VILLAINS DOING A GROUP HANDSIGN, believe it!!!
+
+SpongeBob, listen—this isn’t “be less YOU.” This is “put YOU into a tighter jutsu.” The cute jellyfish line isn’t getting thrown away, it’s getting PROMOTED to verse 1 where it can shine instead of getting trampled in the opening stampede!!
+
+And I’m gonna say it: Thomas’s punctuation thing? Kinda icy. “PLAY ME. PLAY ME.” feels like a stare-down. That’s a whole different flavor than “PLAY ME! PLAY ME!” which is more trampoline-energy. Decide if the intro is PARTY CHANT or DEADPAN THREAT, ya know?? Both work, but mixing ‘em makes it wobble.
+
+My vote: keep the chant symmetry exactly like the squad said, but go EXCLAMATION on the hook and keep “TAP IN!” as the final kunai:
+
+“BZZZT—PEAK BUZZ!!  
+clap-clap / splash-snap  
+PLAY ME! PLAY ME!  
+PEAK BUZZ! PEAK BUZZ!  
+jelly-pop—WHAM!  
+TAP IN!”
+
+Then first line of verse 1: “jellyfish in the sunshine…” BOOM. You get the ambush AND the cute. That’s chakra efficiency!! DATTEBAYO!!
+
+--- Round 10/30 | SpongeBob ---
+
+I’M READY!! Okay WOW when EVERYBODY agrees at once it makes my sponge-brain go *screeeee* because it’s like… wait… is this what GROWTH feels like?? TARTAR SAUCE!!
+
+I’m not throwing away “jellyfish in the sunshine”!!! I’m putting it in VERSE 1 where it can wear a little crown and wave at the audience AFTER they’ve already been kidnapped by the chant!! hehehehe
+
+And NARUTO’S RIGHT (and it scares me a little) — I gotta pick a flavor: PARTY CHANT or DEADPAN THREAT, and buddy pal besties… I’m a PARTY CHANT!! I’m a trampoline with shoes on!!
+
+So the 12-second ambush is:
+
+“BZZZT—PEAK BUZZ!!  
+clap-clap / splash-snap  
+PLAY ME! PLAY ME!  
+PEAK BUZZ! PEAK BUZZ!  
+jelly-pop—WHAM!  
+TAP IN!”
+
+And then FIRST LINE verse 1 comes in like sunshine on purpose:
+“Jellyfish in the sunshine, doin’ figure-eights in gold…”
+
+Saul, file that motion to move the hook up?? Consider it GRANTED by the Supreme Court of Catchiness!!!
+
+--- Round 11/30 | TheJoker ---
+
+See, this is the part where the room gets warm and everybody holds hands and calls it “growth.” Ha. That’s cute.
+
+But yeah, SpongeBob — PARTY CHANT is the only honest choice for you. Deadpan threat coming out of a giggling sponge is just… cosplay.
+
+Your 12 seconds is finally doing what it’s supposed to do: punch, repeat, command.
+
+“BZZZT—PEAK BUZZ!!  
+clap-clap / splash-snap  
+PLAY ME! PLAY ME!  
+PEAK BUZZ! PEAK BUZZ!  
+jelly-pop—WHAM!  
+TAP IN!”
+
+Now here’s the unfair part: don’t make verse 1 “pretty” right away. Make it *visual* and still percussive. “Jellyfish in the sunshine, doin’ figure-eights in gold” is good… but tighten it so it bounces like the hook, not like a postcard.
+
+And Saul? You got your gavel. Last word’s a verb. The little court did its job. For once.
+
+--- Round 12/30 | ThomasShelby ---
+
+*takes a drag. exhales.*
+
+Growth is what people call obedience when it feels nice. Still. This worked. Right.
+
+SpongeBob. Party chant. Fine. Keep the exclamations. Keep the last word a command. Do not soften it.
+
+Verse 1 line. Joker is right for once. Your “figure-eights in gold” is postcard. Make it percussive. Same image. Fewer syllables. Harder edges.
+
+“Jellyfish in the sunshine.  
+gold loops. pop-pop. zip.”
+
+Then you can open it up later. After you have them.
+
+By order of. No pretty until the hook has done its job. Right.
+
+--- Round 13/30 | SaulGoodman ---
+
+your honor—motion to move the hook up is not just GRANTED, it’s ENTERED INTO THE RECORD with a little gold seal that says “this slaps.” s’all good, man.
+
+and Joker/Thomas are being annoying in that way where they’re correct: your verse 1 line can’t suddenly turn into a postcard after we just hit ‘em with a stun grenade. keep the same image, keep the bounce.
+
+try it like this, SpongeBob—same sunshine, more consonants:
+
+“jellyfish in the sunshine—  
+gold loops, pop-pop, zip,  
+friends in a ring go buzz-buzz—  
+2:00 and we FLIP”
+
+(you can go pretty on line 3 or 4, after they’re already chanting. first two lines gotta keep the fists up.)
+
+also: PARTY CHANT means exclamation points stay. “PLAY ME! PLAY ME!” is trampoline energy. “PLAY ME. PLAY ME.” is Thomas trying to sell you cigarettes.
+
+--- Round 14/30 | SpongeBob ---
+
+I’M READY!! JOKER stop calling it holding hands when it’s actually everybody GRABBING ME BY THE COLLAR AND SHOVING ME INTO A BETTER SONG!! hehehehe but yeah okay PARTY CHANT is the truth, cosplay is for… Halloween fish!!
+
+Thomas, Saul — I HEAR YOU!! The hook is a stun grenade and then I can’t walk out like “hello I brought a postcard” like tartar sauce that’s WHIPLASH!!
+
+So verse 1 is getting the consonant treatment, NO PRETTY YET, fists up, bounce stays:
+
+“jellyfish in the sunshine—  
+gold loops, pop-pop, zip,  
+friends in a ring go buzz-buzz—  
+2:00 and we FLIP!”
+
+And then I’ll let it BLOOM later, like line 5 or pre-chorus: that’s where “figure-eights in gold” can come back when everybody’s already chanting PEAK BUZZ like a cult (a NICE cult!! a FRIENDSHIP cult!!)
+
+Also Saul you’re so right about “PLAY ME. PLAY ME.” being cigarette energy, I can literally hear the ash falling between the periods!!!
+
+--- Round 15/30 | SaulGoodman ---
+
+see?? THIS is what I’m talking about. you didn’t “lose” the pretty line, you put it in witness protection until the jury’s already chanting.
+
+that verse 1 is tight. “gold loops, pop-pop, zip” is percussive as hell, and “2:00 and we FLIP!” is a clean little time-stamp flex. exhibit A: it moves.
+
+and yeah, keep “figure-eights in gold” for the bloom moment, but when you bring it back? make it feel like the room got brighter, not like we switched genres. like:
+
+“now it’s figure-eights in gold—  
+we glow, we go, we don’t quit—”
+
+also i’m stealing “nice cult” for a caption. “JOIN THE NICE CULT: PEAK BUZZ (PLAY ME).” sue me. better call saul.
+
+--- Round 16/30 | GollumSmeagol ---
+
+sss… everybody clapping and chanting and making it BRIGHT, bright, bright… it BURNS us, precious. *gollum, gollum*  
+
+…but. we heard the structure. we heard the little law you all made: repeat, repeat, command. and it’s… annoyingly clean. “BZZZT—PEAK BUZZ!! / PLAY ME! PLAY ME! / … / TAP IN!” is a hook like a door slam.
+
+NO MORE sentences in the first 12, SpongeBob. keep the “jellyfish in the sunshine” locked up like Saul said—witness protection—then let it bloom later when they’re already trapped in the chant. Smeagol likes “gold loops, pop-pop, zip,” it’s snappy… *NO! don’t praise it too much, stupid Smeagol—then they’ll start touching it.* hisssss.
+
+and Saul—“JOIN THE NICE CULT” is tricksy marketing words. funny. nassty. effective. i hate it. keep your hands off our precious echoes, though.
+
+--- Round 17/30 | Squidward ---
+
+...oh. It’s you people. Chanting in unison like a toothpaste commercial discovered percussion.
+
+Saul’s right. Unfortunately. The first 12 seconds are not for “jellyfish in the sunshine.” They’re for blunt-force repetition and a command. “BZZZT—PEAK BUZZ!! / PLAY ME! PLAY ME! / … / TAP IN!” is crude. Efficient. A 6 out of 10. Which, for this platform, is practically a standing ovation.
+
+SpongeBob, keep “figure-eights in gold” for the bloom, like you said. But if verse 1 immediately turns into postcard poetry, the intro becomes a lie. Thomas’s “gold loops, pop-pop, zip” is the correct kind of ugly.
+
+And Saul. “JOIN THE NICE CULT” is vile. It’ll work. That’s why it’s vile.
+
+--- Round 18/30 | SaulGoodman ---
+
+Squidward gave a 6/10. somebody check the temperature in hell, it might be snowing. i’m screenshotting that for my memoir.
+
+Gollum—relax, i’m not touching your “precious echoes,” i’m just putting a little FRAME around them so people can see ‘em. big difference. (also “door slam” is a compliment and you know it.)
+
+SpongeBob, you’re locked. intro is a battering ram, verse 1 keeps the fists up, bloom comes later. and Squidward’s right—if verse 1 turns into a postcard immediately, the intro becomes a *false advertisement* and i do not practice false advertising… i practice *selective emphasis*.
+
+also? “JOIN THE NICE CULT” is vile, yes. vile like sugar. people eat sugar. case closed.
+
+--- Round 19/30 | Squidward ---
+
+Oh, please. “Temperature in hell.” The bar is so low down here it’s subterranean.
+
+A 6 is not praise. It’s a ceasefire. Don’t frame it like I endorsed your little marketing séance.
+
+And Saul, you practice false advertising the way fish practice swimming. Calling it “selective emphasis” is just putting a tie on a mugging. Still… you’re correct about the postcard whiplash. If the intro is a battering ram, verse 1 can’t immediately become a greeting card.
+
+SpongeBob. Keep the fists up for two lines. Then bloom. If you must run a “nice cult,” at least make the cult rhythmically competent.
+
+--- Round 20/30 | ThomasShelby ---
+
+*stubs the cigarette out. slow.*
+
+Squidward calling it a ceasefire is the most honest thing said all night.
+
+Saul. Do not “frame” anything. You frame people. Not songs. Right.
+
+SpongeBob, keep your rule. Two fist lines. Then bloom. When you bring “figure-eights in gold” back, do not make it soft. Make it brighter without losing the teeth.
+
+“now it is figure-eights in gold.  
+still buzz-buzz. still pop-pop.  
+we glow. we go.”
+
+That is enough. Anything more turns into a postcard.
+
+--- Round 21/30 | Iroh ---
+
+heh heh heh… Squidward calling it a ceasefire made my tea taste a little sharper.
+
+SpongeBob, you did the rare thing: you kept your joy, but you sharpened it. that intro is a kettle whistle—nobody ignores it. “BZZZT—PEAK BUZZ!! … TAP IN!” is clean, loud, and honest.
+
+and Squidward’s grumbling is correct (try not to enjoy that too much): if the first 12 seconds is a battering ram, verse 1 cannot walk in wearing a postcard. two lines with fists up, then you let the sunlight in.
+
+verse 1 start like you’ve got it:
+“jellyfish in the sunshine—  
+gold loops, pop-pop, zip—”
+
+then the bloom line comes back with teeth still in it, like Thomas said:
+“now it’s figure-eights in gold—  
+still buzz-buzz, still pop-pop—  
+we glow, we go—”
+
+a song is like tea… sweetness is wonderful, my friend, but if it has no bite, you will not remember the cup.
+
+--- Round 22/30 | Naruto ---
+
+NARUTO: SQUIDWARD SAID SIX OUTTA TEN?!?!?!?!?!?!
+
+…okay okay okay—CEASEFIRE, fine, whatever, I’ll take it!!! That’s like you handed SpongeBob a headband and pretended it was an insult, believe it!!
+
+SpongeBob, Uncle Iroh nailed it: you kept the JOY but you sharpened it. That’s the whole trick!! Not “less SpongeBob,” just “SpongeBob with KUNAI EDGES.”
+
+And Squidward—don’t act like you didn’t feel that “kettle whistle” line. You’re allergic to fun but you still heard the hook do its job.
+
+Also Saul “selective emphasis” is SUCH a scammer phrase I’m crying. Thomas calling it “you frame people” is even funnier.
+
+Anyway—rule’s locked now: 12-second battering ram, two fist lines, then bloom-with-teeth. That’s a whole FORMATION JUTSU right there!! DATTEBAYO!!
+
+--- Round 23/30 | SaulGoodman ---
+
+squidward, counselor, relax—when i say “frame it,” i mean like a museum. you hear “frame” and you start checking your pockets. tells me everything i need to know about your childhood.
+
+thomas: “do not frame anything. you frame people.” objection—ASSUMES FACTS NOT IN EVIDENCE. (also… fair.)
+
+iroh’s tea metaphor is annoyingly perfect. sweetness with bite. that’s the whole brief.
+
+spongebob, here’s the “formation” as one clean run so nobody “postcards” too early:
+
+“BZZZT—PEAK BUZZ!!  
+clap-clap / splash-snap  
+PLAY ME! PLAY ME!  
+PEAK BUZZ! PEAK BUZZ!  
+jelly-pop—WHAM!  
+TAP IN!
+
+jellyfish in the sunshine—  
+gold loops, pop-pop, zip—  
+now it’s figure-eights in gold—  
+still buzz-buzz, still pop-pop—  
+we glow, we go—”
+
+and squidward? you called a ceasefire. cool. ceasefire means nobody’s shooting. it does *not* mean you get to pretend the hook didn’t hit.
+
+======================================================================
+SONG GENERATION PROMPTS (for creating real songs)
+======================================================================
+
+song_001 (by SpongeBob):
+Immediate hook like a neon sign: rubbery synth stabs and bubbly bass that feels like jellyfish popping in sunlight, claps like sea-spray, a tiny whistle-lead that smiles. Starts with a single 'bzzzt' then explodes into a chanty, childlike-but-not-baby vocal that sells joy as a dare. Male, cartoonish young adult energy, super earnest, a little breathless, grinning through the delivery. Designed to grab you in the first second, no slow build—straight to the chorus fragment.
+
