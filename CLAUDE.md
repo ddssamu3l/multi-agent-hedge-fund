@@ -154,6 +154,17 @@ Every analysis must end with: (1) directional call with timeframe, (2) confidenc
 
 Full design: `docs/design/analytical-foundation.md`
 
+### Data Pipeline (Designed 2026-03-21)
+
+How agents get information. Design doc: `docs/design/data-pipeline.md`
+
+- **RSS-first discovery** — YouTube channels, news outlets, Substacks, podcasts all via free RSS feeds. No API keys needed for discovery.
+- **YouTube transcript pipeline** — RSS feed per subscribed channel → `youtube-transcript-api` for transcript → context processor summarizes to 200-500 tokens. Full transcript archived and recallable. ~$0.02/day for 50 channels.
+- **Per-agent subscriptions** — Each agent subscribes to sources relevant to their domain (YouTube channels, RSS feeds, EDGAR tickers, FRED series). Stored in agent config.
+- **Morning feed compiled overnight** — Agents wake to a compiled briefing with market data, new filings, YouTube summaries, news. No real-time interrupts except priority events.
+- **Six source categories:** Market data (FRED, Yahoo Finance), News/filings (RSS, EDGAR), YouTube, Podcasts/Substacks, Earnings calls, Knowledge base (books, our docs)
+- **Total ingestion cost: ~$3.60/month.** Agent reasoning (Opus 4.6) is the real cost at $50-100/month.
+
 ---
 
 ## Design Plan Status
@@ -199,14 +210,16 @@ multi-agent-hedge-fund/
 └── docs/
     ├── design/
     │   ├── DESIGN_PLAN.md                 ← Living design tracker with confirmed decisions
-    │   └── analytical-foundation.md       ← System prompt architecture (Layer 1/2/3 design)
+    │   ├── analytical-foundation.md       ← System prompt architecture (Layer 1/2/3 design)
+    │   └── data-pipeline.md              ← How agents get info (YouTube, RSS, EDGAR, FRED)
     ├── knowledge/
     │   ├── world-mechanics.md             ← 14 axioms with full explanations + sources
     │   ├── reasoning-examples.md          ← Worked examples (AI supply chain, Mao, Iran, EV, defense)
     │   └── exit-signals.md                ← Minsky cycle, 7 crack signals, exit protocol
     └── research/
         ├── peer-level-investing-structures.md  ← NAIC, Tiger Cubs, GJP, prediction markets
-        └── top-down-firm-structures.md         ← Bridgewater, Renaissance, Citadel, DE Shaw, Point72
+        ├── top-down-firm-structures.md         ← Bridgewater, Renaissance, Citadel, DE Shaw, Point72
+        └── youtube-ingestion-pipeline.md       ← Technical research on YT API, RSS, transcript extraction
 ```
 
 ---

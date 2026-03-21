@@ -35,9 +35,10 @@
 - [ ] Decision: how agents leave/rejoin conversations, turn weights
 - [ ] Output: full agentic run loop specification
 
-### [ ] Area 5: Tool Schemas
+### [~] Area 5: Tool Schemas
 - Depends on: Area 2 + 4
-- [ ] Research: what data APIs exist (market, news, filings)
+- [x] Research: what data APIs exist (market, news, filings) → `docs/research/youtube-ingestion-pipeline.md`
+- [x] Design: data pipeline architecture → `docs/design/data-pipeline.md`
 - [ ] Decision: per-agent tool access, shared vs exclusive tools
 - [ ] Output: tool schema definitions
 
@@ -97,3 +98,4 @@ Area 6 (Trading) ──► Area 7 (Dashboard)    ← independent track
 6. **Information hierarchy:** Tier 1 (raw data/filings) > Tier 2 (earnings calls/academic) > Tier 3 (financial media) > Tier 4 (mainstream news/social media). All media carries selection bias.
 7. **Token budget:** ~5600 tokens fixed overhead per agent call (Layer 1-4). Acceptable for monthly decision cadence with daily meetings.
 8. **Reference docs recalled on demand** via programmatic keyword pre-injection (<1ms, no LLM call): world-mechanics, reasoning-examples, exit-signals
+9. **Data pipeline: RSS-first discovery** — YouTube channels, news, blogs all via free RSS. Transcripts via youtube-transcript-api. Context processor (cheap LLM) summarizes raw data into 200-500 token briefings. Full text in archive, recallable on demand. Per-agent subscriptions in config. Morning feed compiled overnight. Total ingestion cost: ~$3.60/month.
