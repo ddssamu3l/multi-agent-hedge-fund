@@ -17,11 +17,13 @@
 - [x] Decision: 3 structures — Council (peer), Firm (4-layer pyramid), Model (unified synthesis)
 - [x] Output: `docs/design/organizational-structures.md`
 
-### [ ] Area 2: Agent Role Roster
+### [~] Area 2: Agent Role Roster
 - Depends on: Area 1
-- [ ] Research: what domains actually move markets
-- [ ] Decision: how many agents, what domains, what personality sketches
-- [ ] Output: agent roster with identity drafts
+- [x] Reference: Wondera agent creation form → `docs/reference/WONDERA_AGENT_CREATION_FORM.md`
+- [x] Design: 11-section identity schema from scratch → `docs/design/agent-identity-schema.md`
+- [x] Design: relationship schema (asymmetric, with tags and friction)
+- [ ] Output: filled identity.md for each of the 10 domain agents (future session, one by one)
+- [ ] Output: filled relationships for all agent pairs (future session)
 
 ### [ ] Area 3: Meeting Cadence & Communication
 - Depends on: Area 1 + 2
@@ -107,3 +109,4 @@ Area 6 (Trading) ──► Area 7 (Dashboard)    ← independent track
 13. **Model (C):** Renaissance inspired. No meetings, no interaction. Agents produce independent structured signals. Deterministic optimizer combines via believability-weighted aggregation + correlation management + risk constraints. Control group for social dynamics experiment.
 14. **Same agents, same data, same knowledge across all three.** Only variable is organizational topology. Comparison framework: total return, Sharpe, max drawdown, prediction accuracy, cross-domain connection rate, information loss metric.
 15. **Estimated combined cost: $160-245/month** (A: $65-95, B: $85-135, C: $10-15)
+16. **Agent identity schema: 11 sections from scratch** (not ported from Wondera). Designed around analyst behaviors: research, form thesis, present, defend, challenge, be wrong, evolve. Key new fields: Analytical Method (blind spots, evidence threshold, primary lens), Under Pressure (challenged/wrong/consensus), Bottom Lines (hills + dig-in triggers + walk-away). Individual agent identities to be crafted in future sessions.
