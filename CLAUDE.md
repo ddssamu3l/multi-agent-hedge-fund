@@ -154,6 +154,22 @@ Every analysis must end with: (1) directional call with timeframe, (2) confidenc
 
 Full design: `docs/design/analytical-foundation.md`
 
+### Runtime Cadence & Agent Documents (Designed 2026-03-21)
+
+How agents spend their day and what documents they produce. Design doc: `docs/design/runtime-documents.md`
+
+- **Daily lifecycle: 5pm-10:30pm ET.** All agents wake at 5pm ET (after US close). Solo pre-prep (read feed, check kills, write brief) → morning meeting → execution block (deep research, DMs, private meetings) → evening meeting (compile findings, vote on trades) → wind-down (update journal, place orders, sleep). Orders execute at next market open with pre-execution price check.
+- **Write-first principle:** Every meeting starts with structured pre-meeting briefs submitted independently before any sharing. The single most validated anti-groupthink mechanism.
+- **Three runtime documents per agent:** Pre-meeting brief (structured recs with variant view, kill conditions, counterparty), personal journal (theses, watchlist, triggers, predictions, errors, self-assessment), personal track record (append-only, auto-created from structured outputs, graded over time).
+- **Org-level documents:** Org log (meeting summaries, portfolio, strategy, collective predictions, decision log, believability scores), org track record (group decisions graded over time, systemic patterns, attribution).
+- **Structured decision objects:** All recs/predictions/theses are explicit schemas with fixed fields — parseable by code. System auto-creates track record entries. Agents can't choose what gets tracked.
+- **Personal mock trades vs org real trades:** Agent recs are paper portfolio (zero weight). Only group-approved decisions move the actual portfolio. Rejected calls tracked against real data — "was the group wrong to reject this?" is the most valuable signal.
+- **Track record lifecycle:** Code creates → code monitors → agent reflects → context processor audits → code aggregates → context processor detects patterns → promotes to identity.md.
+- **Research foundations:** Meeting frameworks from Delphi, GJP, Amazon, Point72, McKinsey, Intel, nemawashi. Journal frameworks from Soros, Druckenmiller, Dalio, Burry, GJP superforecasters, military DSM.
+- **Meeting protocols:** `docs/design/meeting-protocols.md`. Council: morning (info+strategy) + evening (debate+vote, 0.60 threshold). Firm: 3 parallel sector standups (analysts first, sector head last, CIO silent) + evening synthesis (CIO approves/rejects, final say, can override risk). Model: no meetings, signal submission only. All meetings: 100 turn limit, natural exit, system code moderates, weighted random speaking with callout priority, end-of-meeting check-in.
+- **DM protocol:** 1-on-1 DMs + multi-agent private meetings. Request/accept (invitees can decline). Risk sees all. Info barriers at L1 in Firm are about default context, not communication bans — agents can DM across sectors.
+- **Decision mechanics:** Council = democratic (0.60 weighted vote, risk veto final). Firm = authoritarian (CIO final say, can override risk on record). Model = algorithmic (optimizer, hard-coded risk constraints). Estimated total cost: $180-300/month all three structures.
+
 ### Organizational Structures (Designed 2026-03-21)
 
 Three topologies running simultaneously. Same agents, same data, same knowledge. Only variable is topology. Design doc: `docs/design/organizational-structures.md`
@@ -187,11 +203,10 @@ Living document: `docs/design/DESIGN_PLAN.md`
 [x] Area 1  — Org Structures (3 variants: Council, Firm, Model)
 [x] Area 8  — Knowledge Base (14 axioms, 3 reference docs)
 [x] Area 9  — Anti-Bias & Analytical Discipline (system prompt, conviction pool)
+[~] Area 2  — Agent Role Roster (schema done, individual identities deferred)
+[x] Area 3+4 — Runtime Cadence & Meetings (COMPLETE — lifecycle, documents, meetings, DMs, decisions)
 [~] Area 5  — Tool Schemas (data pipeline done, tool defs pending)
-[ ] Area 2  — Agent Role Roster
-[ ] Area 3  — Meeting Cadence & Communication
-[ ] Area 4  — Runtime Loop & Context Engineering
-[ ] Area 6  — Trade Execution & Portfolio Tracking
+[~] Area 6  — Trade Execution (conditional orders + mock/real split done via 3+4; full spec pending)
 [ ] Area 7  — Monitoring Dashboard & Human Interface
 ```
 
@@ -222,14 +237,19 @@ multi-agent-hedge-fund/
 └── docs/
     ├── design/
     │   ├── DESIGN_PLAN.md                 ← Living design tracker with confirmed decisions
+    │   ├── agent-identity-schema.md       ← 11-section identity schema for analyst agents
     │   ├── analytical-foundation.md       ← System prompt architecture (Layer 1/2/3 design)
-    │   ├── data-pipeline.md              ← How agents get info (YouTube, RSS, EDGAR, FRED)
-    │   └── organizational-structures.md  ← 3 topologies: Council, Firm, Model
+    │   ├── data-pipeline.md               ← How agents get info (YouTube, RSS, EDGAR, FRED)
+    │   ├── meeting-protocols.md            ← Meeting flow, DMs, turn mgmt, decision mechanics per structure
+    │   ├── organizational-structures.md   ← 3 topologies: Council, Firm, Model
+    │   └── runtime-documents.md           ← Pre-meeting brief, journal, org log, track record schemas
     ├── knowledge/
     │   ├── world-mechanics.md             ← 14 axioms with full explanations + sources
     │   ├── reasoning-examples.md          ← Worked examples (AI supply chain, Mao, Iran, EV, defense)
     │   └── exit-signals.md                ← Minsky cycle, 7 crack signals, exit protocol
     └── research/
+        ├── analyst-journal-frameworks.md       ← Soros, Druckenmiller, Dalio, Burry, GJP, military DSM
+        ├── meeting-frameworks.md               ← Delphi, GJP, Amazon, Point72, McKinsey, Intel, nemawashi
         ├── peer-level-investing-structures.md  ← NAIC, Tiger Cubs, GJP, prediction markets
         ├── top-down-firm-structures.md         ← Bridgewater, Renaissance, Citadel, DE Shaw, Point72
         └── youtube-ingestion-pipeline.md       ← Technical research on YT API, RSS, transcript extraction

@@ -25,17 +25,25 @@
 - [ ] Output: filled identity.md for each of the 10 domain agents (future session, one by one)
 - [ ] Output: filled relationships for all agent pairs (future session)
 
-### [ ] Area 3: Meeting Cadence & Communication
+### [x] Area 3+4: Runtime Cadence & Meeting Protocol (merged) — COMPLETE
 - Depends on: Area 1 + 2
-- Ports from: collab_prototype (hangout mode, DMs, weighted turns)
-- [ ] Decision: scheduled vs spontaneous meetings, accept/reject logic
-- [ ] Output: meeting schedule + communication protocol
-
-### [ ] Area 4: Runtime Loop & Context Engineering
-- Depends on: Area 3
-- Ports from: AgentOS (viewport, memory tiers, wake/sleep)
-- [ ] Decision: how agents leave/rejoin conversations, turn weights
-- [ ] Output: full agentic run loop specification
+- Ports from: collab_prototype (hangout mode, DMs, weighted turns) + AgentOS (viewport, memory tiers, wake/sleep)
+- [x] Research: meeting frameworks & anti-groupthink mechanisms → `docs/research/meeting-frameworks.md`
+- [x] Research: analyst journal & decision-tracking frameworks → `docs/research/analyst-journal-frameworks.md`
+- [x] Decision: daily lifecycle — 5pm ET wake, morning meeting, execution block, evening meeting, 10:30pm sleep
+- [x] Decision: write-first principle — all agents submit structured briefs before any meeting discussion
+- [x] Decision: structured decision objects — all recommendations, predictions, theses are parseable schemas, not prose
+- [x] Decision: personal track record (mock trades, no portfolio weight) vs org track record (real portfolio decisions)
+- [x] Decision: trade execution — conditional limit orders with kill prices, pre-execution check at next market open
+- [x] Decision: track record lifecycle — code creates entries, code monitors, agent reflects, context processor audits, code aggregates
+- [x] Design: pre-meeting brief schema (5 sections, structured recommendations) → `docs/design/runtime-documents.md`
+- [x] Design: personal journal schema (8 sections: daily log, theses, watchlist, triggers, predictions, errors, track record, self-assessment) → `docs/design/runtime-documents.md`
+- [x] Design: org log schema (daily record, portfolio, strategy, collective predictions, decision log, believability scores, org track record) → `docs/design/runtime-documents.md`
+- [x] Design: structured decision object lifecycle (creation → monitoring → validation → aggregation → pattern detection → identity evolution) → `docs/design/runtime-documents.md`
+- [x] Design: per-structure meeting protocols → `docs/design/meeting-protocols.md`
+- [x] Design: DM protocol (request/accept, visibility rules, nemawashi pattern) → `docs/design/meeting-protocols.md`
+- [x] Design: turn management (weighted random + callout priority, juniors-first for Firm, end-of-meeting check-in) → `docs/design/meeting-protocols.md`
+- [x] Design: decision mechanics — Council (0.60 weighted vote), Firm (CIO final say), Model (optimizer)
 
 ### [~] Area 5: Tool Schemas
 - Depends on: Area 2 + 4
@@ -44,9 +52,12 @@
 - [ ] Decision: per-agent tool access, shared vs exclusive tools
 - [ ] Output: tool schema definitions
 
-### [ ] Area 6: Trade Execution & Portfolio Tracking
-- Mostly independent
-- [ ] Decision: paper trading mechanics, position tracking, P&L calc
+### [~] Area 6: Trade Execution & Portfolio Tracking
+- Mostly independent (partially addressed in Area 3+4)
+- [x] Decision: conditional limit orders with kill prices, pre-execution check at market open
+- [x] Decision: personal mock trades vs org real trades separation
+- [ ] Decision: position sizing rules, portfolio construction constraints
+- [ ] Decision: paper trading implementation (SQLite for MVP)
 - [ ] Output: trading system spec
 
 ### [ ] Area 7: Monitoring Dashboard & Human Interface
@@ -79,12 +90,12 @@
 ```
 Area 8 (Knowledge) ──────────────────────────┐
                                               ▼
-Area 1 (Org Structures) ──► Area 2 (Roster) ──► Area 3 (Meetings) ──► Area 4 (Runtime) ──► Area 5 (Tools)
-                                              │
-                                              ▼
+Area 1 (Org Structures) ──► Area 2 (Roster) ──► Area 3+4 (Runtime & Meetings) ──► Area 5 (Tools)
+                                              │           │
+                                              ▼           ├──► Area 6 (Trading, partial)
                                          Area 9 (Anti-Bias)
-
-Area 6 (Trading) ──► Area 7 (Dashboard)    ← independent track
+                                                          │
+Area 6 (Trading) ──► Area 7 (Dashboard)    ← independent track (6 partially done via 3+4)
 ```
 
 ## Confirmed Decisions Log
@@ -110,3 +121,29 @@ Area 6 (Trading) ──► Area 7 (Dashboard)    ← independent track
 14. **Same agents, same data, same knowledge across all three.** Only variable is organizational topology. Comparison framework: total return, Sharpe, max drawdown, prediction accuracy, cross-domain connection rate, information loss metric.
 15. **Estimated combined cost: $160-245/month** (A: $65-95, B: $85-135, C: $10-15)
 16. **Agent identity schema: 11 sections from scratch** (not ported from Wondera). Designed around analyst behaviors: research, form thesis, present, defend, challenge, be wrong, evolve. Key new fields: Analytical Method (blind spots, evidence threshold, primary lens), Under Pressure (challenged/wrong/consensus), Bottom Lines (hills + dig-in triggers + walk-away). Individual agent identities to be crafted in future sessions.
+
+### 2026-03-21: Runtime Cadence & Meeting Frameworks
+17. **Daily lifecycle: 5pm-10:30pm ET.** All agents wake simultaneously at 5pm ET (after US market close, most complete global data). Solo pre-prep → morning meeting → execution block → evening meeting → wind-down → sleep. Orders queue overnight, pre-execution check at 6am ET before market open.
+18. **Write-first principle is non-negotiable.** Every meeting starts with all agents independently submitting structured pre-meeting briefs before any agent sees another's output. Validated by Delphi, GJP, NGT, Amazon memos, Point72 pitches — the single most consistent anti-groupthink finding across all research.
+19. **Authentic dissent > assigned disagreement.** Nemeth's research confirms collab prototype finding: devil's advocacy is counterproductive. Only genuine, identity-grounded disagreement works. Never assign contrarian roles — disagreement must emerge from conviction pool conflicts.
+20. **Structured decision objects, not prose.** All recommendations, predictions, and theses are explicit schemas with fixed fields (action, asset, confidence, kill_condition, counterparty, etc.) — parseable by code. System automatically creates track record entries from these structured outputs. Agents cannot choose what gets tracked.
+21. **Personal track record ≠ org decisions.** Agent recommendations are mock trades in a personal paper portfolio — tracked against real market data for self-calibration and believability scoring, but carrying zero portfolio weight. Only calls that pass group decision process (vote/CIO/optimizer) become org decisions that move the actual portfolio. Rejected calls that turn out correct are the system's most valuable signal.
+22. **Track record lifecycle: code + LLM hybrid.** Code creates entries (from structured outputs), code monitors conditions (market data, thresholds, calendar), main agent reflects on resolved entries (the learning mechanism), context processor audits reflection honesty, code aggregates stats, context processor detects systemic patterns quarterly, context processor promotes significant lessons to identity.md.
+23. **Trade execution: conditional orders with pre-execution check.** Agents decide during their cycle, but all orders queue as conditional limit orders with max acceptable price and kill price. Pre-execution check at 6am ET verifies pre-market prices against limits before market open execution. No blind market orders ever.
+24. **Five agent files per agent:** identity.md (slow churn), memory.md (moderate), recent.md (high), journal.md (daily operational), track_record.md (append-only, separate file). Org level: org_log.md + org_track_record.md per structure.
+25. **Meeting research findings.** Key frameworks adopted: Delphi (anonymous iterative rounds), GJP (private forecast first, extremized mean), Amazon (juniors speak first, 6-page memo), Point72 (variant view requirement), McKinsey (obligation to dissent), nemawashi (pre-meeting DM consensus building), Intel (disagree and commit — separate debate from execution), Klein premortem (imagine failure, extract kill conditions). Full research: `docs/research/meeting-frameworks.md`
+26. **Analyst journal frameworks.** Personal journals modeled on: Soros (reflexivity diary, scenario thinking), Druckenmiller (conviction sizing, streak tracking), Dalio (error log, decision criteria journal), Burry (primary source immersion), GJP (prediction records with Brier scoring), military DSM (if-then triggers), three-tier watchlists. Full research: `docs/research/analyst-journal-frameworks.md`
+
+### 2026-03-23: Meeting Protocols & Decision Mechanics
+27. **Morning meeting = info sharing + strategy equally.** Not just "what happened" but "what should we do about it." Convergence signals get recognized and acted on immediately.
+28. **Evening meeting = full debate + vote.** DMs and private meetings during the day are preparation. Decisions involve the whole group — democratic (Council) and authoritarian (Firm) alike.
+29. **100 turn limit per meeting, natural exit.** No fixed turn budget. Meetings run as long as needed up to 100 turns. Agents can leave when done. System sends reminders at 50/25/10 remaining.
+30. **System code moderates.** No LLM moderator. Deterministic phase transitions, speaker selection, reminders, vote collection.
+31. **Weighted random speaking + callout priority + end-of-meeting check-in.** Round-robin rejected (failed in collab prototype). Random prevents anchoring, callouts ensure relevant agents respond when referenced, check-in guarantees quiet agents aren't silenced.
+32. **DMs (1-on-1) + private meetings (2+), request/accept, Risk sees all.** Two communication tools. Invitees can decline — prevents context blowup. Risk has full visibility in Structures A and B.
+33. **Council decision: 0.60 weighted vote.** Believability-weighted. Risk veto is final — no override mechanism in a peer network.
+34. **Firm decision: CIO has final say.** CIO sits in all meetings silently, only speaks to approve/reject recs in evening. CIO CAN override Risk veto (goes on permanent record, graded in track record). Analysts speak first (Amazon juniors-first).
+35. **Firm: Idea Dinner removed.** CIO is present daily — no need for monthly pitch events. Daily standups + evening synthesis is sufficient.
+36. **Firm: L1 info barriers are about default context, not communication bans.** Analysts don't see other sectors' published work automatically, but CAN DM across sectors. Evening meeting breaks barriers — all layers present, cross-sector discussion open.
+37. **Model: no meetings, pure signal submission.** Agents produce structured signals, optimizer combines algorithmically. Risk is hard-coded constraints, not overridable. The experimental control group.
+38. **Estimated total cost: $180-300/month** for all three structures combined (meetings + DMs + research + data ingestion).
