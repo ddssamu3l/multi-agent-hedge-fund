@@ -78,15 +78,15 @@ moves continuously — there's always something to talk about. If three
 agents independently flagged the same signal overnight, the morning
 meeting is where that convergence gets recognized and acted on.
 
-**Who's in the room:** All 11 agents (10 domain + Risk).
+**Who's in the room:** All 14 agents (13 domain/functional + Risk).
 
 **Phase structure:**
 
 ```
-PHASE 1: BRIEF REVEAL (0 turns, system-managed)
-  All 11 pre-meeting briefs revealed simultaneously.
+PHASE 1: MORNING BRIEFS REVEAL (0 turns, system-managed)
+  All 14 morning briefs (Document 1A) revealed simultaneously.
+  Domain findings, stance updates, flags. NO recommendations.
   Every agent can now read every other agent's brief.
-  No speaking yet — just reading.
 
 PHASE 2: FLAGS & REACTIONS
   Agents respond to what they read in the briefs.
@@ -123,24 +123,27 @@ execution block are all preparation for making the most of this meeting.
 Agents can and should band together, align positions, and build
 coalitions ahead of time — but decisions involve the whole group.
 
-**Who's in the room:** All 11 agents (10 domain + Risk).
+**Who's in the room:** All 14 agents (13 domain/functional + Risk).
 
 **Phase structure:**
 
 ```
-PHASE 1: FINDINGS REVEAL (0 turns, system-managed)
-  All agents submit daily findings summaries.
+PHASE 1: EVENING BRIEFS REVEAL (0 turns, system-managed)
+  All agents submit evening briefs (Document 1B).
+  These contain today's findings, cross-domain synthesis,
+  AND recommendations — informed by the full day's shared
+  context, morning meeting discussion, and DMs.
   Revealed simultaneously. Write-first principle.
 
 PHASE 2: PRESENTATIONS
-  Agents with material findings present.
+  Agents with material findings or recs present.
   (Agent can pass: "Nothing new, my brief stands.")
 
   Speaker selection: weighted random, but agents who
-  flagged new recommendations get priority.
+  submitted recommendations get priority.
 
   Each presenting agent: 1-2 turns to present finding
-  + structured recommendation. Must use the REC-* schema
+  + recommendation. Must use the REC-* schema
   from runtime-documents.md.
 
 PHASE 3: DEBATE
@@ -155,6 +158,15 @@ PHASE 3: DEBATE
   This is the full debate. Agents who did nemawashi
   during the day bring pre-formed arguments. Coalitions
   surface. Real disagreement happens here.
+
+  MEETING END MECHANIC:
+  Each turn, agents can signal [READY_TO_CLOSE].
+  When >50% of agents have signaled AND at least one
+  full round has passed since the last REC-* submission:
+    → System transitions to vote phase.
+  If an agent has something new after signaling, they
+  just speak — their READY_TO_CLOSE resets.
+  100 turn hard cap forces vote regardless.
 
 PHASE 4: VOTE (system-managed)
   Each recommendation gets a believability-weighted vote.

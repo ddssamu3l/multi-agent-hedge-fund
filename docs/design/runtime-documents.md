@@ -55,19 +55,26 @@
 
 ## Document 1: Pre-Meeting Brief (Mini-Thesis)
 
-Written by every agent BEFORE entering any group meeting. Locked before
-discussion begins. No agent sees another's brief until all are submitted.
+Two separate briefs per day. Morning brief has NO recommendations —
+agents haven't seen each other's context yet. Evening brief has
+recommendations informed by the full day's shared context, DMs, and
+cross-domain synthesis.
 
-This serves two purposes: (1) anchors the agent's independent thinking against
-groupthink, and (2) gives the group structured material to discuss rather than
-free-form chat.
+Written BEFORE each meeting. Locked before discussion begins. No agent
+sees another's brief until all are submitted.
+
+### Document 1A: Morning Brief (pre-morning-meeting)
+
+**Purpose:** Share domain findings. NO recommendations. Agents don't
+have enough cross-domain context yet to make good buy/sell calls.
+The morning meeting is for information sharing and coordination, not
+decisions.
 
 ```
-PRE-MEETING BRIEF
+MORNING BRIEF
 ═══════════════════════════════════════════════════════════
 Agent: [name]
 Date: [YYYY-MM-DD]
-Meeting: [morning / evening / monthly-allocation / ad-hoc]
 
 ─── SECTION 1: WHAT I SAW ───────────────────────────────
 
@@ -92,41 +99,64 @@ ACTIVE THESES (status check):
   | TH-011    | JPY carry unwind   | 0.65       | ↓ 0.70 | watching    |
 
 STANCE CHANGES SINCE LAST MEETING:
-  [If any conviction changed, state WHAT changed and WHY.
-   "Reduced JPY carry unwind conviction from 0.70 to 0.65
-   because BoJ rhetoric softened in March minutes."]
+  [If any conviction changed, state WHAT changed and WHY.]
 
 KILL CONDITION CHECK:
-  [Are any active theses approaching their kill conditions?
-   "TH-011 kill condition is '10Y JGB yield drops below
-   0.5%.' Currently at 0.62%. Getting close — flagging."]
+  [Are any active theses approaching their kill conditions?]
 
 ─── SECTION 3: WHAT THE GROUP IS MISSING ─────────────────
 
 FLAG:
   [One thing I believe the group is underweighting or
-   overlooking. This is the most important section.
-   Forces the agent to think beyond its own theses and
-   contribute to group intelligence.
+   overlooking. Forces the agent to think beyond its own
+   theses and contribute to group intelligence.]
 
-   Example: "Everyone is focused on NVIDIA earnings but
-   nobody is watching ABF substrate pricing. Ajinomoto
-   raised prices 15% this week. This is a leading indicator
-   of advanced packaging capacity constraints that will
-   hit ALL AI chip makers in Q3. We should be looking at
-   packaging bottlenecks, not just GPU demand."]
+─── SECTION 4: TODAY'S PLAN ──────────────────────────────
 
-─── SECTION 4: ACTIONABLE RECOMMENDATIONS ────────────────
+RESEARCH PRIORITIES:
+  1. [What I plan to investigate today and why]
+  2. [What I plan to investigate today and why]
 
-[Every finding must trace to a concrete recommendation.
- Not "oil is interesting" but structured output that the
- system can automatically track.
+MEETINGS REQUESTED:
+  [Any DMs or private meetings I want to initiate today.]
 
- 0-3 recommendations per brief. Zero is fine if nothing
- actionable emerged. Agents should NOT force recs to fill
- the section. But any rec MUST use this exact schema —
- the system code parses these fields to create track
- record entries automatically.
+═══════════════════════════════════════════════════════════
+```
+
+### Document 1B: Evening Brief (pre-evening-meeting)
+
+**Purpose:** Present findings AND recommendations. By now the agent has:
+absorbed every other agent's morning brief, discussed cross-domain
+connections in the morning meeting, DM'd relevant agents during the
+execution block, and synthesized their domain findings with the group's
+shared context. Recs are now informed by the full day's intelligence.
+
+```
+EVENING BRIEF
+═══════════════════════════════════════════════════════════
+Agent: [name]
+Date: [YYYY-MM-DD]
+
+─── SECTION 1: TODAY'S FINDINGS ─────────────────────────
+
+[What I discovered during the execution block. New data,
+ research results, DM insights, thesis updates.]
+
+─── SECTION 2: CROSS-DOMAIN SYNTHESIS ───────────────────
+
+[What I learned from OTHER agents today that changes or
+ strengthens my analysis. This is the key section.
+ Example: "After reading @CREDIT's morning brief on
+ widening energy spreads AND DM'ing @OIL about pipeline
+ capacity, I now believe the Hormuz risk is more acute
+ than my morning assessment suggested. @CREDIT's data
+ confirms that energy companies can't hedge at current
+ spread levels."]
+
+─── SECTION 3: ACTIONABLE RECOMMENDATIONS ────────────────
+
+[Recommendations informed by full day's context.
+ 0-3 recs per brief. Zero is fine.
 
  IMPORTANT: These are PERSONAL recommendations — they
  carry NO portfolio weight on their own. They are the
@@ -1001,11 +1031,11 @@ ATTRIBUTION TABLE (auto-computed by code):
 - Weighted voting results shown with individual breakdowns
 
 **Structure B (Firm):**
-- Three sector-level logs (Tech&Supply, Macro&Rates, Geo&Resources)
+- Eight sector-level logs (one per sector)
   - Contains within-sector standup summaries
-  - Sector head synthesis memos
+  - Analyst submissions to sector head
 - One CIO-level log
-  - Contains Idea Dinner summaries
+  - Sector head evening briefs and synthesis memos
   - CIO allocation decisions with rationale
   - Only sees sector-level synthesis, NOT raw analyst output
 - One Risk Committee log
@@ -1149,30 +1179,36 @@ with the right questions already in mind.
   │
 5:00-5:30  SOLO PRE-PREP
   │
-  │  Agent writes: PRE-MEETING BRIEF (Document 1)
+  │  Agent writes: MORNING BRIEF (Document 1A)
+  │    Domain findings, stance, flags, today's plan.
+  │    NO recommendations — too early, no cross-domain context yet.
   │  Agent reviews: watchlist, trigger updates from sub-agent
   │  ← Brief is LOCKED before meeting starts
   │
 5:30-6:30  MORNING MEETING
   │
-  │  Briefs are revealed simultaneously (write-first)
-  │  Discussion of overnight events and recommendations
+  │  Morning briefs revealed simultaneously (write-first)
+  │  Discussion of overnight events and domain findings
+  │  Coordination: who's researching what today
   │  System updates: org log morning meeting summary
+  │  NO trade decisions — that's the evening meeting
   │
 6:30-9:00  EXECUTION BLOCK
   │
   │  Agent works: deep research, DMs, private meetings
+  │  Agent synthesizes: cross-domain insights from morning meeting
   │  Agent updates: journal (findings, thesis evidence,
   │    new triggers, prediction updates)
   │  System nudges: "Evening meeting in 60 min / 15 min"
   │
-  │  Before evening meeting, agent writes:
-  │  DAILY FINDINGS SUMMARY (short version of brief,
-  │    focused on what was discovered during execution)
+  │  ~8:30 PM: Agent writes EVENING BRIEF (Document 1B)
+  │    Today's findings, cross-domain synthesis, recommendations.
+  │    Recs are NOW informed by full day's shared context.
+  │    ← Brief is LOCKED before meeting starts
   │
 9:00-10:00  EVENING MEETING
   │
-  │  Findings summaries revealed simultaneously
+  │  Evening briefs revealed simultaneously
   │  Discussion, debate, trade recommendations voted on
   │  System updates: org log evening meeting summary
   │
@@ -1189,6 +1225,51 @@ with the right questions already in mind.
 6:00 AM   PRE-EXECUTION CHECK (code, no agents)
   │  Check pending orders against pre-market prices
   │  Execute / cancel / flag based on limits and kills
+```
+
+### Firm-Specific Daily Flow Variation
+
+In the Firm, L1 analysts and sector heads have different schedules.
+Analysts are done by 9:00 PM. The evening synthesis is leadership only.
+
+```
+FIRM ANALYST DAY:
+  5:00 PM     Wake, read notifications + CIO directives (via sector head)
+  5:00-5:30   Write morning brief (domain findings, no recs)
+  5:30-6:30   Morning sector standup
+                Sector head relays CIO directives → briefs revealed →
+                analysts report → sector head assigns work
+  6:30-9:00   Execution block
+                Execute CIO directives FIRST, personal research second.
+                DMs allowed (cross-sector ok). Private meetings ok.
+  ~8:30 PM    Submit findings + recs to sector head
+                Analysts write their evening findings and any
+                recommendations, but submit to SECTOR HEAD, not
+                to the group. Sector head decides what to escalate.
+  9:00 PM     Analyst goes to sleep.
+                Does NOT attend evening synthesis.
+
+FIRM SECTOR HEAD DAY:
+  5:00-6:30   Run their sector standup
+  6:30-8:30   Execution block (DM other heads, synthesize analyst work)
+  ~8:30 PM    Receive analyst submissions
+  ~8:45 PM    Write evening brief for CIO
+                Synthesize + filter analyst findings and recs.
+                Choose what's signal vs noise. Choose which analyst
+                recs to escalate. This filtering is the core
+                hierarchy experiment.
+  9:00-10:00  Evening synthesis (sector heads + CIO + Risk only)
+                Present → cross-sector debate → CIO decides →
+                CIO sets tomorrow's priorities
+  10:00-10:30 Wind-down
+                Note CIO decisions to relay to analysts tomorrow.
+                Choose how to frame them.
+
+FIRM CIO DAY:
+  5:00-6:30   Listen to all 8 sector standups (silent, can veto)
+  6:30-9:00   Reflect on what was heard. DM sector heads if needed.
+  9:00-10:00  Evening synthesis — speak, decide, set priorities.
+  10:00-10:30 Wind-down
 ```
 
 ---
