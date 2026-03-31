@@ -49,21 +49,38 @@ believability-weighted vote.
 
 ### Agent Roster
 
-| Agent | Domain | Role |
-|-------|--------|------|
-| MACRO | Monetary policy, rates, CPI/jobs, Fed/ECB/BoJ | Domain analyst |
-| SEMI | Semiconductor supply chain, chip demand/supply, packaging | Domain analyst |
-| CHINA | Chinese economy, 土地财政, PBoC, trade, dual circulation | Domain analyst |
-| OIL | Energy, petrochemicals, OPEC, shipping, renewables transition | Domain analyst |
-| CRYPTO | Digital assets, DeFi, on-chain data, regulatory landscape | Domain analyst |
-| TECH | SaaS, cloud, AI companies, enterprise software, consumer tech | Domain analyst |
-| LIQUIDITY | Credit conditions, yield curves, bank lending, shadow banking | Domain analyst |
-| JAPAN | BoJ, yen carry trade, Japanese equities, demographics | Domain analyst |
-| GEOPOLITICS | US foreign policy, alliances, conflicts, sanctions, NATO | Domain analyst |
-| MINERALS | Copper, lithium, rare earths, mining, commodity super-cycles | Domain analyst |
-| RISK | Cross-cutting: correlation, concentration, drawdown, Minsky stage | Referee (veto power) |
+**Domain Analysts (11 broad generalists):**
 
-**Total: 11 agents** (10 domain + 1 risk referee)
+| Agent | Domain | Scope |
+|-------|--------|-------|
+| SEMI | Semiconductors | Fabs, equipment, memory, packaging, entire supply chain |
+| TECH | Technology | Software, cloud, AI companies, enterprise, consumer tech |
+| CRYPTO | Crypto & Digital Assets | BTC, ETH, DeFi, on-chain, stablecoins, regulatory |
+| MACRO | Macro & Monetary Policy | Fed/ECB/BoJ/PBoC, CPI, employment, fiscal policy, rates |
+| CREDIT | Credit & Financial System | Yield curves, IG/HY spreads, bank lending, shadow banking, gold as monetary signal, bank earnings, financial system stress, mortgage markets |
+| JAPAN | Japan | BoJ, YCC, yen carry trade, JGB market, demographics |
+| CHINA | China | PBoC, 土地财政, dual circulation, trade, HK, Taiwan risk |
+| OIL | Energy | OPEC+, crude, refining, LNG, shipping lanes, energy transition |
+| GEOPOLITICS | Geopolitics | US foreign policy, sanctions, NATO, conflicts, defense, global chokepoints (Hormuz, Suez, Taiwan Strait, Malacca), Middle East |
+| MINERALS | Commodities | Copper, gold, silver, lithium, rare earths, mining, commodity cycles |
+| TRADE_FLOWS | Global Commerce | Shipping (Baltic Dry Index, container rates), port congestion, trade volumes, supply chain disruptions, inventory cycles, freight routing, Suez/Panama traffic, global manufacturing PMI |
+
+**Cross-Cutting Functional Specialists (2):**
+
+| Agent | Function | Scope |
+|-------|----------|-------|
+| TECHNICAL | Technical Analysis | Charts, indicators, price action, volume across ALL sectors. RSI, MACD, Bollinger, moving averages, support/resistance. The "I don't care about your narrative, the chart says X" agent. |
+| SENTIMENT | Sentiment Analysis | Social media, Reddit/X, retail flows, options flow (put/call ratios), short interest, insider transactions across ALL sectors. The "retail is piling into X" or "insiders are dumping Y" agent. |
+
+**Risk (1):**
+
+| Agent | Role | Scope |
+|-------|------|-------|
+| RISK | Referee (veto power) | Cross-cutting: correlation, concentration, drawdown, Minsky stage. Sees all DMs. Can veto any trade. Veto is FINAL in the Council (no CIO to override). |
+
+**Total: 14 agents** (11 domain + 2 cross-cutting + 1 risk referee)
+
+**Why 14?** Peer networks break down beyond ~15 people. Real investment clubs (NAIC) are 10-20 members. GJP superforecaster teams are ~12. This is the sweet spot for flat peer debate. The Firm scales to 37 agents because hierarchy manages information flow — the Council deliberately stays small because that's its natural operating point.
 
 ### Information Architecture
 - **Full transparency among peers.** Every agent can see every other
@@ -129,83 +146,161 @@ each layer also risks filtering out genuine signal.
 
 ### Agent Roster
 
-**Layer 1 — Domain Analysts (ground floor)**
+**Layer 1 — Domain Analysts (27 narrow specialists)**
 
-| Agent | Domain | Reports To |
-|-------|--------|-----------|
-| SEMI | Semiconductor supply chain | Tech & Supply Chain Head |
-| TECH | SaaS, cloud, AI companies | Tech & Supply Chain Head |
-| CRYPTO | Digital assets, DeFi, on-chain | Tech & Supply Chain Head |
-| MACRO | Monetary policy, rates, CPI/jobs | Macro & Rates Head |
-| LIQUIDITY | Credit conditions, yield curves | Macro & Rates Head |
-| JAPAN | BoJ, yen carry trade, demographics | Macro & Rates Head |
-| CHINA | Chinese economy, PBoC, trade | Geopolitics & Resources Head |
-| OIL | Energy, petrochemicals, OPEC | Geopolitics & Resources Head |
-| GEOPOLITICS | US foreign policy, conflicts, sanctions | Geopolitics & Resources Head |
-| MINERALS | Copper, lithium, rare earths, mining | Geopolitics & Resources Head |
+Semiconductors (→ SEMI_HEAD):
 
-**Layer 2 — Sector Heads (middle management)**
+| Agent | Domain |
+|-------|--------|
+| FABS | TSMC, Samsung Foundry, Intel Foundry, GlobalFoundries |
+| EQUIPMENT | ASML, LAM Research, Applied Materials, Tokyo Electron |
+| MEMORY | SK Hynix, Micron, Samsung Memory, WD/Kioxia |
+| PACKAGING | ASE, Amkor, Ajinomoto ABF substrates, CoWoS |
 
-| Agent | Sector | Synthesizes | Reports To |
-|-------|--------|-------------|-----------|
-| TECH_HEAD | Tech & Supply Chain | SEMI + TECH + CRYPTO | CIO |
-| MACRO_HEAD | Macro & Rates | MACRO + LIQUIDITY + JAPAN | CIO |
-| GEO_HEAD | Geopolitics & Resources | CHINA + OIL + GEOPOLITICS + MINERALS | CIO |
+Technology (→ TECH_HEAD):
+
+| Agent | Domain |
+|-------|--------|
+| AI_INFRA | NVIDIA, AMD, datacenter GPUs, custom silicon (TPU, Trainium) |
+| CLOUD | AWS, Azure, GCP, hyperscaler capex, datacenter REITs |
+| ENTERPRISE | SaaS, Oracle, SAP, enterprise AI adoption |
+
+Macro & Rates (→ MACRO_HEAD):
+
+| Agent | Domain |
+|-------|--------|
+| US_MACRO | Fed policy, CPI, employment, fiscal, housing |
+| GLOBAL_RATES | ECB, PBoC divergence, carry trades, FX |
+| CREDIT | Yield curves, IG/HY spreads, bank lending, shadow banking, gold as monetary signal |
+| JAPAN | BoJ, YCC, yen carry trade, JGB market, demographics |
+| FINANCIALS | Bank earnings, loan growth, financial system stress, mortgage markets |
+
+Energy & Power (→ ENERGY_HEAD):
+
+| Agent | Domain |
+|-------|--------|
+| OIL | OPEC+, crude, refining, shipping lanes, LNG |
+| POWER | Nuclear/SMR, renewables, grid infrastructure, utility capex |
+| PIPELINES | Midstream operators, LNG terminals, energy infrastructure |
+
+Geopolitics & Trade (→ GEO_HEAD):
+
+| Agent | Domain |
+|-------|--------|
+| CHINA | PBoC, 土地财政, dual circulation, HK, Taiwan risk |
+| US_FOREIGN | Sanctions, NATO, alliances, defense spending, AUKUS |
+| EMERGING | India, SE Asia, Middle East, Africa (commodity demand) |
+| TRADE | Tariffs, export controls, supply chain reshoring, CHIPS Act |
+| TRADE_FLOWS | Global shipping (Baltic Dry Index, container rates), port congestion, trade volumes, supply chain disruptions, inventory cycles, freight routing, Suez/Panama traffic, global manufacturing PMI |
+
+Commodities (→ COMMODITIES_HEAD):
+
+| Agent | Domain |
+|-------|--------|
+| METALS | Gold, silver, copper, aluminum, steel |
+| BATTERY | Lithium, cobalt, nickel, graphite (EV + storage) |
+| RARE_EARTHS | Processing monopoly, China controls, Western alternatives |
+
+Crypto (→ CRYPTO_HEAD):
+
+| Agent | Domain |
+|-------|--------|
+| CRYPTO_MACRO | BTC, ETH, regulatory landscape, institutional adoption |
+| DEFI | On-chain analytics, DeFi protocols, stablecoins |
+
+Market Intelligence (→ INTEL_HEAD):
+
+| Agent | Domain |
+|-------|--------|
+| TECHNICAL | Charts, indicators, price action, volume across ALL sectors |
+| SENTIMENT | Social media, Reddit/X, retail flows, options flow, insider txns |
+
+**Layer 2 — Sector Heads (8 pure managers, no research)**
+
+| Agent | Sector | Manages |
+|-------|--------|---------|
+| SEMI_HEAD | Semiconductors | FABS, EQUIPMENT, MEMORY, PACKAGING |
+| TECH_HEAD | Technology | AI_INFRA, CLOUD, ENTERPRISE |
+| MACRO_HEAD | Macro & Rates | US_MACRO, GLOBAL_RATES, CREDIT, JAPAN, FINANCIALS |
+| ENERGY_HEAD | Energy & Power | OIL, POWER, PIPELINES |
+| GEO_HEAD | Geopolitics & Trade | CHINA, US_FOREIGN, EMERGING, TRADE, TRADE_FLOWS |
+| COMMODITIES_HEAD | Commodities | METALS, BATTERY, RARE_EARTHS |
+| CRYPTO_HEAD | Crypto | CRYPTO_MACRO, DEFI |
+| INTEL_HEAD | Market Intelligence | TECHNICAL, SENTIMENT |
+
+Sector heads are pure managers — they do no independent research.
+They synthesize, filter, assign directives, present upward, and
+relay CIO decisions downward.
 
 **Layer 3 — CIO (the strategist)**
 
 | Agent | Role |
 |-------|------|
-| CIO | Synthesizes sector heads. Makes final allocation decisions. Runs Idea Dinners. |
+| CIO | Sets strategic priorities. Approves/rejects trades (final say). Silent in standups, speaks only in evening synthesis. Can override Risk veto (on permanent record). |
 
 **Layer 4 — Risk Committee (the check)**
 
 | Agent | Role |
 |-------|------|
-| RISK_COMMITTEE | Sees ALL layers unfiltered. Validates CIO decisions. Can block with stated reason. |
+| RISK | Sees ALL layers unfiltered — all DMs, all reports, all decisions. Veto power. CIO can override but it goes on the permanent record and gets graded in the track record. |
 
-**Total: 15 agents** (10 domain + 3 sector heads + 1 CIO + 1 risk committee)
+**Total: 37 agents** (27 L1 analysts + 8 sector heads + 1 CIO + 1 risk)
+
+**Why 37?** Hierarchy's advantage is scale. The Council caps at 14
+because flat peer networks break down beyond ~15 people. The Firm
+handles 27 narrow specialists because the hierarchy manages information
+flow — each morning standup is only 3-5 people. The question: does a
+hierarchy of 27 narrow specialists outperform 14 broad generalists
+debating as peers?
 
 ### Layer Responsibilities
 
 **Layer 1 analysts:**
 - Do the actual research: read filings, pull data, watch YouTube
   transcripts, analyze earnings calls, form domain-specific views
-- Produce structured reports for their sector head
+- Execute CIO directives relayed through sector heads (priority work)
+- Can pursue personal research AFTER directives are complete
+- Produce structured reports and recommendations for their sector head
 - Have deep but narrow vision — they know their domain cold but
   don't see the full portfolio picture
-- Can DM other L1 analysts WITHIN their sector
-- Cannot DM analysts in other sectors (information barrier, Citadel model)
+- Can DM any agent in any sector (info barriers are about default
+  context, not communication bans)
+- NEVER attend the evening synthesis — learn about CIO decisions
+  the next morning through their sector head (one-day delay)
 
-**Layer 2 sector heads:**
-- Synthesize across their domain analysts
-- See patterns analysts can't see individually. Example: Tech Head
-  sees that SEMI's HBM shortage + TECH's cloud capex surge + CRYPTO's
-  mining demand all point to the same memory bottleneck
-- FILTER: decide what's signal vs noise for the CIO. Not everything
-  goes up. Sector heads own this judgment call.
-- Push BACK to analysts: "your thesis contradicts SEMI's data, reconcile"
-- Produce sector-level synthesis memos for the CIO
+**Layer 2 sector heads (pure managers):**
+- Do NO independent research
+- RELAY CIO directives downward as specific task assignments
+- Synthesize analyst findings and FILTER for the CIO — not everything
+  goes up. Sector heads own this judgment call. Core hierarchy test:
+  does filtering help (removes noise) or hurt (loses signal)?
+- Push BACK to analysts: "your thesis contradicts FABS' data, reconcile"
+- Relay CIO decisions downward — choose HOW to frame them (verbatim,
+  with context, or editorialized). Both upward and downward filtering
+  are part of the hierarchy experiment.
 - Can DM other sector heads (cross-sector intelligence sharing)
+- Attend evening synthesis with CIO and Risk
 
 **Layer 3 CIO:**
+- Sets STRATEGIC PRIORITIES for the entire organization daily
+  ("I want the tech sector to stress-test semi holdings against
+  a rate hike scenario. Macro team: track the yen carry unwind.")
 - Only sees sector-level synthesis, NOT raw analyst output
 - Makes cross-sector connections: Tech Head says "GPU demand insane" +
   Macro Head says "rates about to rise" = CIO sees the collision
-- Runs Idea Dinners with sector heads: structured presentations +
-  interrogation ("tell me why I'm wrong" — Bridgewater style)
-- Makes final allocation decisions with stated reasoning
-- Can pull raw analyst data via request (asks sector head to surface it)
-  but doesn't browse it by default
+- Approves/rejects trade recommendations (final say)
+- Silent in morning standups (prevents HiPPO anchoring)
+- Speaks only in evening synthesis
+- Can override Risk veto (goes on permanent record, graded in track record)
 
 **Layer 4 Risk Committee:**
 - Sees ALL layers: raw analyst data + sector synthesis + CIO decisions
 - The ONLY entity with the complete unfiltered picture
+- Present in every meeting (standups + evening), observing
+- Speaks on every trade recommendation
 - Can block CIO decisions with stated reasoning
 - Monitors: concentration, correlation, Minsky stage, crack signals,
   drawdown limits, sector exposure
-- CIO can override risk block with supermajority (>70%) sector head support
-  and stated reasoning (creates paper trail)
 
 ### Information Architecture
 ```
@@ -214,44 +309,53 @@ each layer also risks filtering out genuine signal.
 
    Layer 1 analysts:
      ✓ Own domain data (full depth)
-     ✓ Other analysts in same sector (DMs)
-     ✗ Other sectors' analysts
-     ✗ Sector head synthesis
-     ✗ CIO decisions (until communicated down)
+     ✓ Other analysts in same sector (standup)
+     ✓ Can DM any agent in any sector
+     ✗ Other sectors' published analyses (by default)
+     ✗ Evening synthesis (never attend)
+     ✗ CIO decisions (until relayed next morning by sector head)
 
    Layer 2 sector heads:
      ✓ Their analysts' full output
-     ✓ Other sector heads (DMs)
-     ✓ CIO questions and requests
+     ✓ Other sector heads (evening synthesis + DMs)
+     ✓ CIO priorities and decisions (evening synthesis)
      ✗ Other sectors' raw analyst data
-     ✗ CIO's final reasoning (until communicated)
 
    Layer 3 CIO:
-     ✓ All sector head synthesis memos
-     ✓ Historical allocation decisions + outcomes
-     ✗ Raw analyst data (unless requested)
-     ✗ Analyst DMs
+     ✓ All sector head synthesis (evening)
+     ✓ Listens to all standups (silent)
+     ✓ Historical decisions + outcomes
+     ✗ Raw analyst data (unless requested via sector head)
 
    Layer 4 Risk Committee:
-     ✓ EVERYTHING (all layers, all DMs, all data)
+     ✓ EVERYTHING (all layers, all standups, all DMs, all data)
 ```
 
-### Decision Flow
-1. **Analysts research daily** → produce domain reports
-2. **Sector heads synthesize weekly** → produce sector memos
-3. **CIO runs Idea Dinner monthly** → sector heads present, CIO
-   interrogates, CIO drafts allocation memo
-4. **Risk Committee reviews** → approves, blocks, or requests changes
-5. **CIO finalizes** → allocation decision executed
+### Decision Flow (Daily Cycle)
+```
+EVENING: CIO decides trades + sets tomorrow's strategic priorities
+              ↓ (strategy flows DOWN)
+MORNING: Sector heads relay directives to analysts as task assignments
+              ↓ (analysts EXECUTE directives)
+DAY:     Analysts work assigned tasks first, personal research second
+              ↓ (research flows UP)
+EVENING: Sector heads synthesize + present to CIO. CIO decides.
+         Analysts never see this meeting. Cycle repeats.
+```
 
 ### Meeting Format
-- **Daily within-sector standups** (~15 turns):
-  L1 analysts brief their sector head. Quick updates, flags,
-  open questions. Sector head assigns research tasks.
-- **Weekly sector synthesis meeting** (~25 turns):
-  Sector head presents draft synthesis to their analysts.
-  Analysts challenge, add context, push back. Sector head
-  finalizes memo for CIO.
+
+See `docs/design/meeting-protocols.md` for full meeting protocol with
+phase structure, speaking order, and turn management.
+
+- **Daily morning sector standups** (8 parallel meetings):
+  Sector head relays CIO directives → analyst briefs revealed →
+  analysts report (juniors first) → sector head synthesizes and
+  assigns work. CIO listens silently. Risk observes.
+- **Daily evening synthesis** (sector heads + CIO + Risk only):
+  Sector heads present findings → cross-sector debate → CIO
+  approves/rejects recs → CIO sets tomorrow's priorities.
+  L1 analysts are excluded.
 - **Monthly Idea Dinner** (~40 turns):
   CIO + all 3 sector heads. Each sector head presents their
   strongest conviction and biggest concern. CIO interrogates.
@@ -261,14 +365,19 @@ each layer also risks filtering out genuine signal.
   Approves, blocks, or flags specific concerns.
 
 ### What This Tests
+- Does a hierarchy of 27 narrow specialists outperform 14 broad
+  generalists debating as peers?
 - Does progressive filtering remove noise or lose signal?
 - Does the CIO miss cross-domain connections that only exist
   at the ground floor (the Ajinomoto problem)?
-- Does the sector head layer add value by synthesizing, or does
-  it just add latency and information loss?
+- Does top-down priority setting react faster to changing conditions,
+  or does it create blind spots where nobody's looking?
+- When an analyst finds something important that contradicts the CIO's
+  directive, does it reach the CIO? Or does the sector head filter it out?
+- Does the one-day information delay on org decisions hurt analyst
+  performance, or does it keep them focused on deep domain work?
 - Does the Risk Committee's full visibility compensate for the
   CIO's filtered view?
-- How does information flow efficiency compare to peer debate?
 
 ---
 
@@ -287,22 +396,32 @@ combine better mathematically than socially.
 
 ### Agent Roster
 
+**Same agents as the Council** — same broad generalist coverage,
+same analytical DNA. The ONLY difference is: no interaction.
+
 | Agent | Domain | Role |
 |-------|--------|------|
-| MACRO | Monetary policy, rates, CPI/jobs | Independent signal generator |
-| SEMI | Semiconductor supply chain | Independent signal generator |
-| CHINA | Chinese economy, PBoC, trade | Independent signal generator |
-| OIL | Energy, petrochemicals, OPEC | Independent signal generator |
-| CRYPTO | Digital assets, DeFi, on-chain | Independent signal generator |
-| TECH | SaaS, cloud, AI companies | Independent signal generator |
-| LIQUIDITY | Credit conditions, yield curves | Independent signal generator |
-| JAPAN | BoJ, yen carry trade | Independent signal generator |
-| GEOPOLITICS | US foreign policy, conflicts | Independent signal generator |
-| MINERALS | Copper, lithium, rare earths | Independent signal generator |
+| SEMI | Semiconductors (full supply chain) | Independent signal generator |
+| TECH | Software, cloud, AI companies, enterprise | Independent signal generator |
+| CRYPTO | Digital assets, DeFi, on-chain, regulatory | Independent signal generator |
+| MACRO | Fed/ECB/BoJ/PBoC, CPI, employment, rates | Independent signal generator |
+| CREDIT | Yield curves, spreads, banks, financial system, gold | Independent signal generator |
+| JAPAN | BoJ, YCC, yen carry trade, JGB, demographics | Independent signal generator |
+| CHINA | PBoC, 土地财政, dual circulation, trade, Taiwan risk | Independent signal generator |
+| OIL | OPEC+, crude, refining, LNG, energy transition | Independent signal generator |
+| GEOPOLITICS | Foreign policy, sanctions, conflicts, chokepoints, Middle East | Independent signal generator |
+| MINERALS | Copper, gold, silver, lithium, rare earths, mining | Independent signal generator |
+| TRADE_FLOWS | Global shipping, port congestion, trade volumes, freight | Independent signal generator |
+| TECHNICAL | Charts, indicators, price action across all sectors | Independent signal generator |
+| SENTIMENT | Social media, retail flows, options flow, insider txns | Independent signal generator |
 
-**Total: 10 agents** + portfolio optimizer (code, not agent)
+**Total: 13 agents** + portfolio optimizer (code, not agent)
 
-No risk agent. Risk is embedded as constraints in the optimizer.
+No risk agent. Risk is embedded as hard-coded constraints in the optimizer.
+The Model is the control group for the Council — same agents, same data,
+but zero social interaction. If the Council outperforms the Model, the
+value of peer debate is proven. If the Model outperforms, social dynamics
+are net-negative noise.
 
 ### Information Architecture
 - **Complete information barriers.** No agent sees any other agent's
@@ -408,15 +527,18 @@ All three structures run simultaneously against the same:
 
 ### Cost Per Structure (Estimated Monthly)
 
-| Structure | Agents | Daily Meeting Tokens | Monthly Decision Tokens | Data Ingestion | Total |
-|-----------|--------|---------------------|------------------------|----------------|-------|
-| A (Council) | 11 | ~$40-60 (1 daily round-table) | ~$20-30 | ~$4 | ~$65-95 |
-| B (Firm) | 15 | ~$50-80 (sector standups + weekly synthesis) | ~$30-50 (Idea Dinner + risk review) | ~$4 | ~$85-135 |
-| C (Model) | 10 | $0 (no meetings) | ~$5-10 (signal generation only) | ~$4 | ~$10-15 |
-| **Combined** | | | | | **~$160-245/month** |
+| Structure | Agents | Daily Meetings | Research/Execution | Data Ingestion | Total |
+|-----------|--------|---------------|-------------------|----------------|-------|
+| A (Council) | 14 | ~$50-70 (morning + evening, 14 agents) | ~$20-30 | ~$4 | ~$75-105 |
+| B (Firm) | 37 | ~$60-90 (8 standups + evening synthesis) | ~$80-120 (27 analysts researching) | ~$4 | ~$145-215 |
+| C (Model) | 13 | $0 (no meetings) | ~$10-15 (signal generation only) | ~$4 | ~$15-20 |
+| **Combined** | | | | | **~$235-340/month** |
 
-Structure C is dramatically cheaper because agents never talk to each
-other. This is itself an interesting finding if C outperforms A and B.
+The Firm is the most expensive because it has the most agents, but
+per-analyst cost is lower than the Council (analysts only attend small
+standups, never the evening debate). Structure C is dramatically cheaper
+because agents never talk to each other. If C outperforms A and B,
+that's a finding worth the price difference.
 
 ---
 
@@ -454,60 +576,94 @@ reasoning rules, same analytical DNA, but different social orientation.
 
 ## Sector Groupings (Structure B)
 
-### Tech & Supply Chain
-- **SEMI** — Semiconductor supply chain, chip fabrication, packaging, equipment
-- **TECH** — SaaS, cloud, AI companies, enterprise software, consumer tech
-- **CRYPTO** — Digital assets, DeFi, on-chain analytics, regulatory landscape
+8 sectors modeled on real fund coverage (Point72, Citadel, Balyasny).
 
-**Why this grouping:** These three domains share supply chain dependencies.
-AI demand drives GPU demand drives chip fabrication drives memory drives
-packaging. Crypto mining adds GPU demand. Cloud capex drives all of it.
-The sector head can see the full demand-supply picture.
+### Semiconductors (SEMI_HEAD → 4 analysts)
+FABS, EQUIPMENT, MEMORY, PACKAGING
 
-### Macro & Rates
-- **MACRO** — Fed/ECB/BoJ policy, CPI, employment, GDP, fiscal policy
-- **LIQUIDITY** — Credit conditions, yield curves, bank lending, shadow banking, credit spreads
-- **JAPAN** — BoJ yield curve control, yen carry trade, Japanese equities, demographics
+**Why:** The semiconductor supply chain is a single interconnected system.
+Fab capacity → equipment lead times → memory allocation → packaging
+bottlenecks. The sector head sees the full pipeline and spots cascading
+constraints (e.g., CoWoS packaging shortage limits even when fab capacity
+is available).
 
-**Why this grouping:** Monetary policy, credit conditions, and the yen
-carry trade are deeply interlinked. BoJ moves affect global liquidity.
-Credit conditions determine which sectors can access capital. The sector
-head can see the full monetary transmission picture.
+### Technology (TECH_HEAD → 3 analysts)
+AI_INFRA, CLOUD, ENTERPRISE
 
-### Geopolitics & Resources
-- **CHINA** — Chinese economy, PBoC, 土地财政, trade policy, dual circulation, Hong Kong
-- **OIL** — Energy, petrochemicals, OPEC+, shipping lanes, renewable transition
-- **GEOPOLITICS** — US foreign policy, alliances, conflicts, sanctions, military
-- **MINERALS** — Copper, lithium, rare earths, mining, commodity super-cycles
+**Why:** AI demand drives GPU demand drives cloud capex drives enterprise
+adoption. The sector head connects: NVIDIA earnings → hyperscaler capex
+guidance → SaaS company AI feature revenue. Demand signal propagation.
 
-**Why this grouping:** Geopolitics drives resource flows. China's economy
-drives commodity demand. US sanctions reshape supply chains. Oil is the
-currency of geopolitical power. The sector head can see the full
-geopolitical-resource nexus.
+### Macro & Rates (MACRO_HEAD → 5 analysts)
+US_MACRO, GLOBAL_RATES, CREDIT, JAPAN, FINANCIALS
+
+**Why:** The largest sector because monetary policy, credit conditions,
+currency markets, and the banking system are deeply interlinked. BoJ moves
+affect yen carry → global liquidity → risk assets. Fed hikes → banks
+tighten → credit spreads widen → everyone feels it. The sector head sees
+the full monetary transmission mechanism.
+
+### Energy & Power (ENERGY_HEAD → 3 analysts)
+OIL, POWER, PIPELINES
+
+**Why:** Energy supply chain from extraction through generation to
+distribution. Oil price → power costs → datacenter economics →
+semiconductor demand. The energy transition (nuclear/SMR, renewables)
+creates new bottlenecks and investment opportunities.
+
+### Geopolitics & Trade (GEO_HEAD → 5 analysts)
+CHINA, US_FOREIGN, EMERGING, TRADE, TRADE_FLOWS
+
+**Why:** Geopolitics drives resource flows, trade policy, and supply chain
+routing. China's economy drives commodity demand. US sanctions reshape
+supply chains. TRADE_FLOWS monitors the physical movement of goods —
+leading indicator for supply disruptions that hit every other sector.
+
+### Commodities (COMMODITIES_HEAD → 3 analysts)
+METALS, BATTERY, RARE_EARTHS
+
+**Why:** Raw materials are the foundation layer. Gold/silver as monetary
+signals (tracked jointly with CREDIT in Macro). Lithium/cobalt for EV
+and storage. Rare earths as China's geopolitical leverage. Commodity
+super-cycles drive multi-year investment themes.
+
+### Crypto (CRYPTO_HEAD → 2 analysts)
+CRYPTO_MACRO, DEFI
+
+**Why:** Crypto sits at the intersection of technology (mining hardware,
+blockchain), macro (risk appetite, dollar alternatives), and regulation.
+Small team but high signal — BTC correlation to risk assets is a macro
+indicator itself.
+
+### Market Intelligence (INTEL_HEAD → 2 analysts)
+TECHNICAL, SENTIMENT
+
+**Why:** Cross-cutting functional analysis that domain analysts lack.
+TECHNICAL reads charts and indicators across ALL sectors — catches
+overbought/oversold conditions domain analysts miss because they're
+focused on narrative. SENTIMENT monitors retail flows and insider
+transactions — leading indicators for short squeezes and distribution.
 
 ---
 
 ## Open Questions (To Resolve During Implementation)
 
-1. **Should Structure A agents know that Structures B and C exist?**
-   Probably not — it could bias their behavior. Each structure should
-   operate as if it's the only one.
+1. **Should structures know about each other?**
+   No — each structure operates as if it's the only one.
+   Agents in Structure A don't know B and C exist.
 
-2. **Should the same random seed / conversation starter be used across
-   structures for fair comparison?** Yes — the daily topic/prompt should
-   be identical. Only the organizational response differs.
+2. **Should the same daily data/prompt be used across structures?**
+   Yes — identical data feed, identical overnight events.
+   Only the organizational response differs.
 
-3. **How do we handle Structure B's staggered meetings?** L1 standups
-   happen first, then L2 synthesis, then L3 Idea Dinner. This means
-   Structure B's final decision incorporates more processing time.
-   Is this an advantage (more thought) or disadvantage (slower reaction)?
-
-4. **Can Structure B's CIO request raw analyst data?** Current design
-   says yes, via sector head. This is a pressure release valve — if the
-   CIO suspects the sector head is filtering too aggressively, they can
-   drill down. But it undermines the pure hierarchy experiment.
-
-5. **What happens when Structure C's optimizer and Structure A's consensus
+3. **What happens when Structure C's optimizer and Structure A's consensus
    agree?** This is the highest-conviction signal — independent algorithmic
-   synthesis AND peer debate reached the same conclusion. Should we track
-   this as a separate "meta-signal"?
+   synthesis AND peer debate reached the same conclusion. Track this as
+   a separate "meta-signal" for research purposes.
+
+4. **How do we handle the scale asymmetry in the comparison?**
+   The Firm has 27 analysts vs the Council's 13. If the Firm outperforms,
+   is it topology or scale? We acknowledge this as a feature: hierarchy's
+   advantage IS scale. The question is whether that scale advantage
+   justifies the management overhead (10 extra agents) and information
+   filtering cost.

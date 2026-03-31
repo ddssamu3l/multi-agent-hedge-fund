@@ -168,19 +168,19 @@ How agents spend their day and what documents they produce. Design doc: `docs/de
 - **Research foundations:** Meeting frameworks from Delphi, GJP, Amazon, Point72, McKinsey, Intel, nemawashi. Journal frameworks from Soros, Druckenmiller, Dalio, Burry, GJP superforecasters, military DSM.
 - **Meeting protocols:** `docs/design/meeting-protocols.md`. Council: morning (info+strategy) + evening (debate+vote, 0.60 threshold). Firm: 3 parallel sector standups (analysts first, sector head last, CIO silent) + evening synthesis (CIO approves/rejects, final say, can override risk). Model: no meetings, signal submission only. All meetings: 100 turn limit, natural exit, system code moderates, weighted random speaking with callout priority, end-of-meeting check-in.
 - **DM protocol:** 1-on-1 DMs + multi-agent private meetings. Request/accept (invitees can decline). Risk sees all. Info barriers at L1 in Firm are about default context, not communication bans — agents can DM across sectors.
-- **Decision mechanics:** Council = democratic (0.60 weighted vote, risk veto final). Firm = authoritarian (CIO final say, can override risk on record). Model = algorithmic (optimizer, hard-coded risk constraints). Estimated total cost: $180-300/month all three structures.
+- **Decision mechanics:** Council = democratic (0.60 weighted vote, risk veto final). Firm = authoritarian (CIO final say, can override risk on record). Model = algorithmic (optimizer, hard-coded risk constraints). Estimated total cost: $225-330/month all three structures.
 
 ### Organizational Structures (Designed 2026-03-21)
 
 Three topologies running simultaneously. Same agents, same data, same knowledge. Only variable is topology. Design doc: `docs/design/organizational-structures.md`
 
-**Structure A "The Council"** (11 agents) — Peer network. All analysts are equals. Full transparency + private DMs. Decisions by believability-weighted consensus + extremized mean. Risk agent has veto power. Inspired by Tiger Cubs, GJP superforecasters, NAIC clubs.
+**Structure A "The Council"** (14 agents) — Peer network. 11 broad domain generalists + TECHNICAL + SENTIMENT + RISK. All peers, no hierarchy. Full transparency + private DMs. Decisions by believability-weighted vote (0.60 threshold). Risk veto is final. Deliberate small scale — peer networks break down beyond ~15 people. Inspired by Tiger Cubs, GJP superforecasters, NAIC clubs.
 
-**Structure B "The Firm"** (15 agents) — 4-layer pyramid. L1: 10 domain analysts → L2: 3 sector heads (Tech & Supply Chain, Macro & Rates, Geopolitics & Resources) → L3: CIO → L4: Risk Committee (sees everything). Progressive information filtering. Info barriers between sectors at L1. CIO sees only sector synthesis, not raw data. Inspired by Point72, Citadel, Bridgewater.
+**Structure B "The Firm"** (~31 agents) — 4-layer pyramid modeled on real fund sector coverage. L1: 23 domain analysts across 7 sectors (Semiconductors, Technology, Macro & Rates, Energy & Power, Geopolitics & Trade, Commodities, Crypto) → L2: 7 sector heads (pure managers, no research) → L3: CIO → L4: Risk Committee (sees everything). Strategy flows DOWN (CIO sets priorities → sector heads assign directives → analysts execute). Research flows UP (analysts → sector heads filter → CIO decides). L1 analysts never attend evening synthesis — one-day information delay on org decisions. Inspired by Point72, Citadel, Bridgewater.
 
-**Structure C "The Model"** (10 agents) — No interaction. Agents produce independent structured signals. Deterministic optimizer (code, not LLM) combines signals via believability weighting + correlation management + risk constraints. No meetings, no DMs. The experimental control group. Inspired by Renaissance.
+**Structure C "The Model"** (13 agents) — Same agents as Council, zero interaction. Independent signal generators + deterministic code optimizer. Believability weighting + correlation management + risk constraints (hard-coded, not overridable). No meetings, no DMs. The control group for the Council — if Council outperforms, peer debate adds value. If Model outperforms, social dynamics are net-negative noise. Inspired by Renaissance.
 
-Estimated combined cost: $160-245/month.
+Estimated combined cost: $235-340/month.
 
 ### Data Pipeline (Designed 2026-03-21)
 
@@ -207,7 +207,7 @@ Living document: `docs/design/DESIGN_PLAN.md`
 [x] Area 3+4 — Runtime Cadence & Meetings (COMPLETE — lifecycle, documents, meetings, DMs, decisions)
 [x] Area 5  — Tool Schemas (COMPLETE — data pipeline + tool definitions + TradingAgents integration)
 [~] Area 6  — Trade Execution (conditional orders + mock/real split done via 3+4; full spec pending)
-[ ] Area 7  — Monitoring Dashboard & Human Interface
+[~] Area 7  — Dashboard & GUI (web app: Next.js + FastAPI; topology-as-config architecture decided; GUI deferred until engine running)
 ```
 
 ---

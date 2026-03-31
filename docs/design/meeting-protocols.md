@@ -179,31 +179,80 @@ personal track records only.
 
 ## Structure B: The Firm (4-Layer Pyramid)
 
-### Meeting Types
+### Core Principle: Strategy Flows Down, Research Flows Up
 
-The Firm has two daily meetings, structured around the hierarchy.
-No weekly or monthly special events — the original Idea Dinner concept
-is removed because the CIO is present in every meeting and makes
-trade decisions daily.
+The Firm models a real finance hierarchy. The CIO sets strategic
+priorities. Sector heads translate them into directives. Analysts
+execute. Findings flow back up through the sector heads. The CIO
+decides. The cycle repeats.
 
-**Key rule: CIO sits in ALL meetings silently.**
-- The CIO listens to every sector standup and every evening synthesis.
-- The CIO does NOT speak during sector standups (prevents HiPPO
-  anchoring — Amazon juniors-first principle).
-- The CIO speaks in the evening synthesis to approve or reject
-  trade recommendations. This is the only time the CIO's voice
-  is heard daily.
-- The CIO can veto at any time (silent veto during standups
-  surfaces as a rejected rec in the evening).
+This is fundamentally different from the Council where every agent
+decides their own research agenda. In the Firm, the CIO tells
+people what to work on.
 
-**Key rule: Risk Committee is present in every meeting.**
+```
+DECISION FLOW (daily cycle)
+════════════════════════════════════════
+
+EVENING: CIO decides + sets tomorrow's priorities
+         "Stress-test semi holdings against rate hike.
+          Track the yen carry unwind. Give me Hormuz
+          scenario with portfolio impact."
+              │
+              ▼ (strategy flows DOWN)
+MORNING: Sector heads relay to analysts as directives
+         "SEMI, you own the TSMC rate model.
+          TECH, cloud name sensitivity. Due by evening."
+              │
+              ▼ (analysts EXECUTE directives)
+DAY:     Analysts work assigned tasks FIRST.
+         Personal research only after directives are done.
+              │
+              ▼ (research flows UP)
+EVENING: Sector heads synthesize + present to CIO
+         CIO decides + sets TOMORROW's priorities
+         Analysts never see this meeting.
+              │
+              ▼ (cycle repeats)
+NEXT MORNING: Sector heads relay decisions + new directives
+```
+
+### Key Rules
+
+**CIO sits in ALL meetings silently.**
+- Listens to every sector standup. Does NOT speak (prevents
+  HiPPO anchoring).
+- Speaks ONLY in evening synthesis to approve/reject recs
+  and set tomorrow's strategic priorities.
+- Can veto silently during standups (surfaces in evening).
+
+**Risk Committee is present in every meeting.**
 - Observes everything. Speaks on trade recommendations.
-- Has full data access across all sectors (bypasses info barriers).
+- Full data access across all sectors (bypasses info barriers).
+
+**L1 analysts NEVER attend the evening synthesis.**
+- They only attend their morning sector standup.
+- They never see the CIO, never hear cross-sector discussion,
+  never witness org-level decisions being made.
+- They learn about CIO decisions the NEXT morning, filtered
+  through their sector head's interpretation.
+- This creates genuine information delay — a one-day lag
+  on org decisions, mediated by the sector head's framing.
+- This is the strictest contrast with the Council (where
+  everyone sees everything instantly).
+
+**Analysts work on assigned directives first.**
+- CIO priorities take precedence over personal research.
+- After assigned work is complete, analysts can pursue
+  personal threads (watchlist items, Tier 3 pipeline).
+- If the directive isn't done, everything else waits.
+
+### Meeting Types
 
 #### Morning Sector Standups (Daily, 3 Parallel Meetings)
 
-**Purpose:** Within-sector information sharing and strategy. Each sector
-runs its own morning meeting simultaneously.
+**Purpose:** Relay CIO directives downward. Hear analyst overnight
+findings. Assign the day's work.
 
 **Who's in the room (per sector):**
 
@@ -215,97 +264,155 @@ runs its own morning meeting simultaneously.
 
 Plus: CIO (silent, veto only) and Risk (silent, observing) in all three.
 
-**Speaking order: Analysts first, sector head last.**
-(Amazon juniors-first rule. Prevents sector head from anchoring.)
-
 **Phase structure:**
 
 ```
-PHASE 1: BRIEF REVEAL (0 turns, system-managed)
+PHASE 1: CIO DIRECTIVE RELAY
+  Sector head opens the meeting by relaying the CIO's
+  strategic priorities from last night's evening synthesis.
+  This is the TOP-DOWN flow — strategy cascading down.
+
+  Sector head translates org-level strategy into
+  sector-specific directives and task assignments:
+  "CIO wants us to stress-test semi holdings against
+  a 50bp rate hike. SEMI, you own the TSMC model —
+  give me margin impact by evening. TECH, same for
+  cloud names. CRYPTO, check BTC-rate correlation."
+
+  Sector head also relays yesterday's CIO decisions:
+  "CIO approved our TSMC rec. CIO rejected the TLT
+  short — reasoning was macro data doesn't support yet."
+
+  Sector head chooses HOW to frame these — verbatim,
+  with context, or editorialized. This filtering is
+  intentional and part of the hierarchy experiment.
+
+PHASE 2: ANALYST BRIEFS (write-first, revealed simultaneously)
   Sector analysts' briefs revealed within the sector.
   (Analysts cannot see briefs from other sectors —
   information barrier at L1.)
 
-PHASE 2: ANALYST REPORTS
+PHASE 3: ANALYST REPORTS
   Each analyst presents their overnight findings.
-  Speaking order: weighted random among analysts,
-  but all analysts speak before the sector head.
+  Speaking order: analysts first (Amazon juniors-first),
+  weighted random among analysts.
 
   Direct callouts honored: if SEMI mentions something
   that affects TECH, TECH gets next slot.
 
-PHASE 3: SECTOR HEAD SYNTHESIS
-  Sector head speaks LAST. Summarizes what they heard.
-  Can push back: "SEMI and TECH are saying contradicting
-  things about AI capex — reconcile before evening."
-  Assigns research directions for the day.
+  Analysts can flag conflicts between their findings
+  and the CIO directive: "CIO wants a rate stress test,
+  but I'm seeing a packaging constraint that matters more
+  right now." The sector head decides whether to escalate
+  this pushback or stick with the directive.
 
-PHASE 4: CHECK-IN
+PHASE 4: SECTOR HEAD SYNTHESIS
+  Sector head speaks LAST. Summarizes analyst findings.
+  Finalizes task assignments for the day.
+  Can push back on analysts: "SEMI and TECH are saying
+  contradicting things about AI capex — reconcile before
+  evening."
+
+PHASE 5: CHECK-IN
   Quick round: anything unsaid?
 
-OUTPUT: Sector standup summary in sector log.
-No trade decisions — that's the evening meeting.
+OUTPUT: Sector standup summary in sector log. Task
+assignments logged. No trade decisions — that's the
+evening meeting (which analysts do not attend).
 ```
 
 #### Evening Synthesis (Daily)
 
-**Purpose:** Full debate and decision-making. All layers present.
-Trade decisions happen here. The CIO has final say.
+**Purpose:** Leadership-level debate and decision-making. L1 analysts
+are NOT present. This is the senior room. Trade decisions and
+tomorrow's strategic priorities are set here.
 
-**Who's in the room:** All 15 agents. L1 analysts, L2 sector heads,
-L3 CIO, L4 Risk Committee.
+**Who's in the room:** 5 agents only. 3 sector heads + CIO + Risk.
 
-**Speaking order: Analysts → Sector Heads → Risk → CIO.**
-Information flows UP before any downward signal.
+**Speaking order: Sector Heads → Risk → CIO.**
 
 **Phase structure:**
 
 ```
-PHASE 1: FINDINGS REVEAL (0 turns, system-managed)
-  All agents submit findings summaries.
-  NOW analysts can see across sectors — the evening
-  meeting breaks the information barrier for discussion.
-  (But their morning research was done in isolation.)
+PHASE 1: SECTOR HEAD BRIEFS (write-first)
+  Each sector head submits a written synthesis of their
+  sector's day — compiled from analyst reports on CIO
+  directives, analyst-initiated findings, DMs, and
+  standup discussion. Revealed simultaneously.
 
-PHASE 2: SECTOR PRESENTATIONS
-  Each sector head presents their sector's key findings.
-  Analysts can add context or correct their sector head.
+PHASE 2: DIRECTIVE RESULTS
+  Each sector head reports on the CIO's directives:
+  "You asked for a rate stress test. Here's what we found:
+  TSMC margin compression 3-5% under 50bp scenario.
+  Cloud names more resilient — long-term contracts.
+  BTC shows high rate correlation — risk to our position."
 
-  Order: sector heads present first (synthesized view),
-  then analysts can speak to fill gaps or disagree.
+  The sector head FILTERS — not everything from the
+  analysts goes up. They decide what's signal vs noise
+  for the CIO. This is the core hierarchy test: does
+  filtering help (removes noise) or hurt (loses signal)?
 
-PHASE 3: CROSS-SECTOR DEBATE
-  This is where cross-domain connections surface.
-  "SEMI's packaging bottleneck + MACRO's rate view +
-  CHINA's demand data all point to the same thing."
+PHASE 3: ANALYST-INITIATED FINDINGS
+  Sector heads also present anything their analysts
+  flagged independently (beyond directives):
+  "SEMI also flagged a packaging constraint we weren't
+  looking for. Could be more urgent than the rate test."
 
-  Agents from different sectors can now directly engage.
-  Direct callouts honored.
+  This is where bottom-up signal can challenge top-down
+  priorities — but only if the sector head chose to
+  escalate it. If they filtered it out, the CIO never
+  hears about it.
+
+PHASE 4: CROSS-SECTOR DEBATE
+  Cross-domain connections surface at the sector head
+  level: "TECH_HEAD's packaging bottleneck + MACRO_HEAD's
+  rate view + GEO_HEAD's China demand data all point to
+  the same thing."
+
+  Sector heads can directly engage across sectors.
   Risk speaks on every recommendation.
 
-PHASE 4: RECOMMENDATIONS & CIO DECISION
-  Agents present structured recommendations (REC-* schema).
+PHASE 5: CIO DECISION + TOMORROW'S PRIORITIES
+  Two outputs from the CIO:
 
-  Unlike the Council's vote, the Firm uses CIO authority:
-  - Agents propose recommendations
-  - CIO approves or rejects each one (final say)
-  - CIO states reasoning for each decision
-  - CIO can override Risk Committee veto
-    (goes on permanent record, graded in track record)
-  - Risk Committee can flag but CIO decides
+  A) TRADE DECISIONS:
+    Sector heads present structured recommendations
+    (REC-* schema, their own or forwarded from analysts).
 
-  All decisions are logged with full attribution:
-  who proposed, who supported, who opposed, CIO reasoning.
+    CIO authority:
+    - Approves or rejects each recommendation (final say)
+    - States reasoning for each decision
+    - Can override Risk Committee veto
+      (goes on permanent record, graded in track record)
+    - Risk Committee can flag but CIO decides
 
-PHASE 5: CHECK-IN
-  Quick round: anything unsaid?
+    All decisions logged with full attribution:
+    who proposed, which analyst originated it, who
+    supported, who opposed, CIO reasoning.
+
+  B) STRATEGIC PRIORITIES FOR TOMORROW:
+    Based on tonight's findings, the CIO sets what
+    the organization focuses on next:
+    "The packaging constraint SEMI flagged is more
+    important than I thought. Tomorrow I want Tech
+    sector to pivot — deep dive on ABF substrate
+    supply and Ajinomoto pricing. Macro team, continue
+    the yen work. Geo team, downgrade Hormuz priority
+    unless something changes overnight."
+
+    These priorities flow DOWN through sector heads
+    in tomorrow's morning standup. The cycle repeats.
+
+PHASE 6: CHECK-IN
   Obligation to dissent (McKinsey rule): silence when
-  you disagree is a failure mode. If your analysis
-  conflicts with the CIO's decision, you MUST speak.
+  you disagree is a failure mode. If a sector head's
+  analysis conflicts with the CIO's decision, they
+  MUST speak up.
 
 OUTPUT: Org log evening summary. CIO-approved recs →
 org track record + conditional orders queued.
 Rejected recs → personal track records.
+CIO priorities → queued for morning relay.
 ```
 
 ### Information Barriers — Clarified
@@ -319,9 +426,28 @@ communication ban:
 - **What analysts CAN do:** DM any agent in any sector. The barrier
   is what's in your feed, not who you can talk to. SEMI can DM MACRO
   about rate impacts on chip capex — that's nemawashi.
-- **Evening meeting breaks the barrier:** When everyone's in the room
-  together, cross-sector information flows freely.
+- **Analysts NEVER attend the evening synthesis.** They don't see
+  cross-sector discussion or CIO decisions in real-time. They learn
+  about decisions the next morning, filtered through their sector head.
+  This is the strictest form of hierarchy — genuine information delay.
 - **Risk sees everything always.** No barriers apply to Risk.
+
+### What This Tests
+
+The Firm is a bet on **directed attention** vs the Council's bet on
+**distributed attention.** Key questions:
+
+- Does the CIO's ability to focus the entire org on one question
+  produce better results than 10 agents independently deciding
+  what matters?
+- Does top-down priority setting react faster to changing conditions,
+  or does it create blind spots where nobody's looking?
+- When an analyst finds something important that contradicts the CIO's
+  directive, does it reach the CIO? Or does the sector head filter
+  it out to avoid contradicting the boss?
+- Does the one-day information delay on org decisions hurt analyst
+  performance, or does it keep them focused on deep domain work
+  instead of reacting to every CIO mood shift?
 
 ---
 

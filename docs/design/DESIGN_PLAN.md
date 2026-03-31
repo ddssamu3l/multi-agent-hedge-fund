@@ -62,10 +62,16 @@
 - [ ] Decision: paper trading implementation (SQLite for MVP)
 - [ ] Output: trading system spec
 
-### [ ] Area 7: Monitoring Dashboard & Human Interface
+### [~] Area 7: Monitoring Dashboard & Human Interface
 - Depends on: Area 6
-- [ ] Decision: Slack vs custom UI, how human injects events
-- [ ] Output: dashboard spec + human control protocol
+- [x] Decision: Web app (Next.js frontend + Python FastAPI backend)
+- [x] Decision: GUI for org configuration — users add/remove agents, create sectors, edit CIO prompts via UI (no YAML editing)
+- [x] Decision: topology as configuration, not code — engine is topology-agnostic, Structure interface drives meeting/decision/visibility logic
+- [x] Decision: open-source two models — Committee (flat, add agents freely) and Firm (3-level hierarchy, configurable sectors)
+- [x] Decision: engine-first — run headless for months collecting data, add GUI when there's something to visualize
+- [ ] Design: GUI wireframes and component spec
+- [ ] Design: API contract between frontend and backend
+- [ ] Output: dashboard implementation
 
 ### [x] Area 8: Financial Knowledge Base — COMPLETE
 - [x] Research: deep macro knowledge frameworks
@@ -158,3 +164,13 @@ Area 6 (Trading) ──► Area 7 (Dashboard)    ← independent track (6 partia
 43. **SHORT added to action enum.** All recommendation schemas now support SHORT with required additional fields: max_loss_pct, catalyst, squeeze_risk, minsky_stage. Short-specific risks documented in exit-signals.md.
 44. **WATCH auto-hookup.** WATCH recommendations automatically create watchlist entries (Tier 2 if entry trigger present, Tier 3 otherwise). reasoning_snapshot field preserves full analytical context for future reference.
 45. **Partial trigger mechanic.** Compound triggers track individual conditions as NOT_MET/APPROACHING/MET. Partial triggers surface in daily notifications so agents can monitor progression.
+
+### 2026-03-31: Firm Expansion & Architecture
+46. **Firm expanded to ~31 agents.** 23 L1 analysts across 7 sectors + 7 sector heads + CIO + Risk. Modeled on real fund sector coverage (Point72, Citadel, Balyasny). Sectors: Semiconductors (4 analysts), Technology (3), Macro & Rates (4, including dedicated JAPAN), Energy & Power (3), Geopolitics & Trade (4), Commodities (3), Crypto (2). Council stays at 11 (peer network limit). Model stays at 10. Hierarchy's advantage is scale — more specialists going deeper.
+47. **Firm daily flow: strategy flows down, research flows up.** CIO sets strategic priorities in evening synthesis → sector heads relay as directives in morning standup → analysts execute assigned tasks first, personal research second → findings flow up through sector heads → CIO decides + sets new priorities. Cycle repeats daily.
+48. **L1 analysts never attend evening synthesis.** Only sector heads + CIO + Risk (9 agents). Analysts learn about CIO decisions the next morning, filtered through their sector head's interpretation. One-day information delay. Genuine hierarchy.
+49. **Sector heads are pure managers.** No independent research. They synthesize, filter, assign tasks, present upward, relay decisions downward. They choose what goes up to the CIO (signal vs noise filtering) and how to frame CIO decisions for analysts (downward filtering). Both filtering directions are part of the hierarchy experiment.
+50. **Gold/silver: split responsibility.** METALS analyst (Commodities sector) covers supply/mining/demand. CREDIT analyst (Macro sector) monitors gold as a monetary/liquidity indicator. Cross-domain connection happens through DMs — not pre-assigned.
+51. **Topology as configuration, not code.** Engine is topology-agnostic. Structure interface (get_morning_meetings, get_decision_mechanic, can_see, can_dm) drives all meeting/decision/visibility logic. Adding an agent = config entry + identity files. Adding a sector = config block. Switching topology = swap config. Code never changes.
+52. **Open-source two models: Committee and Firm.** Committee: flat, add agents freely, they all participate as peers. Firm: 3-level hierarchy, configurable sectors, editable CIO system prompt and skills, add/remove agents per team via GUI.
+53. **Web app: Next.js frontend + Python FastAPI backend.** GUI for org configuration (add/remove agents, create sectors, edit prompts). Engine runs headless first — GUI comes after data collection validates the experiment. Estimated combined cost: $225-330/month for all three structures.
