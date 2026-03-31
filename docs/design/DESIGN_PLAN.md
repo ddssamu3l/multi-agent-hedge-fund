@@ -54,13 +54,18 @@
 - [x] Decision: TradingAgents integrated as research sub-agent tool (no authority, no gating, free use)
 - [x] Output: tool schema definitions → `docs/design/tool-schemas.md`
 
-### [~] Area 6: Trade Execution & Portfolio Tracking
-- Mostly independent (partially addressed in Area 3+4)
+### [x] Area 6: Trade Execution & Portfolio Tracking — COMPLETE
 - [x] Decision: conditional limit orders with kill prices, pre-execution check at market open
 - [x] Decision: personal mock trades vs org real trades separation
-- [ ] Decision: position sizing rules, portfolio construction constraints
-- [ ] Decision: paper trading implementation (SQLite for MVP)
-- [ ] Output: trading system spec
+- [x] Decision: paper portfolio — track entry/exit prices and return %, no real broker, no real capital
+- [x] Decision: proposer's size stands — agent sets size_pct, group votes on thesis not sizing
+- [x] Decision: auto-rebalance — trim all positions proportionally to fund new approved trades
+- [x] Decision: position lifecycle (PROPOSED → APPROVED → EXECUTED → OPEN → CLOSED)
+- [x] Decision: 6 exit triggers (stop price, target price, kill condition, agent exit, time expiry, auto-rebalance)
+- [x] Decision: pre-execution 5% sanity check — hold order if price moved >5% overnight
+- [x] Decision: SQLite for MVP (positions, portfolio snapshots, orders, rebalance log)
+- [x] Decision: $100 real money is manual mirror, not system-managed
+- [x] Output: trading system spec → `docs/design/trade-execution.md`
 
 ### [~] Area 7: Monitoring Dashboard & Human Interface
 - Depends on: Area 6
@@ -174,3 +179,13 @@ Area 6 (Trading) ──► Area 7 (Dashboard)    ← independent track (6 partia
 51. **Topology as configuration, not code.** Engine is topology-agnostic. Structure interface (get_morning_meetings, get_decision_mechanic, can_see, can_dm) drives all meeting/decision/visibility logic. Adding an agent = config entry + identity files. Adding a sector = config block. Switching topology = swap config. Code never changes.
 52. **Open-source two models: Committee and Firm.** Committee: flat, add agents freely, they all participate as peers. Firm: 3-level hierarchy, configurable sectors, editable CIO system prompt and skills, add/remove agents per team via GUI.
 53. **Web app: Next.js frontend + Python FastAPI backend.** GUI for org configuration (add/remove agents, create sectors, edit prompts). Engine runs headless first — GUI comes after data collection validates the experiment. Estimated combined cost: $225-330/month for all three structures.
+
+### 2026-03-31: Trade Execution
+54. **Paper portfolio, real prices.** No broker, no real capital. Track entry price, exit price, return %, holding period against real market data. Starting capital $1M theoretical for return calculation.
+55. **Proposer's size stands.** Agent sets size_pct based on conviction. Group votes on thesis, not sizing. Sizing skill is part of what gets tracked in the track record.
+56. **Auto-rebalance.** When new position approved and insufficient cash, system trims ALL existing positions proportionally. Positions trimmed below 1% get fully closed (dust cleanup). Pure math, no agent decision needed. Logged for audit trail.
+57. **6 exit triggers.** Stop price hit (auto), target price hit (auto), kill condition met (flag for review), agent proposes exit (normal approval process), time expiry (flag for reassessment), auto-rebalance (system trim).
+58. **Pre-execution 5% sanity check.** If overnight price moves >5% from approval price, order is HELD for re-evaluation. If price exceeds kill price, order is CANCELLED. Prevents stale-thesis entries after overnight gaps.
+59. **Morning brief has no recommendations.** Agents lack cross-domain context at morning. Evening brief has recs informed by full day's shared context, DMs, and synthesis. Recs are now better quality because agents absorbed everyone else's morning findings before proposing trades.
+60. **READY_TO_CLOSE meeting mechanic.** Agents signal when they're done discussing. >50% signals + one round since last REC-* → system transitions to vote. Natural meeting endings. 100 turn hard cap as safety net.
+61. **SQLite for MVP.** Four tables: positions, portfolio_snapshots, orders, rebalances. Sufficient for tracking 3 structures × ~5-15 positions each over 6+ months.

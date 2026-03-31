@@ -206,7 +206,7 @@ Living document: `docs/design/DESIGN_PLAN.md`
 [~] Area 2  — Agent Role Roster (schema done, individual identities deferred)
 [x] Area 3+4 — Runtime Cadence & Meetings (COMPLETE — lifecycle, documents, meetings, DMs, decisions)
 [x] Area 5  — Tool Schemas (COMPLETE — data pipeline + tool definitions + TradingAgents integration)
-[~] Area 6  — Trade Execution (conditional orders + mock/real split done via 3+4; full spec pending)
+[x] Area 6  — Trade Execution (COMPLETE — paper portfolio, auto-rebalance, pre-execution check, SQLite schema)
 [~] Area 7  — Dashboard & GUI (web app: Next.js + FastAPI; topology-as-config architecture decided; GUI deferred until engine running)
 ```
 
@@ -243,7 +243,8 @@ multi-agent-hedge-fund/
     │   ├── meeting-protocols.md            ← Meeting flow, DMs, turn mgmt, decision mechanics per structure
     │   ├── organizational-structures.md   ← 3 topologies: Council, Firm, Model
     │   ├── runtime-documents.md           ← Pre-meeting brief, journal, org log, track record schemas
-    │   └── tool-schemas.md               ← Agent tool definitions + TradingAgents integration
+    │   ├── tool-schemas.md               ← Agent tool definitions + TradingAgents integration
+    │   └── trade-execution.md            ← Paper portfolio, position lifecycle, auto-rebalance, SQLite schema
     ├── knowledge/
     │   ├── world-mechanics.md             ← 14 axioms with full explanations + sources
     │   ├── reasoning-examples.md          ← Worked examples (AI supply chain, Mao, Iran, EV, defense)
