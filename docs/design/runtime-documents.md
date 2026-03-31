@@ -151,7 +151,7 @@ FLAG:
 
 RECOMMENDATION:
   rec_id:         [auto-assigned: REC-{agent}-{date}-{seq}]
-  action:         BUY | SELL | HOLD | HEDGE | WATCH
+  action:         BUY | SELL | SHORT | HOLD | HEDGE | WATCH
   asset:          [ticker symbol, e.g. "EPD"]
   asset_name:     [full name, e.g. "Enterprise Products Partners"]
   size_pct:       [float, suggested % of portfolio, e.g. 2.0]
@@ -170,6 +170,20 @@ RECOMMENDATION:
   counterparty:   [string — who disagrees and why]
   tags:           [list of strings, e.g. ["energy", "geopolitics",
                     "middle-east", "infrastructure"]]
+
+  # ── SHORT-SPECIFIC FIELDS (required when action = SHORT) ──
+  max_loss_pct:   [float — hard stop, non-negotiable. Shorts have
+                    unlimited downside. e.g. 15.0 means exit if
+                    position moves 15% against you]
+  catalyst:       [string — specific event/timeline that should
+                    break the narrative. Shorts need catalysts more
+                    than longs: an overvalued stock can stay
+                    overvalued forever if nothing changes]
+  squeeze_risk:   [LOW | MEDIUM | HIGH — based on short interest
+                    as % of float. >20% = HIGH]
+  minsky_stage:   [HEDGE | SPECULATIVE | PONZI — where is the
+                    target in the Minsky cycle? Shorts are strongest
+                    when the target is in PONZI phase]
 
   # ── SYSTEM-MANAGED FIELDS (agent never writes these) ──
   status:         PENDING | APPROVED | REJECTED | EXECUTED |
@@ -355,28 +369,77 @@ THESIS: [ID] [Title]
   Next Review: [date or catalyst trigger]
 
 ─── § WATCHLIST ──────────────────────────────────────────
-[Three tiers of attention. Professional analyst standard.]
+[Three tiers of attention. Professional analyst standard.
 
-TIER 1 — ACTIVE POSITIONS (check daily):
-  | Ticker | Dir  | Entry  | Current | P&L    | Kill Condition     | Next Catalyst |
-  |--------|------|--------|---------|--------|--------------------|---------------|
-  | NVDA   | Long | $142   | $155    | +9.2%  | TSMC rev declines  | Apr 15 event  |
-  | TSM    | Long | $162   | $178    | +9.9%  | <$150 for 5 days   | Mar rev data  |
+ AUTO-HOOKUP: When an agent issues a recommendation with
+ action: WATCH, the system automatically creates a Tier 2
+ or Tier 3 entry from the rec's structured fields. The
+ agent doesn't manually add to the watchlist — WATCH recs
+ flow into it automatically, just like BUY recs flow into
+ the track record.
 
-TIER 2 — READY LIST (check weekly):
-  | Ticker | Thesis Link | Entry Trigger              | Target Price | Expiry     |
-  |--------|-------------|----------------------------|-------------|------------|
-  | ASML   | TH-005      | Pullback to €880 support   | €880-€900   | 2026-06-01 |
-  | EPD    | TH-019      | Hormuz escalation confirmed | Market      | 2026-05-01 |
+   REC with action: WATCH
+     → Has entry_trigger? → Tier 2 (Ready List)
+     → No entry_trigger?  → Tier 3 (Research Pipeline)]
 
-TIER 3 — RESEARCH PIPELINE (check monthly):
+TIER 1 — ACTIVE POSITIONS (verified daily by sub-agent):
+  | Ticker | Dir   | Entry  | Current | P&L    | Kill Condition     | Next Catalyst |
+  |--------|-------|--------|---------|--------|--------------------|---------------|
+  | NVDA   | Long  | $142   | $155    | +9.2%  | TSMC rev declines  | Apr 15 event  |
+  | TSM    | Long  | $162   | $178    | +9.9%  | <$150 for 5 days   | Mar rev data  |
+
+TIER 2 — READY LIST (verified daily by sub-agent):
+  watch_id:       [auto: WATCH-{agent}-{YYYYMMDD}-{seq}]
+  ticker:         [asset symbol]
+  thesis_link:    [which thesis does this serve]
+  entry_trigger:  [specific condition to enter the trade]
+  target_price:   [desired entry range]
+  direction:      [LONG | SHORT]
+  expiry:         [date — reassess if trigger hasn't fired]
+
+  reasoning_snapshot:  [WHY this is on the watchlist. The full
+    analytical context captured at the time of flagging.
+    This is what makes the watchlist useful months later —
+    when the sub-agent flags "MSTR dropped 15% today," the
+    analyst wakes up and sees not just the alert but the
+    ORIGINAL reasoning: "Flagged 2026-03-22: MSTR is in
+    Ponzi phase of Minsky cycle. Leveraged BTC bet that
+    only works if BTC rises forever. 4 of 7 crack signals
+    present. Watching for BTC sustained drawdown below $50K
+    as entry trigger for short position."
+    Without this, the agent has to reconstruct why they
+    cared. With it, they can act immediately.]
+
+  EXAMPLE:
+    watch_id:      WATCH-CRYPTO-20260322-01
+    ticker:        MSTR
+    thesis_link:   TH-023
+    entry_trigger: "BTC below $50K for 2+ weeks AND MSTR
+                    premium to NAV exceeds 2x"
+    target_price:  Market (short at whatever price when triggered)
+    direction:     SHORT
+    expiry:        2026-09-01
+    reasoning_snapshot: "MSTR is in Ponzi phase of Minsky
+      cycle. Issued $4B+ in debt to buy BTC. Stock trades
+      at 2.5x NAV of BTC holdings — premium requires
+      perpetual BTC appreciation. 4/7 crack signals present:
+      revenue-investment divergence, narrative degradation,
+      greater fool dynamics, position crowding. Short when
+      BTC drawdown makes the leverage toxic."
+
+TIER 3 — RESEARCH PIPELINE (verified daily by sub-agent):
   | Name/Theme          | Initial Observation          | Status     | Priority |
   |---------------------|------------------------------|------------|----------|
   | Ajinomoto ABF       | 15% price hike, monopoly     | screening  | high     |
   | Uranium / SMR cycle | AI datacenter power demand   | deep-dive  | medium   |
 
+  reasoning_snapshot: [same field — why did this catch my
+    attention? What's the initial hypothesis? What would
+    make this move to Tier 2?]
+
 ─── § IF-THEN TRIGGERS ──────────────────────────────────
-[Armed triggers waiting for conditions. Machine-parseable.]
+[Armed triggers waiting for conditions. Machine-parseable.
+ Checked daily by the verification sub-agent (see below).]
 
 TRIGGER: [ID]
   Domain:    [agent's domain]
@@ -389,12 +452,45 @@ TRIGGER: [ID]
   THEN:
     [Specific action(s) to take]
 
-  Rationale: [Why this trigger matters — the causal chain]
-  Source:    [Where to check this data]
-  Frequency: [How often to check]
-  Status:   [armed / triggered / expired / cancelled]
-  Expiry:   [Date after which reassess]
+  Rationale:  [Why this trigger matters — the causal chain]
+  Source:     [Where to check this data]
+  Status:     [armed / partial / triggered / expired / cancelled]
+  Expiry:     [Date after which reassess]
   Last Checked: [Date + result]
+
+  # ── PARTIAL TRIGGER MECHANIC ──
+  # For compound triggers (A AND B AND C), individual
+  # conditions can fire before the full trigger does.
+  # The sub-agent tracks which conditions are met:
+
+  conditions:
+    - condition: "US unemployment > 5%"
+      status: NOT_MET | MET | APPROACHING
+      current_value: "3.9% (as of 2026-03-21)"
+      note: [sub-agent note, e.g. "Rising trend — was
+             3.6% three months ago. Approaching."]
+    - condition: "Initial claims > 300K for 3 weeks"
+      status: NOT_MET | MET | APPROACHING
+      current_value: "267K (week of 2026-03-15)"
+      note: ""
+
+  # Status logic:
+  #   ALL conditions MET       → status: TRIGGERED
+  #   ≥1 condition MET or
+  #     APPROACHING            → status: PARTIAL
+  #   No conditions active     → status: ARMED
+  #
+  # PARTIAL triggers get flagged in the agent's daily
+  # notification summary so they can monitor the progression.
+  #
+  # Example notification the agent sees on wake:
+  #   "⚠ TRIG-MACRO-003 PARTIAL (1 of 2 conditions):
+  #    ✓ Unemployment trending toward 5% (currently 3.9%,
+  #      rising 0.1%/month for 3 months)
+  #    ○ Claims still below 300K (267K, not yet triggered)
+  #    Sub-agent note: At current trend, unemployment
+  #    crosses 5% in ~10 months. Not imminent but the
+  #    trajectory is consistent with the thesis."
 
 ─── § PREDICTIONS ────────────────────────────────────────
 [Structured, timestamped, probability-weighted. Scored on
@@ -506,7 +602,7 @@ ENTRY SCHEMA (structured — every field explicit):
   agent:          [agent name]
   created_at:     [timestamp]
   statement:      [exact claim, copied verbatim from source]
-  action:         [BUY | SELL | HOLD | HEDGE | WATCH | FLAG]
+  action:         [BUY | SELL | SHORT | HOLD | HEDGE | WATCH | FLAG]
   asset:          [ticker or "N/A" for macro calls]
   confidence:     [float 0.0-1.0, copied from source]
   timeframe:      [duration, copied from source]
@@ -824,7 +920,7 @@ ORG DECISION ENTRY SCHEMA (structured):
   dec_id:           [auto: DEC-{structure}-{YYYYMMDD}-{seq}]
   source_rec_id:    [the REC-* that was approved]
   proposed_by:      [agent who made the recommendation]
-  action:           BUY | SELL | HOLD | HEDGE
+  action:           BUY | SELL | SHORT | HOLD | HEDGE
   asset:            [ticker]
   size_pct:         [approved size]
   group_confidence: [weighted vote result, float 0.0-1.0]
@@ -924,17 +1020,137 @@ ATTRIBUTION TABLE (auto-computed by code):
 
 ---
 
+## Verification Sub-Agent System
+
+Each of the 10 domain agents has a dedicated verification sub-agent
+(cheap LLM — Haiku-class) that runs once daily BEFORE the analyst
+wakes up. The sub-agent is the analyst's assistant: it checks
+everything on the watchlist and trigger list, then leaves a
+notification summary on the analyst's desk.
+
+### Architecture
+
+```
+VERIFICATION SUB-AGENTS (run ~4:00-4:45 PM ET, before wake)
+═══════════════════════════════════════════════════════════
+
+For each of the 10 domain agents, ONE sub-agent runs:
+
+INPUT:
+  - Agent's full watchlist (all 3 tiers)
+  - Agent's armed + partial triggers
+  - Agent's active position kill conditions
+
+TOOLS AVAILABLE:
+  - Stock/crypto price APIs (Yahoo Finance, CoinGecko, etc.)
+  - FRED economic data API
+  - Web search (for news, events, qualitative triggers)
+  - RSS feed check (for domain-specific sources)
+
+PROCESS (one pass, all items):
+  For each watchlist item:
+    - Check current price / status
+    - Compare against entry triggers, kill conditions
+    - If material change: write notification with context
+
+  For each trigger:
+    - Check each condition against latest data
+    - Update condition status: NOT_MET / APPROACHING / MET
+    - Compute overall trigger status: ARMED / PARTIAL / TRIGGERED
+    - If PARTIAL or TRIGGERED: write notification with note
+      explaining what changed and why it matters
+
+  For each active position:
+    - Check kill conditions against current data
+    - If approaching or met: write urgent notification
+
+OUTPUT:
+  Notification summary for the analyst, structured as:
+
+  DAILY VERIFICATION — [Agent] — [Date]
+  ══════════════════════════════════════
+
+  🔴 TRIGGERED (immediate action needed):
+    [List of fully triggered items with notes]
+
+  🟡 PARTIAL (warming up, monitor closely):
+    [List of partially triggered items with notes]
+
+  🟢 WATCHLIST UPDATES (material changes):
+    [Price movements, news, status changes on watched items]
+
+  📊 STATUS UPDATE (routine — always present):
+    [Quick stats on ALL watched items, even if nothing
+     triggered. Current prices, distances from triggers,
+     trend direction. The analyst's daily dashboard.
+
+     Example:
+     "Tier 1: NVDA $155 (+1.2% today, +9.2% from entry,
+      kill not approaching). TSM $178 (+0.5%, +9.9%,
+      kill not approaching).
+      Tier 2: ASML €920 (trigger: €880, 4.3% away, drifting
+      down slowly). EPD $28.50 (trigger: Hormuz escalation,
+      no change). MSTR $185 (trigger: BTC <$50K for 2wk,
+      BTC currently $58K, -3% this week, trending down).
+      Tier 3: Ajinomoto — no new filings. Uranium/SMR —
+      NRC published new SMR licensing timeline, worth reading."
+
+     This ensures the agent has a complete snapshot of their
+     watchlist state every morning without doing any lookups.
+     Even "no change" is useful — it confirms the sub-agent
+     checked and nothing moved.]
+
+COST:
+  10 sub-agents × 1 cheap LLM call/day × ~$0.01-0.05 each
+  = ~$0.10-0.50/day = ~$3-15/month
+  Negligible compared to analyst agent costs.
+```
+
+### What the Analyst Sees on Wake
+
+The verification summary is the FIRST thing in the agent's context
+when they wake at 5:00 PM. Before the morning feed, before
+yesterday's journal — the notifications. This ensures triggered
+conditions get immediate attention.
+
+```
+WAKE CONTEXT ORDER:
+  1. Verification sub-agent notifications (triggered + partial)
+  2. Watchlist (full, with sub-agent notes attached)
+  3. Journal: yesterday's open threads + active theses
+  4. Morning data feed (compiled by data pipeline)
+  5. Org log: yesterday's evening meeting decisions
+```
+
+The agent reads their OWN state first (what needs my attention?),
+then the world (what happened overnight?). This is deliberate —
+an agent who reads news first might get anchored by headlines.
+An agent who reads their own triggers first approaches the news
+with the right questions already in mind.
+
+---
+
 ## How These Documents Flow Through the Day
 
 ```
+4:00-4:45 PM  VERIFICATION SUB-AGENTS RUN
+  │  (cheap LLM, one per analyst agent)
+  │  Check all watchlist items, triggers, kill conditions
+  │  Write notification summaries
+  │
 5:00 PM  WAKE
   │
-  │  Agent reads: morning feed + yesterday's journal entry
+  │  Agent reads (in order):
+  │    1. Verification notifications (triggered/partial)
+  │    2. Watchlist + trigger status
+  │    3. Yesterday's journal + open threads
+  │    4. Morning data feed
+  │    5. Org log (yesterday's decisions)
   │
 5:00-5:30  SOLO PRE-PREP
   │
   │  Agent writes: PRE-MEETING BRIEF (Document 1)
-  │  Agent updates: journal watchlist, trigger checks
+  │  Agent reviews: watchlist, trigger updates from sub-agent
   │  ← Brief is LOCKED before meeting starts
   │
 5:30-6:30  MORNING MEETING

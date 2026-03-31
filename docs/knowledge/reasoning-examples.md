@@ -226,3 +226,163 @@ Geopolitical tension → defense budget expansion →
 ```
 
 The PATTERN is identical across every domain. Only the specifics change.
+
+---
+
+## Bottleneck Descent in REVERSE: Short Thesis Generation
+
+The same framework that produces long signals also produces short signals.
+Bottleneck Descent traces demand down the supply chain to find the
+chokepoint. The REVERSE traces demand DESTRUCTION or artificial demand
+down the chain to find the most leveraged point of failure.
+
+### Example: MicroStrategy (MSTR) — Leveraged BTC Bet
+
+```
+THE LONG THESIS (what bulls see):
+  MSTR owns ~1% of all Bitcoin. If BTC goes to $500K,
+  MSTR's holdings are worth $100B+. The stock is a
+  leveraged BTC play with a software company attached.
+
+THE SHORT THESIS (one layer deeper):
+  Layer 0: MSTR stock price
+  Layer 1: MSTR's BTC holdings (what drives the stock?)
+  Layer 2: BTC price (what drives the holdings' value?)
+  Layer 3: Crypto market liquidity (what drives BTC?)
+  Layer 4: Macro liquidity / risk appetite (what drives crypto?)
+
+  REVERSE BOTTLENECK: If Layer 4 tightens (Fed hawkish,
+  risk-off) → Layer 3 contracts → Layer 2 (BTC) falls →
+  Layer 1 (holdings lose value) → Layer 0 (MSTR falls
+  FASTER than BTC because of leverage).
+
+  The key insight: MSTR doesn't just track BTC. It AMPLIFIES
+  BTC moves because of the debt. Leverage is a magnifier
+  in both directions.
+
+MINSKY CYCLE ANALYSIS (Crack Detection applied):
+  Phase 1 — Hedge Finance (2020-2021):
+    Bought BTC with $250M corporate cash. Could afford
+    to lose it all. Normal treasury diversification move.
+
+  Phase 2 — Speculative Finance (2022-2023):
+    Issued convertible notes to buy more BTC. Now debt
+    servicing depends on BTC holding value. Still manageable
+    — long maturities on the converts.
+
+  Phase 3 — Ponzi Finance (2024-2025):
+    Issued billions more in debt + equity at premium to NAV.
+    Stock trades at 2-3x the value of its BTC holdings.
+    The premium requires:
+      1. Market believes MSTR will keep buying BTC
+      2. Which drives BTC price up
+      3. Which justifies the premium
+      4. Which lets MSTR raise more capital
+      5. Which lets them buy more BTC
+      6. → goto 1
+    This is circular. It works ONLY if BTC rises forever.
+    Any sustained drawdown breaks the loop.
+
+CRACK SIGNALS PRESENT:
+  ✓ Revenue-investment divergence — software revenue flat
+    for years, all value from BTC holdings
+  ✓ Narrative degradation — rebranded from "enterprise
+    software company with BTC treasury" to "Bitcoin
+    development company" — narrative stretching to
+    justify the pivot
+  ✓ Greater fool dynamics — stock premium to NAV requires
+    new buyers who believe the premium is justified
+  ✓ Position crowding — MSTR is in every BTC ETF, every
+    crypto-adjacent portfolio, retail favorite
+  4 of 7 crack signals → SHORT
+
+COUNTERPARTY TEST:
+  Who's long? BTC maximalists who believe $500K+ is
+  inevitable. They might be right — in which case MSTR
+  leverage is a feature, not a bug.
+  Why they're wrong: BTC doesn't need to go to zero for
+  MSTR to blow up. It just needs to stay FLAT long enough
+  for debt servicing to become unsustainable. Time is on
+  the short side.
+
+TRADE STRUCTURE:
+  Entry trigger: BTC below $50K for 2+ weeks AND MSTR
+    premium to NAV still above 2x
+  Kill condition: BTC breaks new all-time high above $75K
+    (thesis invalidated — momentum is real)
+  Max loss: 15% hard stop (shorts have unlimited downside)
+  Catalyst: Debt maturity wall + BTC drawdown
+  Squeeze risk: HIGH (heavily shorted, check short interest)
+  Timeframe: 3-6 months from entry
+```
+
+### The Pattern: Same Rules, Both Directions
+
+```
+LONG SIGNAL (Bottleneck Descent):
+  Demand > Supply at Layer N → investigate Layer N-1
+  → Find the chokepoint → BUY the chokepoint
+
+SHORT SIGNAL (Reverse Bottleneck):
+  Artificial/leveraged demand at Layer N →
+  trace the dependency chain → find the most
+  leveraged point → SHORT when cracks appear
+
+LONG SIGNAL (Crack Detection):
+  You hold it + no cracks → HOLD
+  You hold it + 3+ cracks → EXIT
+
+SHORT SIGNAL (Crack Detection):
+  You don't hold it + 3+ cracks → SHORT OPPORTUNITY
+  Target is in Ponzi phase of Minsky → HIGHEST CONVICTION
+
+The analysis is the same. The direction is just which
+side of the trade you take based on what you find.
+```
+
+---
+
+## Depth-First Analysis: Real-Time Event → Trade (Iran Strike)
+
+One layer deeper applied to breaking news. Most analysts stop at
+the obvious first-order effect. Our agents should trace to the
+second and third order where the alpha lives.
+
+```
+EVENT: US strikes Iran
+
+LAYER 0 (what everyone knows):
+  "US strikes Iran. Oil up."
+
+LAYER 1 (first-order):
+  Strait of Hormuz at risk. ~20% of global oil transits
+  there. Oil futures spike.
+
+LAYER 2 (second-order):
+  Alternative routes: Saudi East-West pipeline (5 Mb/d),
+  UAE Habshan-Fujairah (1.5 Mb/d). Both at partial
+  capacity. Will run at max.
+  → BUY pipeline operators (Enterprise Products, EPD)
+
+LAYER 3 (third-order — the non-obvious trade):
+  Intelligence was key to strike success. Palantir's
+  Gotham platform was used for force distribution
+  analysis and strike simulation. This is a government
+  contract catalyst the market won't price until the
+  next 10-Q shows DoD revenue spike.
+  → BUY PLTR
+
+LAYER 4 (cross-domain — requires collaboration):
+  Hormuz closure → Chinese crude imports disrupted →
+  PBoC forced to release strategic petroleum reserves →
+  Chinese industrial activity constrained → TSMC power
+  costs rise (Taiwan is energy-import-dependent) →
+  Semiconductor margin pressure next quarter.
+  → This only surfaces when GEOPOLITICS talks to CHINA
+    talks to SEMI. The Ajinomoto-style cross-domain
+    connection.
+
+PATTERN: Event → L1 obvious → L2 infrastructure →
+L3 enabling technology → L4 cross-domain cascade.
+Each layer is less crowded and more profitable.
+```

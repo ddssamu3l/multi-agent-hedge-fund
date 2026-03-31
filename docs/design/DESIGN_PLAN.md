@@ -45,12 +45,14 @@
 - [x] Design: turn management (weighted random + callout priority, juniors-first for Firm, end-of-meeting check-in) → `docs/design/meeting-protocols.md`
 - [x] Design: decision mechanics — Council (0.60 weighted vote), Firm (CIO final say), Model (optimizer)
 
-### [~] Area 5: Tool Schemas
+### [x] Area 5: Tool Schemas — COMPLETE
 - Depends on: Area 2 + 4
 - [x] Research: what data APIs exist (market, news, filings) → `docs/research/youtube-ingestion-pipeline.md`
 - [x] Design: data pipeline architecture → `docs/design/data-pipeline.md`
-- [ ] Decision: per-agent tool access, shared vs exclusive tools
-- [ ] Output: tool schema definitions
+- [x] Decision: per-agent tool access by structure (Council: all, Firm: sector-scoped read + cross-sector DM, Model: no communication tools)
+- [x] Decision: always-loaded vs searchable tool split (8 always-loaded, 7+ searchable on demand)
+- [x] Decision: TradingAgents integrated as research sub-agent tool (no authority, no gating, free use)
+- [x] Output: tool schema definitions → `docs/design/tool-schemas.md`
 
 ### [~] Area 6: Trade Execution & Portfolio Tracking
 - Mostly independent (partially addressed in Area 3+4)
@@ -147,3 +149,12 @@ Area 6 (Trading) ──► Area 7 (Dashboard)    ← independent track (6 partia
 36. **Firm: L1 info barriers are about default context, not communication bans.** Analysts don't see other sectors' published work automatically, but CAN DM across sectors. Evening meeting breaks barriers — all layers present, cross-sector discussion open.
 37. **Model: no meetings, pure signal submission.** Agents produce structured signals, optimizer combines algorithmically. Risk is hard-coded constraints, not overridable. The experimental control group.
 38. **Estimated total cost: $180-300/month** for all three structures combined (meetings + DMs + research + data ingestion).
+
+### 2026-03-30: Tool Schemas
+39. **TradingAgents (TauricResearch) integrated as research sub-agent tool.** Agents can invoke the TradingAgents multi-analyst pipeline on any ticker for a sanity check. Returns 5-tier rating + analyst reports + bull/bear debate + risk assessment. No authority, no gating, no voting weight — just a research instrument. ~$0.05-0.15 per call.
+40. **Always-loaded vs searchable tool split.** 8 always-loaded tools (market data, read/write analysis, save/recall memory, submit rec/prediction, end_cycle). 7+ searchable tools discovered on demand via meta-tool (TradingAgents, FRED, earnings, web search, DM, meeting). Saves ~200-500 tokens per tool definition not loaded.
+41. **Tool access varies by structure.** Council: all tools available to all agents. Firm: communication tools available but read_analysis scoped to sector + evening meeting. Model: no communication tools (DM, meeting), signal submission only.
+42. **Verification sub-agent system.** 10 cheap LLMs (one per analyst), run daily before wake. Check all watchlist items, triggers, kill conditions. Leave notification summary + full status dashboard. ~$3-15/month.
+43. **SHORT added to action enum.** All recommendation schemas now support SHORT with required additional fields: max_loss_pct, catalyst, squeeze_risk, minsky_stage. Short-specific risks documented in exit-signals.md.
+44. **WATCH auto-hookup.** WATCH recommendations automatically create watchlist entries (Tier 2 if entry trigger present, Tier 3 otherwise). reasoning_snapshot field preserves full analytical context for future reference.
+45. **Partial trigger mechanic.** Compound triggers track individual conditions as NOT_MET/APPROACHING/MET. Partial triggers surface in daily notifications so agents can monitor progression.

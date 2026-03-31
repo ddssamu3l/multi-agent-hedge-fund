@@ -205,7 +205,7 @@ Living document: `docs/design/DESIGN_PLAN.md`
 [x] Area 9  — Anti-Bias & Analytical Discipline (system prompt, conviction pool)
 [~] Area 2  — Agent Role Roster (schema done, individual identities deferred)
 [x] Area 3+4 — Runtime Cadence & Meetings (COMPLETE — lifecycle, documents, meetings, DMs, decisions)
-[~] Area 5  — Tool Schemas (data pipeline done, tool defs pending)
+[x] Area 5  — Tool Schemas (COMPLETE — data pipeline + tool definitions + TradingAgents integration)
 [~] Area 6  — Trade Execution (conditional orders + mock/real split done via 3+4; full spec pending)
 [ ] Area 7  — Monitoring Dashboard & Human Interface
 ```
@@ -242,7 +242,8 @@ multi-agent-hedge-fund/
     │   ├── data-pipeline.md               ← How agents get info (YouTube, RSS, EDGAR, FRED)
     │   ├── meeting-protocols.md            ← Meeting flow, DMs, turn mgmt, decision mechanics per structure
     │   ├── organizational-structures.md   ← 3 topologies: Council, Firm, Model
-    │   └── runtime-documents.md           ← Pre-meeting brief, journal, org log, track record schemas
+    │   ├── runtime-documents.md           ← Pre-meeting brief, journal, org log, track record schemas
+    │   └── tool-schemas.md               ← Agent tool definitions + TradingAgents integration
     ├── knowledge/
     │   ├── world-mechanics.md             ← 14 axioms with full explanations + sources
     │   ├── reasoning-examples.md          ← Worked examples (AI supply chain, Mao, Iran, EV, defense)

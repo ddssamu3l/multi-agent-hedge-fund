@@ -294,3 +294,55 @@ dramatically better than the expected value of holding for the top.
   revenue-investment gap to narrow, Minsky stage to reset to Stage 1
 - The best buying opportunities come 6-12 months after a crash when
   capitulation is complete and nobody wants to touch the sector
+
+---
+
+## Crack Detection as Short Signal
+
+The same 7 crack signals that tell you to EXIT positions you hold are
+SHORT ENTRY signals when detected in something you DON'T hold.
+
+```
+Positions you HOLD + 3+ cracks → EXIT (defensive)
+Positions you DON'T HOLD + 3+ cracks → SHORT (offensive)
+```
+
+Crack Detection is not just a defensive tool — it is the primary
+framework for generating short theses. The Minsky progression
+(hedge → speculative → Ponzi) IS the shorting framework:
+
+| Minsky Stage | Signal | Short Action |
+|---|---|---|
+| Hedge | Company services debt from cash flows | No signal. Normal. |
+| Speculative | Must roll principal, depends on market access | Watch closely. Not yet shortable — can persist for years. |
+| Ponzi | Can't cover interest, needs asset appreciation or new capital | **SHORT SIGNAL.** Structure requires impossibility (perpetual appreciation). Any disruption triggers death spiral. |
+
+**Short entry checklist (all required):**
+1. Target is in Speculative or Ponzi phase of Minsky cycle
+2. 3+ of 7 crack signals present
+3. Specific catalyst identified with expected timeline
+4. Counterparty test completed (can you argue the bull case?)
+5. Position sized for unlimited downside (hard stop, non-negotiable)
+6. Short interest checked (<20% of float preferred, >20% = squeeze risk)
+7. Borrow availability confirmed
+
+**Short-specific risks (risks that longs don't have):**
+
+| Risk | Description | Mitigation |
+|---|---|---|
+| Unlimited downside | A long can go to zero. A short can go to infinity. | Hard stop at max loss %. Non-negotiable. |
+| Timing risk | "The market can stay irrational longer than you can stay solvent." (Keynes). Burry was RIGHT about mortgages but nearly went bankrupt waiting. | Require a catalyst with timeline. No open-ended shorts. |
+| Short squeeze | Crowded shorts forced to cover → prices spike UP. GameStop 2021. | Check short interest before entry. >20% of float = elevated risk. |
+| Borrow cost | Shorting requires borrowing shares. Hard-to-borrow = high carry costs eating returns. | Factor into asymmetry calculation. If borrow cost > 5% annualized, upside must be proportionally higher. |
+| Catalyst dependency | Cheap stocks can stay cheap forever (you just hold). Overvalued stocks can stay overvalued forever (you keep paying borrow). | Every short must have a specific catalyst. No "eventually the market will realize." |
+
+**The asymmetric math for shorts:**
+Unlike longs where you can be patient, shorts have a ticking clock
+(borrow costs, margin requirements). The expected payoff must account for:
+- Probability of thesis playing out × expected return
+- MINUS probability of squeeze × max loss
+- MINUS borrow cost × expected holding period
+- MINUS opportunity cost of margin tied up
+
+If the asymmetry doesn't clearly favor the short after all costs,
+don't take it. Shorts should be high-conviction only.
